@@ -1,4 +1,4 @@
-from time import sleep
+from time import time, sleep
 import sys
 import json
 
@@ -28,7 +28,9 @@ def main():
 		#parse site data
 		parse = parseSite(arg_city, data[arg_city], database)
 		while True:
+			start = time()	#debug
 			parse.parseData()
+			print('Execution: ' + time() - start + ' sec')	#debug
 			#sleep(20)	#debug
 
 
