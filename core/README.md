@@ -1,31 +1,31 @@
-LASS Project
+#LASS Project
 
 ===
 
-* content: core
-* version: 1.1
-* update: Nov 15, 2016 - 23:51
+* Content: airbox
+* Version: 1.1
+* Update: Nov 15, 2016 23:51
 
-#Notice
+##Notice
 
-* This version has changed the followings:
+* **History**
+	* Nov 15, 2016 23:51 - 無法抓到的超時測站ID，以及甚麼時候會故障(抓失敗的時間)
 
-    	* Parsing site number: 12
-	* Turn off the "sleep time"
-	* Use the "requests" module for requiring LASS web data.
-	* Set up the request timeout for 25 seconds.
-	* Show the execution time per round of city.
+* **Updates**
+    	* Parsing site number: **12**
+	* Turn off the **sleep time**
+	* Use the '''requests''' module for requiring LASS web data.
+	* Set up the request timeout for **25 seconds**.
+	* Show the **execution time** per round of city.
 
-* TODO:
-
-	* 開資料庫紀錄: 無法抓到的超時測站ID，以及甚麼時候會故障(抓失敗的時間)
+* **TODO**
 	* 紀錄每個城市跑完12筆測站所花的時間
 	* Parallel version will be updated soon.
 
 
-#Description
+##Description
 
-##Query all site ID
+###Query all site ID
 
 This program only need to execution one time unless the site ID be changed.
 * Execution
@@ -38,7 +38,7 @@ This program only need to execution one time unless the site ID be changed.
 	Return a dict that store all city's site IDs.
 
 
-##Parse the site data
+###Parse the site data
 
 This program is going to parse the specific city's site data.
 * Format
