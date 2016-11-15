@@ -30,7 +30,7 @@ def main():
 		while True:
 			start = time()	#debug
 			parse.parseData()
-			print('Execution: ' + time() - start + ' sec')	#debug
+			print('Execution: ' + str(time() - start) + ' sec')	#debug
 			#sleep(20)	#debug
 
 
