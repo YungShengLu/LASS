@@ -8,7 +8,7 @@
 
 ##Notice
 * **History**
-	* Nov 15, 2016 23:51 - 無法抓到的超時測站ID，以及甚麼時候會故障(抓失敗的時間)
+	* **Nov 15, 2016 23:51** - 無法抓到的超時測站ID，以及甚麼時候會故障(抓失敗的時間)
 
 * **Updates**
     	* Parsing site number: **12**
@@ -43,11 +43,8 @@ This program is going to parse the specific city's site data.
 * **Format**
 	```
 	$ python lass_parser.py [city_name]
+		// [city_name] = [taipei / newtaipei / taichung / tainan / kaohsiung]
 	```
-
-	:::info
-	[city_name] = [taipei / newtaipei / taichung / tainan / kaohsiung]
-	:::
 
 * **Example**
 	```
