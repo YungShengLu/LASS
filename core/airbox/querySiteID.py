@@ -1,7 +1,6 @@
-from urllib.request import urlopen
+from requests import get
 from progressbar import ProgressBar, Bar, Percentage
 from time import sleep
-import json
 
 
 class querySiteID:
@@ -20,8 +19,13 @@ class querySiteID:
 		progress = ProgressBar(maxval = len(self.queryCity), widgets = [Bar('=', '[', ']'), ' ', Percentage()]).start()
 
 		for city, perc in zip(self.queryCity, range(len(self.queryCity))):
-			request = urlopen(self.url + city + '.json')
-			data = json.loads(request.read().decode('utf8'))
+			try:
+				req = get(self.url + city + '.json', timeout = 25)
+			except exceptions.Timeout as e:
+				print('City cannot connect: ' + city)
+				continue
+
+			data = req.json()
 			self.init()
 
 			for key1 in data.keys():

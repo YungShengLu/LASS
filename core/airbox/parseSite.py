@@ -1,9 +1,8 @@
-from requests import get
+from requests import get, exceptions
 from progressbar import ProgressBar, Bar, Percentage
 from time import sleep
 from influxdb import InfluxDBClient
 import sys
-import json
 
 
 class parseSite:
@@ -18,17 +17,22 @@ class parseSite:
 		self.client.create_database(database)
 
 	def parseData(self):
-		count = 5	#test
+		count = 3	#test
 
 		print('>>> Parse site data: ' + self.parseCity.capitalize())
 		progress = ProgressBar(maxval = self.parseSite['siteNum'], widgets = [Bar('=', '[', ']'), ' ', Percentage()]).start()
 		self.jsonData = {}
 
-		for ID, perc in zip(self.parseSite['id'], range(self.parseSite['siteNum'])):
-			request = urlopen(self.url + ID)
-			self.jsonData = json.loads(request.read().decode('utf-8-sig'))
+		for ID, perc, i in zip(self.parseSite['id'], range(self.parseSite['siteNum']), range(count)):
+			try:
+				req = get(self.url + ID, timeout = 25)
+			except exceptions.Timeout as e:
+				print('Site cannot connect: ' + ID)
+				continue
 
-			if self.jsonData.get('app') is None:
+			self.jsonData = req.json()
+
+			'''if self.jsonData.get('app') is None:
 				self.jsonData.update({'app': 'N/A'})
 			if self.jsonData.get('gps_lat') is None:
 				self.jsonData.update({'gps_lat': -1.0})
@@ -45,8 +49,8 @@ class parseSite:
 			if self.jsonData.get('s_d1') is None:
 				self.jsonData.update({'s_d1': -1})
 			if self.jsonData.get('s_d2') is None:
-				self.jsonData.update({'s_d2': -1})
-			if self.jsonData.get('timestamp') is None:
+				self.jsonData.update({'s_d2': -1})'''
+			if self.jsonData.get('s_d0') is None:
 				continue
 
 			progress.update(perc + 1)
