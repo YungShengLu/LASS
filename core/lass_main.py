@@ -5,7 +5,7 @@ import time
 
 #custom class
 from airbox.querySiteID import querySiteID
-from airbox.parseSite import parseSite
+#from airbox.parseSite import parseSite
 
 
 def main():
@@ -15,6 +15,7 @@ def main():
 	if option == '-q':
 		print('>>> Query site ID: All')
 		query = querySiteID(cityList)
+		query.queryID()
 
 	elif option == '-p':
 		arg_city = sys.argv[2]
@@ -24,10 +25,10 @@ def main():
 			data = json.load(file)
 
 		#parse site data
-		while True:
-			parse = parseSite(arg_city, data[arg_city], database)
-			parse.parseData()
-			sleep(180)
+		#while True:
+		#	parse = parseSite(arg_city, data[arg_city], database)
+		#	parse.parseData()
+		#	sleep(180)
 
 
 if __name__ == '__main__':
