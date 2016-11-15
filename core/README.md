@@ -1,12 +1,21 @@
-#Load all site ID
+LASS Project
+content: core
+version: 1.1
+update: Nov 15, 2016 - 23:51
+
+===
+
+#Query all site ID
+
 This program only need to execution one time unless the site ID be changed.
 - Execution
-	$ python lass_querySiteID.py
+	$ python lass_querySiteID.py -q
 - Output
 	return a dict that store all city's site IDs    
 
 
 #Parse the site data
+
 This program is going to parse the specific city's site data.
 - Format
 	$ python lass_parser.py [city_name]
@@ -23,8 +32,11 @@ This program is going to parse the specific city's site data.
             - Multithreads and multiprocesses
 
 #Notice
-- Multiprocess will be updated soon.
-- Load each site ID has been changed
-    - All site IDs will be queried after executing lass_querySiteID.py.
-    - lass_querySiteID.py will not going to create siteID.json, by contrast, it will return a dict that store the site data.
-    - Have not test!!!
+
+- This version has changed the followings:
+    - Parsing site number: 12
+    - Turn off the "sleep time"
+    - Use the "requests" module for requiring LASS web data.
+    - Set up the request timeout for 25 seconds.
+- TODO:
+    - Parallel version will be updated soon.
