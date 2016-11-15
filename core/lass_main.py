@@ -29,7 +29,7 @@ def main():
 		parse = parseSite(arg_city, data[arg_city], database)
 		while True:
 			parse.parseData()
-			sleep(20)	#debug
+			#sleep(20)	#debug
 
 
 if __name__ == '__main__':

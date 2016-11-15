@@ -17,7 +17,7 @@ class parseSite:
 		self.client.create_database(database)
 
 	def parseData(self):
-		count = 3	#test
+		count = 12	#test
 
 		print('>>> Parse site data: ' + self.parseCity.capitalize())
 		progress = ProgressBar(maxval = self.parseSite['siteNum'], widgets = [Bar('=', '[', ']'), ' ', Percentage()]).start()
