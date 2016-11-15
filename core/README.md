@@ -28,30 +28,33 @@
 
 ###Query all site ID
 This program only need to execution one time unless the site ID be changed.
-* Execution
+* **Execution**
 	```
 	$ python lass_querySiteID.py -q
 	```
 
-* Output
+* **Output**
 	Return a dict that store all city's site IDs.
 
 
 
 ###Parse the site data
 This program is going to parse the specific city's site data.
-* Format
+* **Format**
 	```
 	$ python lass_parser.py [city_name]
-		// [city_name] = [taipei / newtaipei / taichung / tainan / kaohsiung]
 	```
 
-* Example
+	:::info
+	[city_name] = [taipei / newtaipei / taichung / tainan / kaohsiung]
+	:::
+
+* **Example**
 	```
 	$ python lass_parser.py tainan
 	```
 
-* Structure
+* **Structure**
 	* Use the input dict of the specific city's site IDs to parse the site data.
 	* The most biggest issue is that we have to parse each site data by query the site ID.
 		* Waste too much time to parse.
