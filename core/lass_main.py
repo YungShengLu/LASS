@@ -25,11 +25,8 @@ def main():
 
 		#parse site data
 		while True:
-			#start parser
 			parse = parseSite(arg_city, data[arg_city], database)
 			parse.parseData()
-
-        	#sleep for 3 mins
 			sleep(180)
 
 
