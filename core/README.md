@@ -8,8 +8,6 @@ LASS Project
 
 #Notice
 
-===
-
 * This version has changed the followings:
 
     	* Parsing site number: 12
@@ -26,8 +24,6 @@ LASS Project
 
 
 #Description
-
-===
 
 ##Query all site ID
 
@@ -49,7 +45,7 @@ This program is going to parse the specific city's site data.
 	
 	'''
 	$ python lass_parser.py [city_name]
-	// [city_name] = [taipei / newtaipei / taichung / tainan / kaohsiung]
+		// [city_name] = [taipei / newtaipei / taichung / tainan / kaohsiung]
 	'''
 
 * Example
