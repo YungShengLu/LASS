@@ -1,4 +1,4 @@
-#LASS Project
+S#LASS Project
 
 * Content: **In a target city, store each airbox's PM2.5 data as "csv" files **
 
@@ -35,7 +35,8 @@ This program can get each airbox's PM2.5 data in a target city typed in by user 
 
 * **Output**
 
-        store all the PM2.5 data from each airbox in the city typed in by user as "csv" files in a folder named Taipei,Newtaipei,Taichung,Tainan or Kaohsiung in this directory: "../timeFactorObservation". 
+        Store all the PM2.5 data from each airbox in the city typed in by user as "csv" files 
+        in a folder named Taipei,Newtaipei,Taichung,Tainan or Kaohsiung in this directory: "../timeFactorObservation". 
         
         The folder name depends on which city you typed in when executing this program .
 
