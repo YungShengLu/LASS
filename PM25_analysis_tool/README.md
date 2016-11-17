@@ -9,7 +9,7 @@
 
 ##Description
 
-​
+
 
 ###Store each airbox's PM2.5 data as "csv" files in a target city typed in by user 
 
@@ -25,7 +25,7 @@ This program can get each airbox's PM2.5 data in a target city typed in by user 
 
         ```
 
-​* **Example**
+* **Example**
 
         ```
 
