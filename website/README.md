@@ -1,4 +1,4 @@
-#LASS Demo website
+#LASS website
 * Content: **website**
 * Version: **1.0**
 * Update: **Nov 19, 2016 17:02**
