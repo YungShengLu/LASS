@@ -16,7 +16,7 @@
 	* Open the terminal.
 	* Change directory to the folder of this demo.
 		```
-		$ cd ../demo
+		$ cd ../Demo
 		```
 
 	* Using Python to setup ```SimpleHTTPServer```
