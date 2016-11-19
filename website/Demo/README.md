@@ -1,6 +1,9 @@
-LASS Demo website
+#LASS Demo website
+* Content: **demo**
+* Version: **1.0**
+* Update: **Nov 19, 2016 17:02**
 
-===
+
 
 ##Installation
 
@@ -13,7 +16,7 @@ LASS Demo website
 	* Open the terminal.
 	* Change directory to the folder of this demo.
 		```
-		$ cd ../demo
+		$ cd ../Demo
 		```
 
 	* Using Python to setup ```SimpleHTTPServer```
