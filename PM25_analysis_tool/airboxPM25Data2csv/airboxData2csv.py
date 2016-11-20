@@ -68,7 +68,7 @@ def getGPS_TimeList(GPSList,arg_city,IDList,IDindex):
 	#get Lat
 	GPSQuery = client.query(' select "Gps_lat" from ' + arg_city + ' where "Device_id"=\''+IDList[IDindex]+'\';') 	
 	GPSLatSet = re.search("(?:\d+\.\d*)?\d,", str(GPSQuery))
-	GPSList.append('Lon: '+GPSLonSet.group().replace(',','')+','+'Lat: '+GPSLatSet.group().replace(',',''))
+	GPSList.append(GPSLonSet.group().replace(',','')+','+GPSLatSet.group().replace(',',''))
 	
 	#get time
 	timeSet = " ".join(re.findall("\d{4}[-]?\d{2}[-]?\d{2}T\d{2}[:]?\d{2}[:]?\d{2}Z", str(GPSQuery)))
