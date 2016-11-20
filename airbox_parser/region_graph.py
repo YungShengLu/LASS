@@ -1,5 +1,5 @@
 # The program will query data in the DB, output a graph with nodes and links.
-
+# Output JSON file?
 
 # example(bigger nodes):
 
