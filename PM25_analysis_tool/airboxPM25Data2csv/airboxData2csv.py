@@ -1,5 +1,9 @@
 import sys
 import re
+import os
+import json
+import ast
+
 from influxdb import InfluxDBClient
 client = InfluxDBClient('localhost', 8086, 'root', 'root', 'AirBox_test') 
 client.create_database('AirBox_test') 
@@ -8,50 +12,54 @@ GPSList=[]
 timeList=[]
 #extract ID from query replies
 def getIDList(IDList,arg_city):
-	#get all device id
-	result = client.query(' select "PM2.5"::field,"Device_id"::tag  from '+ arg_city +' group by "Device_id" limit 1;') 
-	#print("Result: {0}".format(result)) 
+        #get all device id
+        result = client.query(' select "PM2.5"::field,"Device_id"::tag  from '+ arg_city +' group by "Device_id" limit 1;') 
+        #print("Result: {0}".format(result)) 
 
-	#extract ID from query replies
-	IDSet = " ".join(re.findall("74[0-9A-Z]\w+|28[0-9A-Z]\w+", str(result)))
-	temp=""
-	for index in range(len(IDSet)):
-		if index%26==0:
-			temp+=IDSet[index:index+12]
-			IDList.append(temp)
-			temp=""
+        #extract ID from query replies
+        IDSet = " ".join(re.findall("74[0-9A-Z]\w+|28[0-9A-Z]\w+", str(result)))
+        temp=""
+        for index in range(len(IDSet)):
+                if index%26==0:
+                        temp+=IDSet[index:index+12]
+                        IDList.append(temp)
+                        temp=""
 
 #get a list of PM2.5 if PM2.5 ranges from 10~99
 def getPM25List(PM25List,arg_city,IDList,IDindex,timeList):
-	PM25Query = client.query(' select "PM2.5" from ' + arg_city + ' where "Device_id"=\''+IDList[IDindex]+'\';') 	
-	#print PM25Query
-	PM25Set = " ".join(re.findall("(?:\d*)?\d,", str(PM25Query)))
-	#print PM25Set
-	
-	#print ('pm25 len ',len(PM25Set))
-	
-	# split PM25Set by ',' to create a list to retain all PM2.5 value
-	PM25List=PM25Set.split(',')
+        PM25Query = client.query(' select "PM2.5" from ' + arg_city + ' where "Device_id"=\''+IDList[IDindex]+'\';')    
+        #print PM25Query
+        PM25Set = " ".join(re.findall("(?:\d*)?\d,", str(PM25Query)))
+        #print PM25Set
+        
+        #print ('pm25 len ',len(PM25Set))
+        
+        # split PM25Set by ',' to create a list to retain all PM2.5 value
+        PM25List=PM25Set.split(',')
 
-	#delete the empty element derived from the last ',' in PM25Set at the end of this list
-	del PM25List[len(PM25List)-1]
-	
-	#write pm2.5 to file	
-	write2file(arg_city,IDList,IDindex,PM25List,timeList)
+        #delete the empty element derived from the last ',' in PM25Set at the end of this list
+        del PM25List[len(PM25List)-1]
+        
+        #write pm2.5 to file    
+        write2file(arg_city,IDList,IDindex,PM25List,timeList)
       
 
-	
+        
 #open a file for each airbox and write each data of the airbox to that file
-def write2file(arg_city,IDList,IDindex,PM25List,timeList):
-	fp = open("../timeFactorObservation/"+arg_city+"/"+IDList[IDindex]+".csv", "w+")
-	#print len(timeList)
-	for PM25index in range(len(PM25List)): 
-		fp.write( str(PM25index)+","+PM25List[PM25index]+","+timeList[PM25index]+"\n");
-				#print (str(PM25index)+","+PM25List[PM25index]+"\n")
 
-				#print (arg_city.capitalize()+" Finish time: "+str(finish_time), end="\n", file=fp)
-	        	
-	fp.close()
+if not os.path.exists("../timeFactorObservation"):
+        os.makedirs("../timeFactorObservation")
+
+def write2file(arg_city,IDList,IDindex,PM25List,timeList):
+        fp = open("../timeFactorObservation/"+arg_city+"/"+IDList[IDindex]+".csv", "w+")
+        #print len(timeList)
+        for PM25index in range(len(PM25List)): 
+                fp.write( str(PM25index)+","+PM25List[PM25index]+","+timeList[PM25index]+"\n");
+                                #print (str(PM25index)+","+PM25List[PM25index]+"\n")
+
+                                #print (arg_city.capitalize()+" Finish time: "+str(finish_time), end="\n", file=fp)
+                        
+        fp.close()
 
 
 
@@ -59,65 +67,93 @@ def write2file(arg_city,IDList,IDindex,PM25List,timeList):
 #get a list of PM2.5 if PM2.5 ranges from 10~99
 def getGPS_TimeList(GPSList,arg_city,IDList,IDindex):
 
-	
+        
 
-	#get Lon
-	GPSQuery = client.query(' select "Gps_lon" from ' + arg_city + ' where "Device_id"=\''+IDList[IDindex]+'\';') 	
-	GPSLonSet = re.search("(?:\d+\.\d*)?\d,", str(GPSQuery))
-	
-	#get Lat
-	GPSQuery = client.query(' select "Gps_lat" from ' + arg_city + ' where "Device_id"=\''+IDList[IDindex]+'\';') 	
-	GPSLatSet = re.search("(?:\d+\.\d*)?\d,", str(GPSQuery))
-	GPSList.append(GPSLonSet.group().replace(',','')+','+GPSLatSet.group().replace(',',''))
-	
-	#get time
-	timeSet = " ".join(re.findall("\d{4}[-]?\d{2}[-]?\d{2}T\d{2}[:]?\d{2}[:]?\d{2}Z", str(GPSQuery)))
-	#print timeSet
-	timeList=timeSet.split(' ')
-	#print timeList
-	
-	return timeList
-	
+        #get Lon
+        GPSQuery = client.query(' select "Gps_lon" from ' + arg_city + ' where "Device_id"=\''+IDList[IDindex]+'\'limit 1;')    
+        # GPSLonSet = re.search("(?:\d+\.\d*)?\d,", str(GPSQuery))
+        print(GPSQuery)
+
+        refine = re.findall('\[(.*?)\]', str(GPSQuery))[0]
+        # print(refine)
+        # print(type(refine))
+
+        data_lon = ast.literal_eval(refine)
+        # print(data_lon)
+        print(data_lon['Gps_lon'])
 
 
-	
+        #get Lat
+        print("get lat")
+        GPSQuery = client.query(' select "Gps_lat" from ' + arg_city + ' where "Device_id"=\''+IDList[IDindex]+'\';')   
+        
+        # print(GPSQuery)
+
+        refine = re.findall('\[(.*?)\]', str(GPSQuery))[0]
+        # print(refine)
+        # print(type(refine))
+
+        split = re.findall('\{(.*?)\}',refine)[0]
+        print(split)
+        new_string = "{"+split+"}"
+
+        data_lat = ast.literal_eval(new_string)
+        # print(data_lat)
+        print(data_lat['Gps_lat'])
+
+        
+        # GPSLatSet = re.search("(?:\d+\.\d*)?\d,", str(GPSQuery))
+        # print(GPSLonSet.group())
+        GPSList.append(str(data_lon['Gps_lon'])+','+str(data_lat['Gps_lat']))
+        
+        #get time
+        timeSet = " ".join(re.findall("\d{4}[-]?\d{2}[-]?\d{2}T\d{2}[:]?\d{2}[:]?\d{2}Z", str(GPSQuery)))
+        #print timeSet
+        timeList=timeSet.split(' ')
+        #print timeList
+        
+        return timeList
+        
+
+
+        
 def writeGPS2file(arg_city,IDList,GPSList):
-	fp = open("../timeFactorObservation/"+arg_city+"/GPSList.csv", "w+")
-	for GPSindex in range(len(GPSList)): 
-		fp.write( IDList[GPSindex]+","+GPSList[GPSindex]+"\n");
-				
-	fp.close()	
+        fp = open("../timeFactorObservation/"+arg_city+"/GPSList.csv", "w+")
+        for GPSindex in range(len(GPSList)): 
+                fp.write( IDList[GPSindex]+","+GPSList[GPSindex]+"\n");
+                                
+        fp.close()      
 
 def main():
 
-	#read in target city
-	arg_city = sys.argv[1].capitalize()
+        #read in target city
+        arg_city = sys.argv[1].capitalize()
 
-	#get a list of distinct ID
-	IDList=[]
-	getIDList(IDList,arg_city)
-	
+        #get a list of distinct ID
+        IDList=[]
+        getIDList(IDList,arg_city)
+        
 
-	print('City: ',arg_city)
-	print('IDList: ',IDList)
-	print('AirBox num: ',len(IDList))
+        print('City: ',arg_city)
+        print('IDList: ',IDList)
+        print('AirBox num: ',len(IDList))
 
 
-	
-	# get data from each airbox and write it to each airbox's csv file
-	
-	for IDindex in range(len(IDList)): 
-		#get a list of PM2.5 if PM2.5 ranges from 10~99
-		timeList=getGPS_TimeList(GPSList,arg_city,IDList,IDindex)
-		
-		#get PM25List and write to file	
-		getPM25List(PM25List,arg_city,IDList,IDindex,timeList)
-		#print PM25List  is empty here
-		
-	
-	
-	#write GPS and ID to file
-	writeGPS2file(arg_city,IDList,GPSList)
+        
+        # get data from each airbox and write it to each airbox's csv file
+        
+        for IDindex in range(len(IDList)): 
+                #get a list of PM2.5 if PM2.5 ranges from 10~99
+                timeList=getGPS_TimeList(GPSList,arg_city,IDList,IDindex)
+                
+                #get PM25List and write to file 
+                getPM25List(PM25List,arg_city,IDList,IDindex,timeList)
+                #print PM25List  is empty here
+                
+        
+        
+        #write GPS and ID to file
+        writeGPS2file(arg_city,IDList,GPSList)
 if __name__ == '__main__':
         main()
 
