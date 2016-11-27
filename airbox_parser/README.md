@@ -5,9 +5,7 @@
 
 ##Framework
 
-![Diagram](https://github.com/YungShengLu/LASS/blob/PM25_parser_fix/LASS_framework)
-
-<a href="http://jgraph.github.io/drawio-github/edit-diagram.html?repo=drawio-github&path=diagram.png" target="_blank">Edit</a> | <a href="https://www.draw.io/?url=http%3A%2F%2Fjgraph.github.io%2Fdrawio-github%2Fdiagram.png" target="_blank">Edit As New</a>
+![Diagram](https://www.draw.io/?chrome=0&lightbox=1&edit=https%3A%2F%2Fwww.draw.io%2F%23G0B4HtMogtiujlUnlJYWJmT1pETXM&nav=1#G0B4HtMogtiujlUnlJYWJmT1pETXM)
 
 
 ##Notice
