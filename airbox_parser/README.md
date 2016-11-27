@@ -5,7 +5,7 @@
 
 ##Framework
 
-![Diagram](https://www.draw.io/?chrome=0&lightbox=1&edit=https%3A%2F%2Fwww.draw.io%2F%23G0B4HtMogtiujlUnlJYWJmT1pETXM&nav=1#G0B4HtMogtiujlUnlJYWJmT1pETXM)
+![Diagram](https://github.com/YungShengLu/LASS/blob/PM25_parser_fix/LASS_framework.png)
 
 
 ##Notice
