@@ -9,7 +9,7 @@ class parseSite:
 		self.url = 'http://nrl.iis.sinica.edu.tw/LASS/last-all-' + self.src + '.json'
 		self.jsonData = {}
 
-		#connect with DB (AirBox / LASS)
+		#connect with DB (PM25)
 		self.database = database
 		self.client = InfluxDBClient('localhost', 8086, 'root', 'root', self.database)
 		self.client.create_database(database)
@@ -26,9 +26,12 @@ class parseSite:
 		#classify the data and write into database
 		for i in range(self.jsonData.get('num_of_records')):
 			json_body = [{
+				"measurement": self.src,
 				"time": self.jsonData.get('version'),
+				"tags": {
+					"Device_id": self.jsonData.get('feeds')[i].get('device_id')
+				},
 				"fields": {
-					"device_id": self.jsonData.get('feeds')[i].get('device_id'),
 					"PM2.5": self.jsonData.get('feeds')[i].get('s_d0'),
 					"Temperature": float(self.jsonData.get('feeds')[i].get('s_t0')),
 					"Humidity": self.jsonData.get('feeds')[i].get('s_h0'),
@@ -49,6 +52,7 @@ class parseSite:
 		self.client.create_database(database)
 
 		json_body = [{
+			"measurement": self.src + "_record",
 			"time": strftime("%Y-%m-%d_%H:%M:%S", gmtime()),
 			"fields": {
 				"parse_time": self.jsonData.get('version'),

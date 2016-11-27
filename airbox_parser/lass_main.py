@@ -8,7 +8,7 @@ from airbox.parseSite import parseSite
 
 def main():
 	arg_src = sys.argv[1]
-	database = 'AirBox_test'
+	database = 'PM25'
 
 	#parse site data
 	parse = parseSite(arg_src, database)
