@@ -7,7 +7,6 @@
 
 ![Diagram](https://github.com/YungShengLu/LASS/blob/PM25_parser_fix/LASS_framework.png)
 
-
 ##Notice
 * **History**
 	* **Nov 15, 2016 23:51** - 無法抓到的超時測站ID，以及甚麼時候會故障(抓失敗的時間)

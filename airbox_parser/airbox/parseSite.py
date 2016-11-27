@@ -32,9 +32,9 @@ class parseSite:
 					"Device_id": self.jsonData.get('feeds')[i].get('device_id')
 				},
 				"fields": {
-					"PM2.5": self.jsonData.get('feeds')[i].get('s_d0'),
+					"PM2.5": float(self.jsonData.get('feeds')[i].get('s_d0')),
 					"Temperature": float(self.jsonData.get('feeds')[i].get('s_t0')),
-					"Humidity": self.jsonData.get('feeds')[i].get('s_h0'),
+					"Humidity": float(self.jsonData.get('feeds')[i].get('s_h0')),
 					"Gps_lat": float(self.jsonData.get('feeds')[i].get('gps_lat')),
 					"Gps_lon": float(self.jsonData.get('feeds')[i].get('gps_lon')),
 					"Gps_num": self.jsonData.get('feeds')[i].get('gps_num')
