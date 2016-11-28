@@ -52,12 +52,14 @@ class parseSite:
 		self.client.create_database(self.database)
 
 		json_body = [{
-			"measurement": self.src + "_record",
+			"measurement": self.src + '_record',
 			"time": strftime("%Y-%m-%d_%H:%M:%S", gmtime()),
+			"tags": {
+				"Parse_time": self.jsonData.get('version')
+			},
 			"fields": {
-				"parse_time": self.jsonData.get('version'),
-				"parse_site": self.jsonData.get('num_of_records'),
-				"parse_src": self.jsonData.get('source')
+				"Parse_site": self.jsonData.get('num_of_records'),
+				"Parse_src": self.jsonData.get('source')
 			}
 		}]
 		self.client.write_points(json_body)
