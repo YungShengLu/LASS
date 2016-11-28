@@ -12,7 +12,7 @@ class parseSite:
 		#connect with DB (PM25)
 		self.database = database
 		self.client = InfluxDBClient('localhost', 8086, 'root', 'root', self.database)
-		self.client.create_database(database)
+		self.client.create_database(self.database)
 
 	def parseData(self):
 		try:
@@ -49,7 +49,7 @@ class parseSite:
 		#connect with DB (AirBox_record / LASS_record)
 		self.database = 'AirBox_record'
 		self.client = InfluxDBClient('localhost', 8086, 'root', 'root', self.database)
-		self.client.create_database(database)
+		self.client.create_database(self.database)
 
 		json_body = [{
 			"measurement": self.src + "_record",
