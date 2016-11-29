@@ -1,6 +1,9 @@
 from requests import get, exceptions
 from time import sleep, gmtime, strftime
 from influxdb import InfluxDBClient
+###
+from datetime import datetime
+####
 
 
 class parseSite:
@@ -8,13 +11,15 @@ class parseSite:
 		self.src = src
 		self.url = 'http://nrl.iis.sinica.edu.tw/LASS/last-all-' + self.src + '.json'
 		self.jsonData = {}
-
 		#connect with DB (PM25)
 		self.database = database
+
+		
+	def parseData(self):
+		#connect with DB (PM25)
 		self.client = InfluxDBClient('localhost', 8086, 'root', 'root', self.database)
 		self.client.create_database(self.database)
 
-	def parseData(self):
 		try:
 			req = get(self.url, timeout = 25)
 		except exceptions.Timeout as e:
@@ -23,11 +28,16 @@ class parseSite:
 		#parse data
 		self.jsonData = req.json()
 
+		
+
+
 		#classify the data and write into database
 		for i in range(self.jsonData.get('num_of_records')):
+			
 			json_body = [{
-				"measurement": self.src,
-				"time": self.jsonData.get('version'),
+				"measurement":self.src,
+                #"time": self.jsonData.get('version'),
+				"time":self.jsonData.get('version'),
 				"tags": {
 					"Device_id": self.jsonData.get('feeds')[i].get('device_id')
 				},
@@ -39,6 +49,7 @@ class parseSite:
 					"Gps_lon": float(self.jsonData.get('feeds')[i].get('gps_lon')),
 					"Gps_num": self.jsonData.get('feeds')[i].get('gps_num')
 				}
+	
 			}]
 			self.client.write_points(json_body)
 
@@ -47,13 +58,16 @@ class parseSite:
 
 	def record(self):
 		#connect with DB (AirBox_record / LASS_record)
+		originalDB=self.database
 		self.database = 'AirBox_record'
 		self.client = InfluxDBClient('localhost', 8086, 'root', 'root', self.database)
 		self.client.create_database(self.database)
 
 		json_body = [{
 			"measurement": self.src + '_record',
-			"time": strftime("%Y-%m-%d_%H:%M:%S", gmtime()),
+			#"time": strftime("%Y-%m-%d_%H:%M:%S", gmtime()),
+			"time":datetime.utcnow(),
+
 			"tags": {
 				"Parse_time": self.jsonData.get('version')
 			},
@@ -63,3 +77,8 @@ class parseSite:
 			}
 		}]
 		self.client.write_points(json_body)
+
+		#restore self.database to the DB that stores the parsed data.
+		self.database=originalDB
+
+
