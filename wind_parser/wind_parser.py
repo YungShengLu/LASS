@@ -12,8 +12,9 @@ import urllib.request
 from datetime import datetime,timedelta   
 #access influxDB and create database
 from influxdb import InfluxDBClient
-client = InfluxDBClient('localhost',8086,'root','root','LASS_WIND')
-client.create_database('LASS_WIND')
+database='LASS_WIND'
+client = InfluxDBClient('localhost',8086,'root','root',database)
+client.create_database(database)
 #get today's year 
 thisYear=str(datetime.now().date().year)
 
@@ -121,7 +122,7 @@ for i in range(0,len(observeList)):
     #recordTime=recordTime.replace(year = recordTime.year + 116)#since 1900
     #print (recordTime)
     #recordTime=datetime.strptime(str(recordTime),"%Y-%m-%d %H:%M:%S" )
-    json_body=[{"measurement":"ancient_wind","tags":{"Station":observeList[i].Station},"timestamp":recordTime ,"fields":{"County":observeList[i].County,"Direction":observeList[i].WindList[i*24].Direction,"Speed":observeList[i].WindList[i*24].Speed,"Gust":observeList[i].WindList[i*24].Gust}}]
+    json_body=[{"measurement":"wind","tags":{"Station":observeList[i].Station},"timestamp":recordTime ,"fields":{"County":observeList[i].County,"Direction":observeList[i].WindList[i*24].Direction,"Speed":observeList[i].WindList[i*24].Speed,"Gust":observeList[i].WindList[i*24].Gust}}]
     
     client.write_points(json_body)
 
