@@ -49,7 +49,7 @@
 
 ##Description
 
-###Retrieve PM2.5 data and store it as CSV file for each device in measurement 'airbox' / 'lass'.
+###"toCSV" in the above diagram: Retrieve PM2.5 data and store it as CSV file for each device in measurement 'airbox' / 'lass'.
 
 This program retrieves PM2.5 data for each device stored in database:'PM25',measurement:'airbox'/'lass' of influxDB .
 It sets up folders './PM2.5_csv/airbox' or './PM2.5_csv/airbox'(if these folder don't exist) according to your cmd to keep all the CSV files gernerated by this program that stores device's PM2.5 data of the requested measurement typed in cmd .
