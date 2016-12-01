@@ -12,7 +12,7 @@ class Node(object):
         self.lat = lat
         self.lon = lon
     def hello(self):
-        print("I'm "+ self.id+" Lat="+self.lat+" and Lon="+self.lon)
+        print("I'm "+ self.id+" Lat="+str(self.lat)+" and Lon="+str(self.lon))
 
 # fuction to collect all Gps data in DB
 import re
@@ -37,7 +37,7 @@ def collectAllGps(Gpslist, kind, IDList):
 
     for i in range(len(IDs)):
         IDList.append(IDs[i])
-        Gpslist.append((LonList[i], LatList[i]))
+        Gpslist.append((float(LonList[i]), float(LatList[i])))
 
 
 def main():
@@ -52,8 +52,8 @@ def main():
     for i in range(1, len(lines)):
         segment = lines[i].split(",")
         id = "factory" + segment[0]
-        lat = segment[1]
-        lon = segment[2]
+        lat = float(segment[1])
+        lon = float(segment[2])
         #print([id, type, lat, lon])
         
         node = Node(id, type, lat, lon)
