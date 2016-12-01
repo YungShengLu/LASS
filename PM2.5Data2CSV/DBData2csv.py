@@ -27,13 +27,7 @@ if not os.path.exists("./PM2.5_csv/lass"):
 if not os.path.exists("./PM2.5_csv/airbox"):
 		os.makedirs("./PM2.5_csv/airbox")
 
-#if the folder already exsits , delete it and recreate it to avoid retainning outdated files.
-if os.path.exists("./PM2.5_csv/lass"):
-        shutil.rmtree('./PM2.5_csv/lass')
-        os.makedirs("./PM2.5_csv/lass")
-if os.path.exists("./PM2.5_csv/airbox"):
-        shutil.rmtree('./PM2.5_csv/airbox')
-        os.makedirs("./PM2.5_csv/airbox")
+
 
 
 
@@ -150,25 +144,39 @@ def write2file(arg_measurement,IDList,PM25List,IDindex):
 def main():
 
         #read in target measurement
-        arg_measurement = sys.argv[1]
-        
+		arg_measurement = sys.argv[1]
+		if arg_measurement=='airbox':
+			#if the folder already exsits , delete it and recreate it to avoid retainning outdated files.
+			if os.path.exists("./PM2.5_csv/airbox"):
+					shutil.rmtree('./PM2.5_csv/airbox')
+					os.makedirs("./PM2.5_csv/airbox")
+
+		if arg_measurement=='lass':
+		#if the folder already exsits , delete it and recreate it to avoid retainning outdated files.
+			if os.path.exists("./PM2.5_csv/lass"):
+					shutil.rmtree('./PM2.5_csv/lass')
+					os.makedirs("./PM2.5_csv/lass")
+
+
+
         #read in target past time if it exists in the cmd
-        arg_pastTime=0
-        if len(sys.argv)==3:
-                arg_pastTime= sys.argv[2]
+		arg_pastTime=0
+		if len(sys.argv)==3:
+			arg_pastTime= sys.argv[2]
 
-       
-        getIDList(arg_measurement,IDList)
-        for IDindex in range(len(IDList)):
-                getPM25List(PM25List,arg_measurement,IDindex,IDList,arg_pastTime)
-                write2file(arg_measurement,IDList,PM25List,IDindex)
-                del PM25List[:]
+		
 
-        print('Measurement: ',arg_measurement)
-        print('Total AirBox num: ',len(IDList))
-        print('Response AirBox num: ',len(IDList)-lackDataID)
+		getIDList(arg_measurement,IDList)
+		for IDindex in range(len(IDList)):
+				getPM25List(PM25List,arg_measurement,IDindex,IDList,arg_pastTime)
+				write2file(arg_measurement,IDList,PM25List,IDindex)
+				del PM25List[:]
+
+		print('Measurement: ',arg_measurement)
+		print('Total AirBox num: ',len(IDList))
+		print('Response AirBox num: ',len(IDList)-lackDataID)
         
         
 if __name__ == '__main__':
-        main()
+	main()
 
