@@ -31,9 +31,9 @@ def collectAllGps(Gpslist, kind, IDList):
     
     IDs = list(re.findall("Device_id': u'(.*?)'", GPSQuery))
 
-    LonList = re.findall("Gps_lon': ([0-9]*\.*[0-9]*)", GPSQuery)
+    LonList = re.findall("Gps_lon': (-*[0-9]*\.*[0-9]*)", GPSQuery)
 
-    LatList = re.findall("Gps_lat': ([0-9]*\.*[0-9]*)", GPSQuery)
+    LatList = re.findall("Gps_lat': (-*[0-9]*\.*[0-9]*)", GPSQuery)
 
     for i in range(len(IDs)):
         IDList.append(IDs[i])
