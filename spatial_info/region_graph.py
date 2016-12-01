@@ -115,11 +115,14 @@ import json
 def node2file(fn, Allnodes):
     print("writing...")
     dict = {}
+    sites = []
+    
     for n in Allnodes:
-        dict[n.id] = {}
-        dict[n.id]["type"] = n.type
-        dict[n.id]["lon"] = n.lon
-        dict[n.id]["lat"] = n.lat
+        data = {"id":n.id, "lat":n.lat, "lon":n.lon, "type":n.type}
+        sites.append(data)
+    dict["sites"] = sites
+
+
     print(dict)
     print(len(dict))
     with open(fn, 'w') as fp:
