@@ -69,9 +69,9 @@ e.g.
 	$ python GetLatestPM25.py [source] 
 		// [source] = [airbox / lass]
 		
-
-* **Example**
 	```
+* **Example**
+	```shell
 	$ python GetLatestPM25.py airbox  
 	//set up airbox.csv to store latest PM2.5 data for each Device_id in measurement airbox.
 
