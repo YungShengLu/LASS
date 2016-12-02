@@ -26,7 +26,10 @@ svg.append("rect")
 var g = svg.append('g')
     .style('stroke-width', '0.5px');
 
-var region = svg.append('g');
+var region = svg.append('g'),
+    factory = svg.append('g'),
+    airbox = svg.append('g'),
+    lass = svg.append('g');
 
 var tooltip = d3.select('body')
     .append('div')
@@ -65,6 +68,102 @@ d3.json('topojson/taiwan.json', function(error, taiwan) {
         .attr('class', 'mesh');
 });
 
+d3.json('topojson/factory_topo.json', function(error, site) {
+    if (error)
+        return console.error(error);
+
+    //display all regions.
+    factory.selectAll('path')
+        .data(topojson.feature(site, site.objects.collection).features)
+        .enter()
+        .append('path')
+        .attr('d', path)
+        .attr('class', 'factory')
+        .on('click', zoom_in)
+        .on('mousemove', function(d) {
+            var mouse = d3.mouse(svg.node()).map(function(d) {
+                return parseInt(d);
+            });
+            tooltip.classed('hidden', false)
+                .attr('style', 'left:' + (mouse[0] + 15) + 'px; top:' + (mouse[1] - 35) + 'px')
+                .html(d.properties.device_id);
+        })
+        .on('mouseout', function() {
+            tooltip.classed('hidden', true);
+        });
+
+    factory.append('path')
+        .datum(topojson.mesh(site, site.objects.collection, function(a, b) {
+            return a !== b;
+        }))
+        .attr('d', path)
+        .attr('class', 'mesh');
+});
+
+d3.json('topojson/airbox_topo.json', function(error, site) {
+    if (error)
+        return console.error(error);
+
+    //display all regions.
+    airbox.selectAll('path')
+        .data(topojson.feature(site, site.objects.collection).features)
+        .enter()
+        .append('path')
+        .attr('d', path)
+        .attr('class', 'airbox')
+        .on('click', zoom_in)
+        .on('mousemove', function(d) {
+            var mouse = d3.mouse(svg.node()).map(function(d) {
+                return parseInt(d);
+            });
+            tooltip.classed('hidden', false)
+                .attr('style', 'left:' + (mouse[0] + 15) + 'px; top:' + (mouse[1] - 35) + 'px')
+                .html(d.properties.device_id);
+        })
+        .on('mouseout', function() {
+            tooltip.classed('hidden', true);
+        });
+
+    airbox.append('path')
+        .datum(topojson.mesh(site, site.objects.collection, function(a, b) {
+            return a !== b;
+        }))
+        .attr('d', path)
+        .attr('class', 'mesh');
+});
+
+d3.json('topojson/lass_topo.json', function(error, site) {
+    if (error)
+        return console.error(error);
+
+    //display all regions.
+    lass.selectAll('path')
+        .data(topojson.feature(site, site.objects.collection).features)
+        .enter()
+        .append('path')
+        .attr('d', path)
+        .attr('class', 'lass')
+        .on('click', zoom_in)
+        .on('mousemove', function(d) {
+            var mouse = d3.mouse(svg.node()).map(function(d) {
+                return parseInt(d);
+            });
+            tooltip.classed('hidden', false)
+                .attr('style', 'left:' + (mouse[0] + 15) + 'px; top:' + (mouse[1] - 35) + 'px')
+                .html(d.properties.device_id);
+        })
+        .on('mouseout', function() {
+            tooltip.classed('hidden', true);
+        });
+
+    lass.append('path')
+        .datum(topojson.mesh(site, site.objects.collection, function(a, b) {
+            return a !== b;
+        }))
+        .attr('d', path)
+        .attr('class', 'mesh');
+});
+
 //click to zoom in
 function zoom_in(d) {
     if (active.node() === this)
@@ -85,6 +184,21 @@ function zoom_in(d) {
         .duration(750)
         .style('stroke-width', 1.5 / scale + 'px')
         .attr('transform', 'translate(' + translate + ')scale(' + scale + ')');
+
+    factory.transition()
+        .duration(750)
+        .style('stroke-width', 0.5 / scale + 'px')
+        .attr('transform', 'translate(' + translate + ')scale(' + scale + ')');
+
+    airbox.transition()
+        .duration(750)
+        .style('stroke-width', 0.5 / scale + 'px')
+        .attr('transform', 'translate(' + translate + ')scale(' + scale + ')');
+
+    lass.transition()
+        .duration(750)
+        .style('stroke-width', 0.5 / scale + 'px')
+        .attr('transform', 'translate(' + translate + ')scale(' + scale + ')');
 }
 
 //click to reset zoom
@@ -94,7 +208,22 @@ function zoom_reset() {
 
     region.transition()
         .duration(750)
-        .style('stroke-width', '1.5px')
+        .style('stroke-width', '1.1px')
+        .attr('transform', '');
+
+    factory.transition()
+        .duration(750)
+        .style('stroke-width', '0.1px')
+        .attr('transform', '');
+
+    airbox.transition()
+        .duration(750)
+        .style('stroke-width', '0.1px')
+        .attr('transform', '');
+
+    lass.transition()
+        .duration(750)
+        .style('stroke-width', '0.1px')
         .attr('transform', '');
 }
 

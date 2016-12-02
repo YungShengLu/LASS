@@ -18,6 +18,13 @@ div.tooltip {
     position: absolute;
 }
 
+.mesh {
+    fill: none;
+    stroke: #fff;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
 .region {
     fill: #B1B3B3;
     cursor: pointer;
@@ -31,9 +38,42 @@ div.tooltip {
     fill: orange;
 }
 
-.mesh {
-    fill: none;
-    stroke: #fff;
-    stroke-linecap: round;
-    stroke-linejoin: round;
+.factory {
+    fill: #B029CB;
+    cursor: pointer;
 }
+
+.factory:hover {
+    fill: #FF886A;
+}
+
+.factory.active {
+    fill: orange;
+}
+
+.airbox {
+    fill: #2276D5;
+    cursor: pointer;
+}
+
+.airbox:hover {
+    fill: #FF886A;
+}
+
+.airbox.active {
+    fill: orange;
+}
+
+.lass {
+    fill: #44CD2F;
+    cursor: pointer;
+}
+
+.lass:hover {
+    fill: #FF886A;
+}
+
+.lass.active {
+    fill: orange;
+}
+

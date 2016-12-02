@@ -1,0 +1,2472 @@
+{
+  "properties": [
+    {
+      "type": "factory",
+      "device_id": "factory1"
+    },
+    {
+      "type": "factory",
+      "device_id": "factory2"
+    },
+    {
+      "type": "factory",
+      "device_id": "factory3"
+    },
+    {
+      "type": "factory",
+      "device_id": "factory4"
+    },
+    {
+      "type": "factory",
+      "device_id": "factory5"
+    },
+    {
+      "type": "factory",
+      "device_id": "factory6"
+    },
+    {
+      "type": "factory",
+      "device_id": "factory7"
+    },
+    {
+      "type": "factory",
+      "device_id": "factory8"
+    },
+    {
+      "type": "factory",
+      "device_id": "factory9"
+    },
+    {
+      "type": "factory",
+      "device_id": "factory10"
+    },
+    {
+      "type": "factory",
+      "device_id": "factory11"
+    },
+    {
+      "type": "factory",
+      "device_id": "factory12"
+    },
+    {
+      "type": "factory",
+      "device_id": "factory13"
+    },
+    {
+      "type": "factory",
+      "device_id": "factory14"
+    },
+    {
+      "type": "factory",
+      "device_id": "factory15"
+    },
+    {
+      "type": "factory",
+      "device_id": "factory16"
+    },
+    {
+      "type": "factory",
+      "device_id": "factory17"
+    },
+    {
+      "type": "factory",
+      "device_id": "factory18"
+    },
+    {
+      "type": "factory",
+      "device_id": "factory19"
+    },
+    {
+      "type": "factory",
+      "device_id": "factory20"
+    },
+    {
+      "type": "factory",
+      "device_id": "factory21"
+    },
+    {
+      "type": "factory",
+      "device_id": "factory22"
+    },
+    {
+      "type": "factory",
+      "device_id": "factory23"
+    },
+    {
+      "type": "factory",
+      "device_id": "factory24"
+    },
+    {
+      "type": "factory",
+      "device_id": "factory25"
+    },
+    {
+      "type": "factory",
+      "device_id": "factory26"
+    },
+    {
+      "type": "factory",
+      "device_id": "factory27"
+    },
+    {
+      "type": "factory",
+      "device_id": "factory28"
+    },
+    {
+      "type": "factory",
+      "device_id": "factory29"
+    },
+    {
+      "type": "factory",
+      "device_id": "factory30"
+    },
+    {
+      "type": "factory",
+      "device_id": "factory31"
+    },
+    {
+      "type": "factory",
+      "device_id": "factory32"
+    },
+    {
+      "type": "factory",
+      "device_id": "factory33"
+    },
+    {
+      "type": "factory",
+      "device_id": "factory34"
+    },
+    {
+      "type": "factory",
+      "device_id": "factory35"
+    },
+    {
+      "type": "factory",
+      "device_id": "factory36"
+    },
+    {
+      "type": "factory",
+      "device_id": "factory37"
+    },
+    {
+      "type": "factory",
+      "device_id": "factory38"
+    },
+    {
+      "type": "factory",
+      "device_id": "factory39"
+    },
+    {
+      "type": "factory",
+      "device_id": "factory40"
+    },
+    {
+      "type": "factory",
+      "device_id": "factory41"
+    },
+    {
+      "type": "factory",
+      "device_id": "factory42"
+    },
+    {
+      "type": "factory",
+      "device_id": "factory43"
+    },
+    {
+      "type": "factory",
+      "device_id": "factory44"
+    },
+    {
+      "type": "factory",
+      "device_id": "factory45"
+    },
+    {
+      "type": "factory",
+      "device_id": "factory46"
+    },
+    {
+      "type": "factory",
+      "device_id": "factory47"
+    },
+    {
+      "type": "factory",
+      "device_id": "factory48"
+    },
+    {
+      "type": "factory",
+      "device_id": "factory49"
+    },
+    {
+      "type": "factory",
+      "device_id": "factory50"
+    },
+    {
+      "type": "factory",
+      "device_id": "factory51"
+    },
+    {
+      "type": "factory",
+      "device_id": "factory52"
+    },
+    {
+      "type": "factory",
+      "device_id": "factory53"
+    },
+    {
+      "type": "factory",
+      "device_id": "factory54"
+    },
+    {
+      "type": "factory",
+      "device_id": "factory55"
+    },
+    {
+      "type": "factory",
+      "device_id": "factory56"
+    },
+    {
+      "type": "factory",
+      "device_id": "factory57"
+    },
+    {
+      "type": "factory",
+      "device_id": "factory58"
+    },
+    {
+      "type": "factory",
+      "device_id": "factory59"
+    },
+    {
+      "type": "factory",
+      "device_id": "factory60"
+    },
+    {
+      "type": "factory",
+      "device_id": "factory61"
+    },
+    {
+      "type": "factory",
+      "device_id": "factory62"
+    },
+    {
+      "type": "factory",
+      "device_id": "factory63"
+    },
+    {
+      "type": "factory",
+      "device_id": "factory64"
+    },
+    {
+      "type": "factory",
+      "device_id": "factory65"
+    },
+    {
+      "type": "factory",
+      "device_id": "factory66"
+    },
+    {
+      "type": "factory",
+      "device_id": "factory67"
+    },
+    {
+      "type": "factory",
+      "device_id": "factory68"
+    },
+    {
+      "type": "factory",
+      "device_id": "factory69"
+    },
+    {
+      "type": "factory",
+      "device_id": "factory70"
+    },
+    {
+      "type": "factory",
+      "device_id": "factory71"
+    },
+    {
+      "type": "factory",
+      "device_id": "factory72"
+    },
+    {
+      "type": "factory",
+      "device_id": "factory73"
+    },
+    {
+      "type": "factory",
+      "device_id": "factory74"
+    },
+    {
+      "type": "factory",
+      "device_id": "factory75"
+    },
+    {
+      "type": "factory",
+      "device_id": "factory76"
+    },
+    {
+      "type": "factory",
+      "device_id": "factory77"
+    },
+    {
+      "type": "factory",
+      "device_id": "factory78"
+    },
+    {
+      "type": "factory",
+      "device_id": "factory79"
+    },
+    {
+      "type": "factory",
+      "device_id": "factory80"
+    },
+    {
+      "type": "factory",
+      "device_id": "factory81"
+    },
+    {
+      "type": "factory",
+      "device_id": "factory82"
+    },
+    {
+      "type": "factory",
+      "device_id": "factory83"
+    },
+    {
+      "type": "factory",
+      "device_id": "factory84"
+    },
+    {
+      "type": "factory",
+      "device_id": "factory85"
+    },
+    {
+      "type": "factory",
+      "device_id": "factory86"
+    },
+    {
+      "type": "factory",
+      "device_id": "factory87"
+    },
+    {
+      "type": "factory",
+      "device_id": "factory88"
+    },
+    {
+      "type": "factory",
+      "device_id": "factory89"
+    },
+    {
+      "type": "factory",
+      "device_id": "factory90"
+    },
+    {
+      "type": "factory",
+      "device_id": "factory91"
+    },
+    {
+      "type": "factory",
+      "device_id": "factory92"
+    },
+    {
+      "type": "factory",
+      "device_id": "factory93"
+    },
+    {
+      "type": "factory",
+      "device_id": "factory94"
+    },
+    {
+      "type": "factory",
+      "device_id": "factory95"
+    },
+    {
+      "type": "factory",
+      "device_id": "factory96"
+    },
+    {
+      "type": "factory",
+      "device_id": "factory97"
+    },
+    {
+      "type": "factory",
+      "device_id": "factory98"
+    },
+    {
+      "type": "factory",
+      "device_id": "factory99"
+    },
+    {
+      "type": "factory",
+      "device_id": "factory100"
+    },
+    {
+      "type": "factory",
+      "device_id": "factory101"
+    },
+    {
+      "type": "factory",
+      "device_id": "factory102"
+    },
+    {
+      "type": "factory",
+      "device_id": "factory103"
+    },
+    {
+      "type": "factory",
+      "device_id": "factory104"
+    },
+    {
+      "type": "factory",
+      "device_id": "factory105"
+    },
+    {
+      "type": "factory",
+      "device_id": "factory106"
+    },
+    {
+      "type": "factory",
+      "device_id": "factory107"
+    },
+    {
+      "type": "factory",
+      "device_id": "factory108"
+    },
+    {
+      "type": "factory",
+      "device_id": "factory109"
+    },
+    {
+      "type": "factory",
+      "device_id": "factory110"
+    },
+    {
+      "type": "factory",
+      "device_id": "factory111"
+    },
+    {
+      "type": "factory",
+      "device_id": "factory112"
+    },
+    {
+      "type": "factory",
+      "device_id": "factory113"
+    },
+    {
+      "type": "factory",
+      "device_id": "factory114"
+    },
+    {
+      "type": "factory",
+      "device_id": "factory115"
+    },
+    {
+      "type": "factory",
+      "device_id": "factory116"
+    },
+    {
+      "type": "factory",
+      "device_id": "factory117"
+    },
+    {
+      "type": "factory",
+      "device_id": "factory118"
+    },
+    {
+      "type": "factory",
+      "device_id": "factory119"
+    },
+    {
+      "type": "factory",
+      "device_id": "factory120"
+    },
+    {
+      "type": "factory",
+      "device_id": "factory121"
+    },
+    {
+      "type": "factory",
+      "device_id": "factory122"
+    },
+    {
+      "type": "factory",
+      "device_id": "factory123"
+    },
+    {
+      "type": "factory",
+      "device_id": "factory124"
+    },
+    {
+      "type": "factory",
+      "device_id": "factory125"
+    },
+    {
+      "type": "factory",
+      "device_id": "factory126"
+    },
+    {
+      "type": "factory",
+      "device_id": "factory127"
+    },
+    {
+      "type": "factory",
+      "device_id": "factory128"
+    },
+    {
+      "type": "factory",
+      "device_id": "factory129"
+    },
+    {
+      "type": "factory",
+      "device_id": "factory130"
+    },
+    {
+      "type": "factory",
+      "device_id": "factory131"
+    },
+    {
+      "type": "factory",
+      "device_id": "factory132"
+    },
+    {
+      "type": "factory",
+      "device_id": "factory133"
+    },
+    {
+      "type": "factory",
+      "device_id": "factory134"
+    },
+    {
+      "type": "factory",
+      "device_id": "factory135"
+    },
+    {
+      "type": "factory",
+      "device_id": "factory136"
+    },
+    {
+      "type": "factory",
+      "device_id": "factory137"
+    },
+    {
+      "type": "factory",
+      "device_id": "factory138"
+    },
+    {
+      "type": "factory",
+      "device_id": "factory139"
+    },
+    {
+      "type": "factory",
+      "device_id": "factory140"
+    },
+    {
+      "type": "factory",
+      "device_id": "factory141"
+    },
+    {
+      "type": "factory",
+      "device_id": "factory142"
+    },
+    {
+      "type": "factory",
+      "device_id": "factory143"
+    },
+    {
+      "type": "factory",
+      "device_id": "factory144"
+    },
+    {
+      "type": "factory",
+      "device_id": "factory145"
+    },
+    {
+      "type": "factory",
+      "device_id": "factory146"
+    },
+    {
+      "type": "factory",
+      "device_id": "factory147"
+    },
+    {
+      "type": "factory",
+      "device_id": "factory148"
+    },
+    {
+      "type": "factory",
+      "device_id": "factory149"
+    },
+    {
+      "type": "factory",
+      "device_id": "factory150"
+    },
+    {
+      "type": "factory",
+      "device_id": "factory151"
+    },
+    {
+      "type": "lass",
+      "device_id": ""
+    },
+    {
+      "type": "lass",
+      "device_id": "FT1_001"
+    },
+    {
+      "type": "lass",
+      "device_id": "FT1_005"
+    },
+    {
+      "type": "lass",
+      "device_id": "FT1_024"
+    },
+    {
+      "type": "lass",
+      "device_id": "FT1_028"
+    },
+    {
+      "type": "lass",
+      "device_id": "FT1_031"
+    },
+    {
+      "type": "lass",
+      "device_id": "FT1_032"
+    },
+    {
+      "type": "lass",
+      "device_id": "FT1_035"
+    },
+    {
+      "type": "lass",
+      "device_id": "FT1_037"
+    },
+    {
+      "type": "lass",
+      "device_id": "FT1_0446D"
+    },
+    {
+      "type": "lass",
+      "device_id": "FT1_0447A"
+    },
+    {
+      "type": "lass",
+      "device_id": "FT1_052"
+    },
+    {
+      "type": "lass",
+      "device_id": "FT1_063"
+    },
+    {
+      "type": "lass",
+      "device_id": "FT1_115"
+    },
+    {
+      "type": "lass",
+      "device_id": "FT1_23FC"
+    },
+    {
+      "type": "lass",
+      "device_id": "FT1_386"
+    },
+    {
+      "type": "lass",
+      "device_id": "FT1_388"
+    },
+    {
+      "type": "lass",
+      "device_id": "FT1_389"
+    },
+    {
+      "type": "lass",
+      "device_id": "FT1_390"
+    },
+    {
+      "type": "lass",
+      "device_id": "FT1_391"
+    },
+    {
+      "type": "lass",
+      "device_id": "FT1_392"
+    },
+    {
+      "type": "lass",
+      "device_id": "FT1_394"
+    },
+    {
+      "type": "lass",
+      "device_id": "FT1_395"
+    },
+    {
+      "type": "lass",
+      "device_id": "FT1_396"
+    },
+    {
+      "type": "lass",
+      "device_id": "FT1_397"
+    },
+    {
+      "type": "lass",
+      "device_id": "FT1_398"
+    },
+    {
+      "type": "lass",
+      "device_id": "FT1_401"
+    },
+    {
+      "type": "lass",
+      "device_id": "FT1_403"
+    },
+    {
+      "type": "lass",
+      "device_id": "FT1_456"
+    },
+    {
+      "type": "lass",
+      "device_id": "FT1_777"
+    },
+    {
+      "type": "lass",
+      "device_id": "FT1_928"
+    },
+    {
+      "type": "lass",
+      "device_id": "FT1_966"
+    },
+    {
+      "type": "lass",
+      "device_id": "FT1_CCH01"
+    },
+    {
+      "type": "lass",
+      "device_id": "FT1_CCUME_Factory101"
+    },
+    {
+      "type": "lass",
+      "device_id": "FT1_CCUME_Factory202"
+    },
+    {
+      "type": "lass",
+      "device_id": "FT1_DJES_1"
+    },
+    {
+      "type": "lass",
+      "device_id": "FT1_Dounan_Indoor"
+    },
+    {
+      "type": "lass",
+      "device_id": "FT1_Dounan_Outdoor"
+    },
+    {
+      "type": "lass",
+      "device_id": "FT3_999"
+    },
+    {
+      "type": "lass",
+      "device_id": "FTI_Toadmountain"
+    },
+    {
+      "type": "lass",
+      "device_id": "FTM_Bruce"
+    },
+    {
+      "type": "lass",
+      "device_id": "FTM_scott"
+    },
+    {
+      "type": "lass",
+      "device_id": "FT_CDPS"
+    },
+    {
+      "type": "lass",
+      "device_id": "FT_Minca"
+    },
+    {
+      "type": "lass",
+      "device_id": "FT_SYPS1"
+    },
+    {
+      "type": "lass",
+      "device_id": "HRY_7688"
+    },
+    {
+      "type": "lass",
+      "device_id": "LASD_62145"
+    },
+    {
+      "type": "lass",
+      "device_id": "LASD_ASTRO"
+    },
+    {
+      "type": "lass",
+      "device_id": "LASD_CMC_002"
+    },
+    {
+      "type": "lass",
+      "device_id": "LASS-FCU"
+    },
+    {
+      "type": "lass",
+      "device_id": "LASS-PI_014"
+    },
+    {
+      "type": "lass",
+      "device_id": "LASS-PI_022"
+    },
+    {
+      "type": "lass",
+      "device_id": "LASS-PI_026"
+    },
+    {
+      "type": "lass",
+      "device_id": "LASS-SPS_011"
+    },
+    {
+      "type": "lass",
+      "device_id": "NUK_518-1_inside"
+    },
+    {
+      "type": "lass",
+      "device_id": "NUK_518-1_outside"
+    },
+    {
+      "type": "lass",
+      "device_id": "NUK_H1-207_inside"
+    },
+    {
+      "type": "lass",
+      "device_id": "NUK_IM5F_outside"
+    },
+    {
+      "type": "lass",
+      "device_id": "NUK_RD5F_inside"
+    },
+    {
+      "type": "lass",
+      "device_id": "Quchi"
+    },
+    {
+      "type": "lass",
+      "device_id": "RCEC-LASS-001"
+    },
+    {
+      "type": "lass",
+      "device_id": "RCEC-LASS-002"
+    },
+    {
+      "type": "lass",
+      "device_id": "RCEC-LASS-003"
+    },
+    {
+      "type": "lass",
+      "device_id": "RCEC-LASS-005"
+    },
+    {
+      "type": "lass",
+      "device_id": "RCEC-LASS-006"
+    },
+    {
+      "type": "lass",
+      "device_id": "RCEC-LASS-007"
+    },
+    {
+      "type": "lass",
+      "device_id": "SSPS-Ameba"
+    },
+    {
+      "type": "lass",
+      "device_id": "WF_12781724"
+    },
+    {
+      "type": "lass",
+      "device_id": "WF_12977044"
+    },
+    {
+      "type": "lass",
+      "device_id": "WF_1664490"
+    },
+    {
+      "type": "lass",
+      "device_id": "WF_185372"
+    },
+    {
+      "type": "lass",
+      "device_id": "WF_198166"
+    },
+    {
+      "type": "lass",
+      "device_id": "YK_160"
+    },
+    {
+      "type": "airbox",
+      "device_id": "28C2DDDD3FE7"
+    },
+    {
+      "type": "airbox",
+      "device_id": "28C2DDDD3FFA"
+    },
+    {
+      "type": "airbox",
+      "device_id": "28C2DDDD4003"
+    },
+    {
+      "type": "airbox",
+      "device_id": "28C2DDDD400A"
+    },
+    {
+      "type": "airbox",
+      "device_id": "28C2DDDD4023"
+    },
+    {
+      "type": "airbox",
+      "device_id": "28C2DDDD40CB"
+    },
+    {
+      "type": "airbox",
+      "device_id": "28C2DDDD40E0"
+    },
+    {
+      "type": "airbox",
+      "device_id": "28C2DDDD40E8"
+    },
+    {
+      "type": "airbox",
+      "device_id": "28C2DDDD40F0"
+    },
+    {
+      "type": "airbox",
+      "device_id": "28C2DDDD40FD"
+    },
+    {
+      "type": "airbox",
+      "device_id": "28C2DDDD4149"
+    },
+    {
+      "type": "airbox",
+      "device_id": "28C2DDDD4154"
+    },
+    {
+      "type": "airbox",
+      "device_id": "28C2DDDD415C"
+    },
+    {
+      "type": "airbox",
+      "device_id": "28C2DDDD415E"
+    },
+    {
+      "type": "airbox",
+      "device_id": "28C2DDDD415F"
+    },
+    {
+      "type": "airbox",
+      "device_id": "28C2DDDD41A0"
+    },
+    {
+      "type": "airbox",
+      "device_id": "28C2DDDD41B2"
+    },
+    {
+      "type": "airbox",
+      "device_id": "28C2DDDD41C7"
+    },
+    {
+      "type": "airbox",
+      "device_id": "28C2DDDD41EB"
+    },
+    {
+      "type": "airbox",
+      "device_id": "28C2DDDD41ED"
+    },
+    {
+      "type": "airbox",
+      "device_id": "28C2DDDD41FA"
+    },
+    {
+      "type": "airbox",
+      "device_id": "28C2DDDD4229"
+    },
+    {
+      "type": "airbox",
+      "device_id": "28C2DDDD4233"
+    },
+    {
+      "type": "airbox",
+      "device_id": "28C2DDDD423A"
+    },
+    {
+      "type": "airbox",
+      "device_id": "28C2DDDD423C"
+    },
+    {
+      "type": "airbox",
+      "device_id": "28C2DDDD4240"
+    },
+    {
+      "type": "airbox",
+      "device_id": "28C2DDDD4242"
+    },
+    {
+      "type": "airbox",
+      "device_id": "28C2DDDD4244"
+    },
+    {
+      "type": "airbox",
+      "device_id": "28C2DDDD4246"
+    },
+    {
+      "type": "airbox",
+      "device_id": "28C2DDDD42C7"
+    },
+    {
+      "type": "airbox",
+      "device_id": "28C2DDDD42F7"
+    },
+    {
+      "type": "airbox",
+      "device_id": "28C2DDDD4305"
+    },
+    {
+      "type": "airbox",
+      "device_id": "28C2DDDD431C"
+    },
+    {
+      "type": "airbox",
+      "device_id": "28C2DDDD432A"
+    },
+    {
+      "type": "airbox",
+      "device_id": "28C2DDDD4333"
+    },
+    {
+      "type": "airbox",
+      "device_id": "28C2DDDD4338"
+    },
+    {
+      "type": "airbox",
+      "device_id": "28C2DDDD4342"
+    },
+    {
+      "type": "airbox",
+      "device_id": "28C2DDDD4343"
+    },
+    {
+      "type": "airbox",
+      "device_id": "28C2DDDD4344"
+    },
+    {
+      "type": "airbox",
+      "device_id": "28C2DDDD434D"
+    },
+    {
+      "type": "airbox",
+      "device_id": "28C2DDDD434F"
+    },
+    {
+      "type": "airbox",
+      "device_id": "28C2DDDD4353"
+    },
+    {
+      "type": "airbox",
+      "device_id": "28C2DDDD4354"
+    },
+    {
+      "type": "airbox",
+      "device_id": "28C2DDDD4357"
+    },
+    {
+      "type": "airbox",
+      "device_id": "28C2DDDD435A"
+    },
+    {
+      "type": "airbox",
+      "device_id": "28C2DDDD435C"
+    },
+    {
+      "type": "airbox",
+      "device_id": "28C2DDDD4360"
+    },
+    {
+      "type": "airbox",
+      "device_id": "28C2DDDD4363"
+    },
+    {
+      "type": "airbox",
+      "device_id": "28C2DDDD4367"
+    },
+    {
+      "type": "airbox",
+      "device_id": "28C2DDDD436E"
+    },
+    {
+      "type": "airbox",
+      "device_id": "28C2DDDD436F"
+    },
+    {
+      "type": "airbox",
+      "device_id": "28C2DDDD4373"
+    },
+    {
+      "type": "airbox",
+      "device_id": "28C2DDDD4377"
+    },
+    {
+      "type": "airbox",
+      "device_id": "28C2DDDD4378"
+    },
+    {
+      "type": "airbox",
+      "device_id": "28C2DDDD437C"
+    },
+    {
+      "type": "airbox",
+      "device_id": "28C2DDDD437D"
+    },
+    {
+      "type": "airbox",
+      "device_id": "28C2DDDD4394"
+    },
+    {
+      "type": "airbox",
+      "device_id": "28C2DDDD43FC"
+    },
+    {
+      "type": "airbox",
+      "device_id": "28C2DDDD43FD"
+    },
+    {
+      "type": "airbox",
+      "device_id": "28C2DDDD4408"
+    },
+    {
+      "type": "airbox",
+      "device_id": "28C2DDDD4413"
+    },
+    {
+      "type": "airbox",
+      "device_id": "28C2DDDD4414"
+    },
+    {
+      "type": "airbox",
+      "device_id": "28C2DDDD441E"
+    },
+    {
+      "type": "airbox",
+      "device_id": "28C2DDDD4423"
+    },
+    {
+      "type": "airbox",
+      "device_id": "28C2DDDD443A"
+    },
+    {
+      "type": "airbox",
+      "device_id": "28C2DDDD4463"
+    },
+    {
+      "type": "airbox",
+      "device_id": "28C2DDDD44AA"
+    },
+    {
+      "type": "airbox",
+      "device_id": "28C2DDDD44F8"
+    },
+    {
+      "type": "airbox",
+      "device_id": "28C2DDDD4501"
+    },
+    {
+      "type": "airbox",
+      "device_id": "28C2DDDD450C"
+    },
+    {
+      "type": "airbox",
+      "device_id": "28C2DDDD451B"
+    },
+    {
+      "type": "airbox",
+      "device_id": "28C2DDDD4525"
+    },
+    {
+      "type": "airbox",
+      "device_id": "28C2DDDD4528"
+    },
+    {
+      "type": "airbox",
+      "device_id": "28C2DDDD452E"
+    },
+    {
+      "type": "airbox",
+      "device_id": "28C2DDDD4532"
+    },
+    {
+      "type": "airbox",
+      "device_id": "28C2DDDD4534"
+    },
+    {
+      "type": "airbox",
+      "device_id": "28C2DDDD4539"
+    },
+    {
+      "type": "airbox",
+      "device_id": "28C2DDDD4559"
+    },
+    {
+      "type": "airbox",
+      "device_id": "28C2DDDD455E"
+    },
+    {
+      "type": "airbox",
+      "device_id": "28C2DDDD4566"
+    },
+    {
+      "type": "airbox",
+      "device_id": "28C2DDDD4568"
+    },
+    {
+      "type": "airbox",
+      "device_id": "28C2DDDD456A"
+    },
+    {
+      "type": "airbox",
+      "device_id": "28C2DDDD456C"
+    },
+    {
+      "type": "airbox",
+      "device_id": "28C2DDDD4571"
+    },
+    {
+      "type": "airbox",
+      "device_id": "28C2DDDD4572"
+    },
+    {
+      "type": "airbox",
+      "device_id": "28C2DDDD4575"
+    },
+    {
+      "type": "airbox",
+      "device_id": "28C2DDDD4579"
+    },
+    {
+      "type": "airbox",
+      "device_id": "28C2DDDD457A"
+    },
+    {
+      "type": "airbox",
+      "device_id": "28C2DDDD457B"
+    },
+    {
+      "type": "airbox",
+      "device_id": "28C2DDDD457D"
+    },
+    {
+      "type": "airbox",
+      "device_id": "28C2DDDD457E"
+    },
+    {
+      "type": "airbox",
+      "device_id": "28C2DDDD4583"
+    },
+    {
+      "type": "airbox",
+      "device_id": "28C2DDDD4585"
+    },
+    {
+      "type": "airbox",
+      "device_id": "28C2DDDD458A"
+    },
+    {
+      "type": "airbox",
+      "device_id": "28C2DDDD458F"
+    },
+    {
+      "type": "airbox",
+      "device_id": "28C2DDDD4592"
+    },
+    {
+      "type": "airbox",
+      "device_id": "28C2DDDD4594"
+    },
+    {
+      "type": "airbox",
+      "device_id": "28C2DDDD4597"
+    },
+    {
+      "type": "airbox",
+      "device_id": "28C2DDDD4598"
+    },
+    {
+      "type": "airbox",
+      "device_id": "28C2DDDD459A"
+    },
+    {
+      "type": "airbox",
+      "device_id": "28C2DDDD459C"
+    },
+    {
+      "type": "airbox",
+      "device_id": "28C2DDDD459D"
+    },
+    {
+      "type": "airbox",
+      "device_id": "28C2DDDD459F"
+    },
+    {
+      "type": "airbox",
+      "device_id": "28C2DDDD45A1"
+    },
+    {
+      "type": "airbox",
+      "device_id": "28C2DDDD45AA"
+    },
+    {
+      "type": "airbox",
+      "device_id": "28C2DDDD45D9"
+    },
+    {
+      "type": "airbox",
+      "device_id": "28C2DDDD45E0"
+    },
+    {
+      "type": "airbox",
+      "device_id": "28C2DDDD45E2"
+    },
+    {
+      "type": "airbox",
+      "device_id": "28C2DDDD45E7"
+    },
+    {
+      "type": "airbox",
+      "device_id": "28C2DDDD45E8"
+    },
+    {
+      "type": "airbox",
+      "device_id": "28C2DDDD45FA"
+    },
+    {
+      "type": "airbox",
+      "device_id": "28C2DDDD45FC"
+    },
+    {
+      "type": "airbox",
+      "device_id": "28C2DDDD4616"
+    },
+    {
+      "type": "airbox",
+      "device_id": "28C2DDDD4620"
+    },
+    {
+      "type": "airbox",
+      "device_id": "28C2DDDD4625"
+    },
+    {
+      "type": "airbox",
+      "device_id": "28C2DDDD46F1"
+    },
+    {
+      "type": "airbox",
+      "device_id": "28C2DDDD4774"
+    },
+    {
+      "type": "airbox",
+      "device_id": "28C2DDDD477E"
+    },
+    {
+      "type": "airbox",
+      "device_id": "28C2DDDD4781"
+    },
+    {
+      "type": "airbox",
+      "device_id": "28C2DDDD478C"
+    },
+    {
+      "type": "airbox",
+      "device_id": "28C2DDDD4790"
+    },
+    {
+      "type": "airbox",
+      "device_id": "28C2DDDD479C"
+    },
+    {
+      "type": "airbox",
+      "device_id": "28C2DDDD479E"
+    },
+    {
+      "type": "airbox",
+      "device_id": "28C2DDDD479F"
+    },
+    {
+      "type": "airbox",
+      "device_id": "28C2DDDD47A4"
+    },
+    {
+      "type": "airbox",
+      "device_id": "28C2DDDD47A8"
+    },
+    {
+      "type": "airbox",
+      "device_id": "28C2DDDD47AD"
+    },
+    {
+      "type": "airbox",
+      "device_id": "28C2DDDD47BB"
+    },
+    {
+      "type": "airbox",
+      "device_id": "28C2DDDD47BC"
+    },
+    {
+      "type": "airbox",
+      "device_id": "28C2DDDD47C0"
+    },
+    {
+      "type": "airbox",
+      "device_id": "28C2DDDD47C5"
+    },
+    {
+      "type": "airbox",
+      "device_id": "28C2DDDD47C7"
+    },
+    {
+      "type": "airbox",
+      "device_id": "28C2DDDD47C8"
+    },
+    {
+      "type": "airbox",
+      "device_id": "28C2DDDD47CB"
+    },
+    {
+      "type": "airbox",
+      "device_id": "28C2DDDD47CC"
+    },
+    {
+      "type": "airbox",
+      "device_id": "28C2DDDD47CE"
+    },
+    {
+      "type": "airbox",
+      "device_id": "28C2DDDD47D6"
+    },
+    {
+      "type": "airbox",
+      "device_id": "28C2DDDD47D7"
+    },
+    {
+      "type": "airbox",
+      "device_id": "28C2DDDD47DB"
+    },
+    {
+      "type": "airbox",
+      "device_id": "28C2DDDD47DE"
+    },
+    {
+      "type": "airbox",
+      "device_id": "28C2DDDD47E7"
+    },
+    {
+      "type": "airbox",
+      "device_id": "74DA388FF3A6"
+    },
+    {
+      "type": "airbox",
+      "device_id": "74DA388FF3AE"
+    },
+    {
+      "type": "airbox",
+      "device_id": "74DA388FF3B2"
+    },
+    {
+      "type": "airbox",
+      "device_id": "74DA388FF3B4"
+    },
+    {
+      "type": "airbox",
+      "device_id": "74DA388FF3BA"
+    },
+    {
+      "type": "airbox",
+      "device_id": "74DA388FF3D0"
+    },
+    {
+      "type": "airbox",
+      "device_id": "74DA388FF3EE"
+    },
+    {
+      "type": "airbox",
+      "device_id": "74DA388FF3F0"
+    },
+    {
+      "type": "airbox",
+      "device_id": "74DA388FF3F6"
+    },
+    {
+      "type": "airbox",
+      "device_id": "74DA388FF406"
+    },
+    {
+      "type": "airbox",
+      "device_id": "74DA388FF42A"
+    },
+    {
+      "type": "airbox",
+      "device_id": "74DA388FF42C"
+    },
+    {
+      "type": "airbox",
+      "device_id": "74DA388FF430"
+    },
+    {
+      "type": "airbox",
+      "device_id": "74DA388FF43A"
+    },
+    {
+      "type": "airbox",
+      "device_id": "74DA388FF43C"
+    },
+    {
+      "type": "airbox",
+      "device_id": "74DA388FF498"
+    },
+    {
+      "type": "airbox",
+      "device_id": "74DA388FF49E"
+    },
+    {
+      "type": "airbox",
+      "device_id": "74DA388FF4B4"
+    },
+    {
+      "type": "airbox",
+      "device_id": "74DA388FF4BC"
+    },
+    {
+      "type": "airbox",
+      "device_id": "74DA388FF4CA"
+    },
+    {
+      "type": "airbox",
+      "device_id": "74DA388FF4F8"
+    },
+    {
+      "type": "airbox",
+      "device_id": "74DA388FF4FA"
+    },
+    {
+      "type": "airbox",
+      "device_id": "74DA388FF502"
+    },
+    {
+      "type": "airbox",
+      "device_id": "74DA388FF534"
+    },
+    {
+      "type": "airbox",
+      "device_id": "74DA388FF552"
+    },
+    {
+      "type": "airbox",
+      "device_id": "74DA388FF5BC"
+    },
+    {
+      "type": "airbox",
+      "device_id": "74DA388FF5C4"
+    },
+    {
+      "type": "airbox",
+      "device_id": "74DA388FF65A"
+    },
+    {
+      "type": "airbox",
+      "device_id": "74DA388FF65C"
+    },
+    {
+      "type": "airbox",
+      "device_id": "74DA388FF6D0"
+    },
+    {
+      "type": "airbox",
+      "device_id": "74DA388FF73C"
+    },
+    {
+      "type": "airbox",
+      "device_id": "74DA388FF744"
+    },
+    {
+      "type": "airbox",
+      "device_id": "74DA3895C1FA"
+    },
+    {
+      "type": "airbox",
+      "device_id": "74DA3895C208"
+    },
+    {
+      "type": "airbox",
+      "device_id": "74DA3895C20A"
+    },
+    {
+      "type": "airbox",
+      "device_id": "74DA3895C210"
+    },
+    {
+      "type": "airbox",
+      "device_id": "74DA3895C212"
+    },
+    {
+      "type": "airbox",
+      "device_id": "74DA3895C214"
+    },
+    {
+      "type": "airbox",
+      "device_id": "74DA3895C218"
+    },
+    {
+      "type": "airbox",
+      "device_id": "74DA3895C21A"
+    },
+    {
+      "type": "airbox",
+      "device_id": "74DA3895C21C"
+    },
+    {
+      "type": "airbox",
+      "device_id": "74DA3895C21E"
+    },
+    {
+      "type": "airbox",
+      "device_id": "74DA3895C222"
+    },
+    {
+      "type": "airbox",
+      "device_id": "74DA3895C224"
+    },
+    {
+      "type": "airbox",
+      "device_id": "74DA3895C22A"
+    },
+    {
+      "type": "airbox",
+      "device_id": "74DA3895C230"
+    },
+    {
+      "type": "airbox",
+      "device_id": "74DA3895C270"
+    },
+    {
+      "type": "airbox",
+      "device_id": "74DA3895C27C"
+    },
+    {
+      "type": "airbox",
+      "device_id": "74DA3895C280"
+    },
+    {
+      "type": "airbox",
+      "device_id": "74DA3895C284"
+    },
+    {
+      "type": "airbox",
+      "device_id": "74DA3895C286"
+    },
+    {
+      "type": "airbox",
+      "device_id": "74DA3895C28E"
+    },
+    {
+      "type": "airbox",
+      "device_id": "74DA3895C290"
+    },
+    {
+      "type": "airbox",
+      "device_id": "74DA3895C292"
+    },
+    {
+      "type": "airbox",
+      "device_id": "74DA3895C294"
+    },
+    {
+      "type": "airbox",
+      "device_id": "74DA3895C2A0"
+    },
+    {
+      "type": "airbox",
+      "device_id": "74DA3895C2A2"
+    },
+    {
+      "type": "airbox",
+      "device_id": "74DA3895C2AA"
+    },
+    {
+      "type": "airbox",
+      "device_id": "74DA3895C2AC"
+    },
+    {
+      "type": "airbox",
+      "device_id": "74DA3895C2AE"
+    },
+    {
+      "type": "airbox",
+      "device_id": "74DA3895C2B0"
+    },
+    {
+      "type": "airbox",
+      "device_id": "74DA3895C2B2"
+    },
+    {
+      "type": "airbox",
+      "device_id": "74DA3895C2B4"
+    },
+    {
+      "type": "airbox",
+      "device_id": "74DA3895C2B6"
+    },
+    {
+      "type": "airbox",
+      "device_id": "74DA3895C2BA"
+    },
+    {
+      "type": "airbox",
+      "device_id": "74DA3895C2BC"
+    },
+    {
+      "type": "airbox",
+      "device_id": "74DA3895C2BE"
+    },
+    {
+      "type": "airbox",
+      "device_id": "74DA3895C2C4"
+    },
+    {
+      "type": "airbox",
+      "device_id": "74DA3895C2D4"
+    },
+    {
+      "type": "airbox",
+      "device_id": "74DA3895C2DA"
+    },
+    {
+      "type": "airbox",
+      "device_id": "74DA3895C2DC"
+    },
+    {
+      "type": "airbox",
+      "device_id": "74DA3895C2E2"
+    },
+    {
+      "type": "airbox",
+      "device_id": "74DA3895C2E4"
+    },
+    {
+      "type": "airbox",
+      "device_id": "74DA3895C2E8"
+    },
+    {
+      "type": "airbox",
+      "device_id": "74DA3895C2F0"
+    },
+    {
+      "type": "airbox",
+      "device_id": "74DA3895C2F2"
+    },
+    {
+      "type": "airbox",
+      "device_id": "74DA3895C2F4"
+    },
+    {
+      "type": "airbox",
+      "device_id": "74DA3895C2F8"
+    },
+    {
+      "type": "airbox",
+      "device_id": "74DA3895C2FA"
+    },
+    {
+      "type": "airbox",
+      "device_id": "74DA3895C2FE"
+    },
+    {
+      "type": "airbox",
+      "device_id": "74DA3895C304"
+    },
+    {
+      "type": "airbox",
+      "device_id": "74DA3895C306"
+    },
+    {
+      "type": "airbox",
+      "device_id": "74DA3895C308"
+    },
+    {
+      "type": "airbox",
+      "device_id": "74DA3895C30A"
+    },
+    {
+      "type": "airbox",
+      "device_id": "74DA3895C30C"
+    },
+    {
+      "type": "airbox",
+      "device_id": "74DA3895C312"
+    },
+    {
+      "type": "airbox",
+      "device_id": "74DA3895C314"
+    },
+    {
+      "type": "airbox",
+      "device_id": "74DA3895C318"
+    },
+    {
+      "type": "airbox",
+      "device_id": "74DA3895C31C"
+    },
+    {
+      "type": "airbox",
+      "device_id": "74DA3895C31E"
+    },
+    {
+      "type": "airbox",
+      "device_id": "74DA3895C320"
+    },
+    {
+      "type": "airbox",
+      "device_id": "74DA3895C322"
+    },
+    {
+      "type": "airbox",
+      "device_id": "74DA3895C324"
+    },
+    {
+      "type": "airbox",
+      "device_id": "74DA3895C326"
+    },
+    {
+      "type": "airbox",
+      "device_id": "74DA3895C32A"
+    },
+    {
+      "type": "airbox",
+      "device_id": "74DA3895C330"
+    },
+    {
+      "type": "airbox",
+      "device_id": "74DA3895C332"
+    },
+    {
+      "type": "airbox",
+      "device_id": "74DA3895C338"
+    },
+    {
+      "type": "airbox",
+      "device_id": "74DA3895C33A"
+    },
+    {
+      "type": "airbox",
+      "device_id": "74DA3895C33C"
+    },
+    {
+      "type": "airbox",
+      "device_id": "74DA3895C342"
+    },
+    {
+      "type": "airbox",
+      "device_id": "74DA3895C344"
+    },
+    {
+      "type": "airbox",
+      "device_id": "74DA3895C346"
+    },
+    {
+      "type": "airbox",
+      "device_id": "74DA3895C348"
+    },
+    {
+      "type": "airbox",
+      "device_id": "74DA3895C354"
+    },
+    {
+      "type": "airbox",
+      "device_id": "74DA3895C358"
+    },
+    {
+      "type": "airbox",
+      "device_id": "74DA3895C35E"
+    },
+    {
+      "type": "airbox",
+      "device_id": "74DA3895C362"
+    },
+    {
+      "type": "airbox",
+      "device_id": "74DA3895C366"
+    },
+    {
+      "type": "airbox",
+      "device_id": "74DA3895C368"
+    },
+    {
+      "type": "airbox",
+      "device_id": "74DA3895C36C"
+    },
+    {
+      "type": "airbox",
+      "device_id": "74DA3895C36E"
+    },
+    {
+      "type": "airbox",
+      "device_id": "74DA3895C376"
+    },
+    {
+      "type": "airbox",
+      "device_id": "74DA3895C38A"
+    },
+    {
+      "type": "airbox",
+      "device_id": "74DA3895C38C"
+    },
+    {
+      "type": "airbox",
+      "device_id": "74DA3895C38E"
+    },
+    {
+      "type": "airbox",
+      "device_id": "74DA3895C392"
+    },
+    {
+      "type": "airbox",
+      "device_id": "74DA3895C394"
+    },
+    {
+      "type": "airbox",
+      "device_id": "74DA3895C396"
+    },
+    {
+      "type": "airbox",
+      "device_id": "74DA3895C398"
+    },
+    {
+      "type": "airbox",
+      "device_id": "74DA3895C39A"
+    },
+    {
+      "type": "airbox",
+      "device_id": "74DA3895C39E"
+    },
+    {
+      "type": "airbox",
+      "device_id": "74DA3895C3A0"
+    },
+    {
+      "type": "airbox",
+      "device_id": "74DA3895C3AC"
+    },
+    {
+      "type": "airbox",
+      "device_id": "74DA3895C3AE"
+    },
+    {
+      "type": "airbox",
+      "device_id": "74DA3895C3B0"
+    },
+    {
+      "type": "airbox",
+      "device_id": "74DA3895C3B2"
+    },
+    {
+      "type": "airbox",
+      "device_id": "74DA3895C3B4"
+    },
+    {
+      "type": "airbox",
+      "device_id": "74DA3895C3B6"
+    },
+    {
+      "type": "airbox",
+      "device_id": "74DA3895C3B8"
+    },
+    {
+      "type": "airbox",
+      "device_id": "74DA3895C3BA"
+    },
+    {
+      "type": "airbox",
+      "device_id": "74DA3895C3BE"
+    },
+    {
+      "type": "airbox",
+      "device_id": "74DA3895C3C0"
+    },
+    {
+      "type": "airbox",
+      "device_id": "74DA3895C3C4"
+    },
+    {
+      "type": "airbox",
+      "device_id": "74DA3895C3C6"
+    },
+    {
+      "type": "airbox",
+      "device_id": "74DA3895C3CA"
+    },
+    {
+      "type": "airbox",
+      "device_id": "74DA3895C3CC"
+    },
+    {
+      "type": "airbox",
+      "device_id": "74DA3895C3D8"
+    },
+    {
+      "type": "airbox",
+      "device_id": "74DA3895C3DC"
+    },
+    {
+      "type": "airbox",
+      "device_id": "74DA3895C3E2"
+    },
+    {
+      "type": "airbox",
+      "device_id": "74DA3895C3E4"
+    },
+    {
+      "type": "airbox",
+      "device_id": "74DA3895C3E8"
+    },
+    {
+      "type": "airbox",
+      "device_id": "74DA3895C3EC"
+    },
+    {
+      "type": "airbox",
+      "device_id": "74DA3895C3F0"
+    },
+    {
+      "type": "airbox",
+      "device_id": "74DA3895C3FC"
+    },
+    {
+      "type": "airbox",
+      "device_id": "74DA3895C3FE"
+    },
+    {
+      "type": "airbox",
+      "device_id": "74DA3895C406"
+    },
+    {
+      "type": "airbox",
+      "device_id": "74DA3895C408"
+    },
+    {
+      "type": "airbox",
+      "device_id": "74DA3895C40A"
+    },
+    {
+      "type": "airbox",
+      "device_id": "74DA3895C40E"
+    },
+    {
+      "type": "airbox",
+      "device_id": "74DA3895C410"
+    },
+    {
+      "type": "airbox",
+      "device_id": "74DA3895C416"
+    },
+    {
+      "type": "airbox",
+      "device_id": "74DA3895C418"
+    },
+    {
+      "type": "airbox",
+      "device_id": "74DA3895C41A"
+    },
+    {
+      "type": "airbox",
+      "device_id": "74DA3895C41E"
+    },
+    {
+      "type": "airbox",
+      "device_id": "74DA3895C42E"
+    },
+    {
+      "type": "airbox",
+      "device_id": "74DA3895C430"
+    },
+    {
+      "type": "airbox",
+      "device_id": "74DA3895C432"
+    },
+    {
+      "type": "airbox",
+      "device_id": "74DA3895C434"
+    },
+    {
+      "type": "airbox",
+      "device_id": "74DA3895C436"
+    },
+    {
+      "type": "airbox",
+      "device_id": "74DA3895C438"
+    },
+    {
+      "type": "airbox",
+      "device_id": "74DA3895C43A"
+    },
+    {
+      "type": "airbox",
+      "device_id": "74DA3895C43E"
+    },
+    {
+      "type": "airbox",
+      "device_id": "74DA3895C440"
+    },
+    {
+      "type": "airbox",
+      "device_id": "74DA3895C442"
+    },
+    {
+      "type": "airbox",
+      "device_id": "74DA3895C446"
+    },
+    {
+      "type": "airbox",
+      "device_id": "74DA3895C458"
+    },
+    {
+      "type": "airbox",
+      "device_id": "74DA3895C45A"
+    },
+    {
+      "type": "airbox",
+      "device_id": "74DA3895C466"
+    },
+    {
+      "type": "airbox",
+      "device_id": "74DA3895C46C"
+    },
+    {
+      "type": "airbox",
+      "device_id": "74DA3895C47C"
+    },
+    {
+      "type": "airbox",
+      "device_id": "74DA3895C47E"
+    },
+    {
+      "type": "airbox",
+      "device_id": "74DA3895C482"
+    },
+    {
+      "type": "airbox",
+      "device_id": "74DA3895C486"
+    },
+    {
+      "type": "airbox",
+      "device_id": "74DA3895C488"
+    },
+    {
+      "type": "airbox",
+      "device_id": "74DA3895C4A8"
+    },
+    {
+      "type": "airbox",
+      "device_id": "74DA3895C4CC"
+    },
+    {
+      "type": "airbox",
+      "device_id": "74DA3895C4CE"
+    },
+    {
+      "type": "airbox",
+      "device_id": "74DA3895C4E6"
+    },
+    {
+      "type": "airbox",
+      "device_id": "74DA3895C4E8"
+    },
+    {
+      "type": "airbox",
+      "device_id": "74DA3895C4EA"
+    },
+    {
+      "type": "airbox",
+      "device_id": "74DA3895C4EC"
+    },
+    {
+      "type": "airbox",
+      "device_id": "74DA3895C4F0"
+    },
+    {
+      "type": "airbox",
+      "device_id": "74DA3895C4F2"
+    },
+    {
+      "type": "airbox",
+      "device_id": "74DA3895C502"
+    },
+    {
+      "type": "airbox",
+      "device_id": "74DA3895C514"
+    },
+    {
+      "type": "airbox",
+      "device_id": "74DA3895C524"
+    },
+    {
+      "type": "airbox",
+      "device_id": "74DA3895C540"
+    },
+    {
+      "type": "airbox",
+      "device_id": "74DA3895C54C"
+    },
+    {
+      "type": "airbox",
+      "device_id": "74DA3895C55A"
+    },
+    {
+      "type": "airbox",
+      "device_id": "74DA3895C55C"
+    },
+    {
+      "type": "airbox",
+      "device_id": "74DA3895C55E"
+    },
+    {
+      "type": "airbox",
+      "device_id": "74DA3895C560"
+    },
+    {
+      "type": "airbox",
+      "device_id": "74DA3895C572"
+    },
+    {
+      "type": "airbox",
+      "device_id": "74DA3895C576"
+    },
+    {
+      "type": "airbox",
+      "device_id": "74DA3895C57E"
+    },
+    {
+      "type": "airbox",
+      "device_id": "74DA3895C588"
+    },
+    {
+      "type": "airbox",
+      "device_id": "74DA3895C58E"
+    },
+    {
+      "type": "airbox",
+      "device_id": "74DA3895C590"
+    },
+    {
+      "type": "airbox",
+      "device_id": "74DA3895C596"
+    },
+    {
+      "type": "airbox",
+      "device_id": "74DA3895C598"
+    },
+    {
+      "type": "airbox",
+      "device_id": "74DA3895C5A2"
+    },
+    {
+      "type": "airbox",
+      "device_id": "74DA3895C5A8"
+    },
+    {
+      "type": "airbox",
+      "device_id": "74DA3895C5AA"
+    },
+    {
+      "type": "airbox",
+      "device_id": "74DA3895C5AE"
+    },
+    {
+      "type": "airbox",
+      "device_id": "74DA3895C5B0"
+    },
+    {
+      "type": "airbox",
+      "device_id": "74DA3895C5B4"
+    },
+    {
+      "type": "airbox",
+      "device_id": "74DA3895DF9C"
+    },
+    {
+      "type": "airbox",
+      "device_id": "74DA3895DF9E"
+    },
+    {
+      "type": "airbox",
+      "device_id": "74DA3895DFA2"
+    },
+    {
+      "type": "airbox",
+      "device_id": "74DA3895DFA4"
+    },
+    {
+      "type": "airbox",
+      "device_id": "74DA3895DFA6"
+    },
+    {
+      "type": "airbox",
+      "device_id": "74DA3895DFAA"
+    },
+    {
+      "type": "airbox",
+      "device_id": "74DA3895DFB0"
+    },
+    {
+      "type": "airbox",
+      "device_id": "74DA3895DFB2"
+    },
+    {
+      "type": "airbox",
+      "device_id": "74DA3895DFB4"
+    },
+    {
+      "type": "airbox",
+      "device_id": "74DA3895DFB6"
+    },
+    {
+      "type": "airbox",
+      "device_id": "74DA3895DFBC"
+    },
+    {
+      "type": "airbox",
+      "device_id": "74DA3895DFBE"
+    },
+    {
+      "type": "airbox",
+      "device_id": "74DA3895DFC4"
+    },
+    {
+      "type": "airbox",
+      "device_id": "74DA3895DFC6"
+    },
+    {
+      "type": "airbox",
+      "device_id": "74DA3895DFC8"
+    },
+    {
+      "type": "airbox",
+      "device_id": "74DA3895DFCA"
+    },
+    {
+      "type": "airbox",
+      "device_id": "74DA3895DFCC"
+    },
+    {
+      "type": "airbox",
+      "device_id": "74DA3895DFCE"
+    },
+    {
+      "type": "airbox",
+      "device_id": "74DA3895DFD0"
+    },
+    {
+      "type": "airbox",
+      "device_id": "74DA3895DFF6"
+    },
+    {
+      "type": "airbox",
+      "device_id": "74DA3895E04C"
+    },
+    {
+      "type": "airbox",
+      "device_id": "74DA3895E068"
+    },
+    {
+      "type": "airbox",
+      "device_id": "74DA3895E06E"
+    },
+    {
+      "type": "airbox",
+      "device_id": "74DA3895E070"
+    },
+    {
+      "type": "airbox",
+      "device_id": "74DA3895E072"
+    },
+    {
+      "type": "airbox",
+      "device_id": "74DA3895E074"
+    },
+    {
+      "type": "airbox",
+      "device_id": "74DA3895E076"
+    },
+    {
+      "type": "airbox",
+      "device_id": "74DA3895E078"
+    },
+    {
+      "type": "airbox",
+      "device_id": "74DA3895E096"
+    },
+    {
+      "type": "airbox",
+      "device_id": "74DA3895E098"
+    },
+    {
+      "type": "airbox",
+      "device_id": "74DA3895E09A"
+    },
+    {
+      "type": "airbox",
+      "device_id": "74DA3895E09C"
+    },
+    {
+      "type": "airbox",
+      "device_id": "74DA3895E0A6"
+    },
+    {
+      "type": "airbox",
+      "device_id": "74DA3895E0A8"
+    },
+    {
+      "type": "airbox",
+      "device_id": "74DA3895E0AC"
+    },
+    {
+      "type": "airbox",
+      "device_id": "74DA3895E0AE"
+    },
+    {
+      "type": "airbox",
+      "device_id": "74DA3895E0B0"
+    },
+    {
+      "type": "airbox",
+      "device_id": "74DA3895E0BE"
+    },
+    {
+      "type": "airbox",
+      "device_id": "74DA3895E0DC"
+    },
+    {
+      "type": "airbox",
+      "device_id": "74DA3895E0DE"
+    },
+    {
+      "type": "airbox",
+      "device_id": "74DA3895E0E2"
+    },
+    {
+      "type": "airbox",
+      "device_id": "74DA3895E142"
+    },
+    {
+      "type": "airbox",
+      "device_id": "74DA389B9A74"
+    },
+    {
+      "type": "airbox",
+      "device_id": "74DA38A7952C"
+    },
+    {
+      "type": "airbox",
+      "device_id": "801F02000010"
+    }
+  ]
+}
