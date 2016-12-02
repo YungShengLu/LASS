@@ -1,4 +1,4 @@
-#Get Lateset PM2.5 data from influxDB and store it to CSV files,lass.csv and airbox.csv
+#Get Lateset PM2.5 data from influxDB and store it to CSV files,lass.csv and airbox.csv every 5 minutes
 
 
 
@@ -26,16 +26,19 @@
 
 ##Description
 
-###Retrieve the latest PM2.5 data from measurement 'airbox' / 'lass' for each Device_ID and store it as CSV files .
+###Retrieve the latest PM2.5 data from measurement 'airbox' and 'lass' for each Device_ID and store it as CSV files every 5 minutes .
 
-This program retrieves latest PM2.5 data for each device stored in database:'PM25',measurement:'airbox'/'lass' of influxDB .
+This program retrieves latest PM2.5 data for each device stored in database:'PM25',measurement:'airbox'and'lass' of influxDB .
 
-Output is a CSV file that stores the latest PM2.5 data from measurement 'airbox' / 'lass'according to user's cmd .
+Output is a CSV file that stores the latest PM2.5 data from measurement 'airbox' and 'lass' .
 
 It sets up folders './Latest_PM2.5' (if these folder don't exist)to keep output CSV file. 
 
+###The output :
+		'./Latest_PM2.5/airbox.csv' and './Latest_PM2.5/lass.csv'
 
-###The format of output file :
+
+###The format of output :
 ###"'Device_id','Latest PM2.5','time'"
 e.g.
 ```shell

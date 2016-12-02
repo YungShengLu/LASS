@@ -2,9 +2,7 @@ import sys
 import re
 import os
 import json
-import ast
-import shutil
-
+import time
 
 from influxdb import InfluxDBClient
 connectDB='PM25'
@@ -101,30 +99,38 @@ def write2file(arg_measurement,IDList,PM25List,timeList):
 def main():
 
         #read in target measurement
-        arg_measurement = sys.argv[1]
+        arg_measurementList = ['airbox','lass']
          #get a list of distinct ID
         IDList=[]
         timeList=[]
         PM25List=[]
 
-       
+        #get latest PM2.5 data and store it in CSV files from DB every 5 mins
+        while(True):
+            for mIndex in range(len(arg_measurementList)):
+                #get all IDs in this measurement
+                PM25Query=getIDList(arg_measurementList[mIndex],IDList)
+                #Get PM2.5 list
+                getPM25List(PM25Query,PM25List)
+                #Get time list
+                getTimeList(PM25Query,timeList)
+
+                #write latest PM2.5 data to csv file
+                write2file(arg_measurementList[mIndex],IDList,PM25List,timeList)
+
+                
 
 
-        #get all IDs in this measurement
-        PM25Query=getIDList(arg_measurement,IDList)
-        #Get PM2.5 list
-        getPM25List(PM25Query,PM25List)
-        #Get time list
-        getTimeList(PM25Query,timeList)
+                print('Measurement: ',arg_measurementList[mIndex])
+                print('Total AirBox num: ',len(IDList))
 
-        #write latest PM2.5 data to csv file
-        write2file(arg_measurement,IDList,PM25List,timeList)
-
-        
-
-
-        print('Measurement: ',arg_measurement)
-        print('Total AirBox num: ',len(IDList))
+                #clear Lists before containing data from other measurement
+                del IDList[:]
+                del timeList[:]
+                del PM25List[:]
+            #get latest PM2.5 data from DB every 5 mins
+            time.sleep(300)
+                
         
         
         
