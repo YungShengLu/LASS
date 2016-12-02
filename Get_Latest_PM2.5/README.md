@@ -32,10 +32,10 @@ This program retrieves latest PM2.5 data for each device stored in database:'PM2
 
 Output is a CSV file that stores the latest PM2.5 data from measurement 'airbox' and 'lass' .
 
-It sets up folders './Latest_PM2.5' (if these folder don't exist)to keep output CSV file. 
+It stores output CSV file in '/var/www/html/Demo/csv/' directory. 
 
 ###The output :
-		'./Latest_PM2.5/airbox.csv' and './Latest_PM2.5/lass.csv'
+	'airbox.csv' and 'lass.csv' ,and store these files in '/var/www/html/Demo/csv/' directory
 
 
 ###The format of output :

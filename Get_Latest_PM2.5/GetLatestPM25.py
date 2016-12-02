@@ -14,8 +14,8 @@ client.create_database(connectDB)
 
 
 #open a file for each airbox and write each data of the airbox to that file
-if not os.path.exists("./Latest_PM2.5"):
-    os.makedirs("./Latest_PM2.5")
+if not os.path.exists("/var/www/html/Demo/csv/"):
+    os.makedirs("/var/www/html/Demo/csv/")
 
 
 #Get time list
@@ -83,7 +83,7 @@ def write2file(arg_measurement,IDList,PM25List,timeList):
         
     if(len(IDList)!=0):
 
-        fp = open("./Latest_PM2.5/"+arg_measurement+".csv", "w+")
+        fp = open("/var/www/html/Demo/csv/"+arg_measurement+".csv", "w+")
         for IDindex in range(len(IDList)):
 
             fp.write( str(IDList[IDindex])+","+str(PM25List[IDindex])+","+timeList[IDindex]+"\n");
