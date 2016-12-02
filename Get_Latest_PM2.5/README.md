@@ -26,7 +26,11 @@
 
 ##Description
 
+<<<<<<< HEAD
 ###Retrieve the latest PM2.5 data from measurement 'airbox' and 'lass' for each Device_ID and store it as CSV files every 5 minutes .
+=======
+f###Retrieve the latest PM2.5 data from measurement 'airbox' / 'lass' for each Device_ID and store it as CSV files .
+>>>>>>> 8c6d830858035e8ea42a377b69c11bd93db52a94
 
 This program retrieves latest PM2.5 data for each device stored in database:'PM25',measurement:'airbox'and'lass' of influxDB .
 
@@ -72,10 +76,10 @@ e.g.
 	$ python GetLatestPM25.py [source] 
 		// [source] = [airbox / lass]
 		
-
-* **Example**
 	```
+* **Example**
+	```shell
 	$ python GetLatestPM25.py airbox  
-	//set up airbox.csv to store latest PM2.5 data for each device.
+	//set up airbox.csv to store latest PM2.5 data for each Device_id in measurement airbox.
 
 	```
