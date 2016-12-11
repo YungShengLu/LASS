@@ -13,18 +13,15 @@ class Rain:
     def __str__(self):
         return '{{"time": "{}", "county": "{}", "temp": "{}", "prob": "{}"}}'.format(self.time, self.county, self.temp, self.prob)
     def toJSON(self):
-        return '{{"time": "{}", "county": "{}", "temp": "{}", "prob": "{}"}}'.format(self.time, self.county, self.temp, self.prob)
+        #return '{{"time": "{}", "county": "{}", "temp": "{}", "prob": "{}"}}'.format(self.time, self.county, self.temp, self.prob)
+        return self
     def toCSV(self):
         return '{},{},{},{}'.format(self.time, self.county, self.temp, self.prob)
 
-rains = []
-
-def main():
-#    link = 'http://www.cwb.gov.tw/V7/forecast/f_index.htm'
-#    with urllib.request.urlopen(link) as f:
-#        forecast = f.read().decode('UTF-8')
-    with open('f_index.html', 'r') as f: # local test
-        forecast = f.read()              # local test
+def getRains(link):
+    with urllib.request.urlopen(link) as f:
+        forecast = f.read().decode('UTF-8')
+    rains = []
     soup = BeautifulSoup(forecast, 'lxml')
     timeStr = soup.findAll('div', {'class': 'modifyedDate'})[0].string
     #print('[debug] %s' % timeStr)
@@ -40,6 +37,13 @@ def main():
         #print(rain)
         rains.append(rain)
     #print(len(rains)) # 22
+    return rains
+
+def main():
+    links = ['http://www.cwb.gov.tw/V7/forecast/f_index.htm', 'http://www.cwb.gov.tw/V7/forecast/f_index2.htm', 'http://www.cwb.gov.tw/V7/forecast/f_index3.htm']
+    for link in links:
+        rains = getRains(link)
+        # TODO
     pass
 
 if __name__ == '__main__':
