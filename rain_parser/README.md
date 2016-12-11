@@ -15,11 +15,13 @@
 
 ## 格式
 
+Type: `Rain`
 ```json
 {
-  "time": "",
-  "county": "",
-  "prob": ""
+  "time": "string",
+  "county": "string",
+  "temp": "string",
+  "prob": "string"
 }
 ```
 
