@@ -13,7 +13,6 @@ class Rain:
     def __str__(self):
         return '{{"time": "{}", "county": "{}", "temp": "{}", "prob": "{}"}}'.format(self.time, self.county, self.temp, self.prob)
     def toJSON(self):
-        #return '{{"time": "{}", "county": "{}", "temp": "{}", "prob": "{}"}}'.format(self.time, self.county, self.temp, self.prob)
         return self
     def toCSV(self):
         return '{},{},{},{}'.format(self.time, self.county, self.temp, self.prob)
@@ -24,19 +23,13 @@ def getRains(link):
     rains = []
     soup = BeautifulSoup(forecast, 'lxml')
     timeStr = soup.findAll('div', {'class': 'modifyedDate'})[0].string
-    #print('[debug] %s' % timeStr)
     trs = soup.findAll('tr')
-    #print('[debug] %s' % len(trs))
-    #for i in range(len(trs)):
-    #    print('trs[{}]: {}'.format(i, trs[i].prettify()))
     for tr in trs:
         tds = tr.findAll('td')
         if not tds:
             continue
         rain = Rain(timeStr, tds[0].a.string, tds[1].a.string, tds[2].a.string)
-        #print(rain)
         rains.append(rain)
-    #print(len(rains)) # 22
     return rains
 
 def main():
@@ -48,6 +41,5 @@ def main():
 
 if __name__ == '__main__':
     main()
-    #print('[debug] Python3 run successfully')
     pass
 
