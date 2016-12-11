@@ -13,7 +13,7 @@
 - 縣市名稱
 - 降雨機率
 
-## 格式
+## Format
 
 Type: `Rain`
 ```json
