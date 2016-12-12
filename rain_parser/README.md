@@ -1,4 +1,6 @@
 # Rain Parser
+This parser parses the following 3 中央氣象局 降雨機率預報 webpages every 24 hours
+,and stores the parsed "時間,縣市名稱,降雨機率,溫度" data in measurement 'rain_prob'/database 'LASS_RAIN_PROB' in influxDB .
 
 ## Link
 
@@ -12,6 +14,7 @@
 - 時間
 - 縣市名稱
 - 降雨機率
+- 溫度
 
 ## Format
 
@@ -25,3 +28,10 @@ Type: `Rain`
 }
 ```
 
+## Execution
+
+
+```
+	python3 rain-parser.py
+
+```
