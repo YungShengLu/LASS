@@ -34,8 +34,14 @@ class parseSite:
         for i in range(self.jsonData.get('num_of_records')):
             
             # fill -1 to attrubute if no values
-            
+            pm25 = self.jsonData.get('feeds')[i].get('s_d0')
+            print(pm25, type(pm25))
+            if pm25 == 'NaN' or pm25 == None:
+                continue
+
+
             temperature = self.jsonData.get('feeds')[i].get('s_t0')  
+            print(temperature)
             if temperature is None:
                 temperature = -1
 
@@ -52,7 +58,7 @@ class parseSite:
                     "Device_id": self.jsonData.get('feeds')[i].get('device_id')
                 },
                 "fields": {
-                    "PM2.5": float(self.jsonData.get('feeds')[i].get('s_d0')),
+                    "PM2.5": float(pm25),
                     "Temperature": float(temperature),
                     "Humidity": float(humidity),
                     "Gps_lat": float(self.jsonData.get('feeds')[i].get('gps_lat')),
