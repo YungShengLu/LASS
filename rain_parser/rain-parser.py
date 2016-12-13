@@ -22,6 +22,7 @@ def getRains(link):
         forecast = f.read().decode('UTF-8')
     rains = []
     soup = BeautifulSoup(forecast, 'lxml')
+    #soup = BeautifulSoup(forecast, 'html.parser') # if there is NO lxml parser, use python html parser instead
     timeStr = soup.findAll('div', {'class': 'modifyedDate'})[0].string
     trs = soup.findAll('tr')
     for tr in trs:
