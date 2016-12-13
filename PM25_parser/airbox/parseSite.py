@@ -50,24 +50,27 @@ class parseSite:
             if humidity is None:
                 humidity = -1
             
-            json_body = [{
-                "measurement":self.src,
-                #"time": self.jsonData.get('version'),
-                "time":self.jsonData.get('version'),
-                "tags": {
-                    "Device_id": self.jsonData.get('feeds')[i].get('device_id')
-                },
-                "fields": {
-                    "PM2.5": float(pm25),
-                    "Temperature": float(temperature),
-                    "Humidity": float(humidity),
-                    "Gps_lat": float(self.jsonData.get('feeds')[i].get('gps_lat')),
-                    "Gps_lon": float(self.jsonData.get('feeds')[i].get('gps_lon')),
-                    "Gps_num": self.jsonData.get('feeds')[i].get('gps_num')
-                }
-    
-            }]
-            self.client.write_points(json_body)
+            try:                        # may fail when parsing
+                json_body = [{
+                    "measurement":self.src,
+                    #"time": self.jsonData.get('version'),
+                    "time":self.jsonData.get('version'),
+                    "tags": {
+                        "Device_id": self.jsonData.get('feeds')[i].get('device_id')
+                    },
+                    "fields": {
+                        "PM2.5": float(pm25),
+                        "Temperature": float(temperature),
+                        "Humidity": float(humidity),
+                        "Gps_lat": float(self.jsonData.get('feeds')[i].get('gps_lat')),
+                        "Gps_lon": float(self.jsonData.get('feeds')[i].get('gps_lon')),
+                        "Gps_num": self.jsonData.get('feeds')[i].get('gps_num')
+                    }
+        
+                }]
+                self.client.write_points(json_body)
+            except:
+                print(self.jsonData.get('feeds')[i].get('device_id')+"Write to DB failed")
 
         #parse record
         self.record()
