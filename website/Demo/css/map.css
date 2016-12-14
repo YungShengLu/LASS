@@ -1,7 +1,18 @@
+#map {
+  width: 100%;
+  height: 100%;
+}
+
+svg {
+    width: 100%;
+    height: 100%;
+}
+
 .background {
-    fill: none;
+    width: 100%;
+    height: 100%;
+    fill: #BFE1FF;
     pointer-events: all;
-    //overflow: hidden;
 }
 
 .hidden {
@@ -18,8 +29,15 @@ div.tooltip {
     position: absolute;
 }
 
+.mesh {
+    fill: none;
+    stroke: #fff;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
 .region {
-    fill: #B1B3B3;
+    fill: #9C9C9C;
     cursor: pointer;
 }
 
@@ -31,9 +49,42 @@ div.tooltip {
     fill: orange;
 }
 
-.mesh {
-    fill: none;
-    stroke: #fff;
-    stroke-linecap: round;
-    stroke-linejoin: round;
+.factory {
+    fill: #B029CB;
+    cursor: pointer;
 }
+
+.factory:hover {
+    fill: #FF886A;
+}
+
+.factory.active {
+    fill: orange;
+}
+
+.airbox {
+    fill: #2276D5;
+    cursor: pointer;
+}
+
+.airbox:hover {
+    fill: #FF886A;
+}
+
+.airbox.active {
+    fill: orange;
+}
+
+.lass {
+    fill: #44CD2F;
+    cursor: pointer;
+}
+
+.lass:hover {
+    fill: #FF886A;
+}
+
+.lass.active {
+    fill: orange;
+}
+
