@@ -172,7 +172,7 @@ function createDataCircle() {
 /* Initialize map */
 function initMap() {
     // Load CSV file.
-    d3.csv('../LASS/data/csv/airbox.csv', function(error, d) {
+    d3.csv('data/csv/airbox.csv', function(error, d) {
         if (error) throw error;
 
         data = d;
