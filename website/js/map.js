@@ -5,7 +5,8 @@ var position = [23.583, 120.583],
     maxZoom = 18,
     legendGrade = [0, 11, 23, 35, 41, 47, 53, 58, 64, 70],
     legendColor = ['#9CFF9C', '#31FF00', '#31CF00', '#FFFF00', '#FFCF00',
-    '#FF9A00', '#FF6464', '#FF0000', '#990000', '#CE30FF'];
+    '#FF9A00', '#FF6464', '#FF0000', '#990000', '#CE30FF'],
+    factoryColor = '#888888';
 var map,
     layerAirData;
 
@@ -69,16 +70,19 @@ function createLegend() {
     legend.onAdd = function(map) {
         var div = L.DomUtil.create('div', 'info legend');
 
+        div.innerHTML = '<i style="background: ' + factoryColor
+            + ';">&nbsp;&nbsp;&nbsp;&nbsp;</i> factory<br/>';
+
         // Generate a label with a colored square for each interval.
         for (var i = 0; i < legendGrade.length; ++i) {
-            div.innerHTML += legendLabel.push('<i style="background:'
+            legendLabel.push('<i style="background:'
                     + getLegendColor(legendGrade[i] + 1)
                     + ';">&nbsp;&nbsp;&nbsp;&nbsp;</i> '
                     + legendGrade[i]
                     + (legendGrade[i + 1] ? '&ndash;'+legendGrade[i + 1] : '+')
                     );
         }
-        div.innerHTML = legendLabel.join('<br>');
+        div.innerHTML += legendLabel.join('<br>');
 
         return div;
     };
@@ -100,6 +104,29 @@ function createLegend() {
 
     layerAirData = new L.LayerGroup();
     map.addLayer(layerAirData);
+
+    // load factories
+    d3.csv('data/csv/factories.csv', function(error, data) {
+        if(error) throw error;
+        var color = factoryColor;
+        var circle,
+            strPopup;
+
+        var I = data.length;
+        for(var i = 0; i < I; i++) {
+            circle = L.circle([data[i].latitude, data[i].longitude], {
+                color: color,
+                fillColor: color,
+                fillOpacity: 0.5,
+                radius: 500
+            }).addTo(map);
+
+            strPopup = "ID: " + data[i].id
+                + "<br/> FactoryName: " + data[i].name
+                + "<br/> Type: " + data[i].type;
+            circle.bindPopup(strPopup);
+        }
+    });
 
     // load csv
     d3.csv('data/csv/lass.csv', function(error, data) {
