@@ -23,7 +23,7 @@ var datacircles = [],
     dataAlpha = 0.5,
     dataRadius = 500,
     circleMaker,
-    markerAlpha = 0.75,
+    markerAlpha = 0.55,
     markerRadius = 1;
 
 /* Define color square of legend. */
@@ -65,7 +65,7 @@ function createDataCircle() {
     for (i in data) {
         var title = data[i].device_id;
 
-        if (0 <= data[i].pollution && data[i].pollution < 11) {
+        if (0 <= data[i].pollution && data[i].pollution <= 11) {
             circle = L.circle([data[i].lat, data[i].lon], {
                 color: legendColor[0],
                 fillOpacity: dataAlpha,
@@ -77,7 +77,7 @@ function createDataCircle() {
                 fillOpacity: markerAlpha,
                 radius: markerRadius
             });
-        } else if (11 <= data[i].pollution && data[i].pollution < 21) {
+        } else if (11 < data[i].pollution && data[i].pollution <= 23) {
             circle = L.circle([data[i].lat, data[i].lon], {
                 color: legendColor[1],
                 fillOpacity: dataAlpha,
@@ -89,7 +89,7 @@ function createDataCircle() {
                 fillOpacity: markerAlpha,
                 radius: markerRadius
             });
-        } else if (21 <= data[i].pollution && data[i].pollution < 31) {
+        } else if (23 < data[i].pollution && data[i].pollution <= 35) {
             circle = L.circle([data[i].lat, data[i].lon], {
                 color: legendColor[2],
                 fillOpacity: dataAlpha,
@@ -101,7 +101,7 @@ function createDataCircle() {
                 fillOpacity: markerAlpha,
                 radius: markerRadius
             });
-        } else if (31 <= data[i].pollution && data[i].pollution < 41) {
+        } else if (35 < data[i].pollution && data[i].pollution <= 41) {
             circle = L.circle([data[i].lat, data[i].lon], {
                 color: legendColor[3],
                 fillOpacity: dataAlpha,
@@ -113,7 +113,7 @@ function createDataCircle() {
                 fillOpacity: markerAlpha,
                 radius: markerRadius
             });
-        } else if (41 <= data[i].pollution && data[i].pollution < 51) {
+        } else if (41 < data[i].pollution && data[i].pollution <= 47) {
             circle = L.circle([data[i].lat, data[i].lon], {
                 color: legendColor[4],
                 fillOpacity: dataAlpha,
@@ -125,7 +125,7 @@ function createDataCircle() {
                 fillOpacity: markerAlpha,
                 radius: markerRadius
             });
-        } else if (51 <= data[i].pollution && data[i].pollution < 61) {
+        } else if (47 < data[i].pollution && data[i].pollution <= 53) {
             circle = L.circle([data[i].lat, data[i].lon], {
                 color: legendColor[5],
                 fillOpacity: dataAlpha,
@@ -137,7 +137,7 @@ function createDataCircle() {
                 fillOpacity: markerAlpha,
                 radius: markerRadius
             });
-        } else if (61 <= data[i].pollution && data[i].pollution < 71) {
+        } else if (53 < data[i].pollution && data[i].pollution <= 58) {
             circle = L.circle([data[i].lat, data[i].lon], {
                 color: legendColor[6],
                 fillOpacity: dataAlpha,
@@ -171,8 +171,8 @@ function createDataCircle() {
 
 /* Initialize map */
 function initMap() {
-    // Load CSV file.
-    d3.csv('../LASS/data/csv/airbox.csv', function(error, d) {
+    // Load CSV file. (path: ../LASS/data/csv/airbox.html)
+    d3.csv('data/csv/airbox.csv', function(error, d) {
         if (error) throw error;
 
         data = d;

@@ -42,7 +42,7 @@ $.fn.sidebar = function(options) {
     $sidebar.open = function(id, $tab) {
         if (typeof $tab === 'undefined')
             $tab = $tabs.find('li > a[href="#' + id + '"]').parent();
-
+        console.log($tab);
         // hide old active contents
         $container.children('.sidebar-pane.active').removeClass('active');
 

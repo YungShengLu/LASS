@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <meta name="description" content="">
     <meta name="author" content="">
+    <meta http-equiv="refresh" content="300">
     <title>NCKU CSIE | IKDD PM2.5 Demo</title>
     <!-- Plugin CSS -->
     <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
@@ -31,6 +32,7 @@
     <script src="vendor/leaflet/js/leaflet-sidebar.min.js" type="text/javascript"></script>
     <script src="vendor/leaflet/js/leaflet-search.min.js" type="text/javascript"></script>
     <!-- Custom JavaScript -->
+    <script src="js/index.js" type="text/javascript"></script>
     <script src="js/map.js" type="text/javascript"></script>
 </head>
 
@@ -74,33 +76,82 @@
                 </li>
             </ul>
         </div>
-        <!-- sidebar - tab -->
+        <!-- sidebar - content -->
         <div class="sidebar-content">
             <div class="sidebar-pane" id="home">
-                <h1 class="sidebar-header head">NCKU CSIE - IKDD PM2.5 Demo<span class="sidebar-close"><i class="fa fa-caret-left"></i></span>
-                </h1>
-            </div>
-            <div class="sidebar-pane" id="wind">
-                <h1 class="sidebar-header tabs">Wind Direction<span class="sidebar-close"><i class="fa fa-caret-left"></i></span></h1>
-            </div>
-            <div class="sidebar-pane" id="chart">
-                <h1 class="sidebar-header tabs">Charts<span class="sidebar-close"><i class="fa fa-caret-left"></i></span></h1>
-            </div>
-            <div class="sidebar-pane" id="table">
-                <h1 class="sidebar-header tabs">Tables<span class="sidebar-close"><i class="fa fa-caret-left"></i></span></h1>
-            </div>
-            <div class="sidebar-pane" id="info">
-                <h1 class="sidebar-header tabs">Information<span class="sidebar-close"><i class="fa fa-caret-left"></i></span></h1>
-            </div>
-            <div class="sidebar-pane" id="option">
-                <h1 class="sidebar-header hint">Settings<span class="sidebar-close"><i class="fa fa-caret-left"></i></span></h1>
+                <div class="sidebar-header head">
+                    <span class="loc-ch">臺南市</span>
+                    <span class="loc-en">Tainan City</span>
+                    <span class="sidebar-close"><i class="fa fa-caret-left"></i></span>
+                </div>
+                <div class="content-title">
+                    <div class="title-picture">
+                        <img class="title-pic" src="img/tainan.png">
+                    </div>
+                    <div class="title-content">
+                        <div class="title-data">
+                            <p class="title-col">PM2.5</p>
+                            <p class="title-pm25">0.00</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="content-main">
+                    <div class="main-top">
+                        <div class="loc-temp">
+                            <div class="loc-col">
+                                <p class="col col-temp"><span>溫度</span></p>
+                            </div>
+                            <p class="temp">0.00 °C</p>
+                        </div>
+                        <div class="loc-timestamp">
+                            <div class="loc-col">
+                                <p class="col col-timestamp"><span>更新</span></p>
+                            </div>
+                            <p class="timestamp">2016 年 12 月 22 日 00:00</p>
+                        </div>
+                        <div class="loc-sitenum">
+                            <div class="loc-col">
+                                <p class="col col-sitenum col-btm"><span>測站個數</span></p>
+                            </div>
+                            <p class="sitenum">0</p>
+                        </div>
+                    </div>
+                    <div class="main-btm">
+                        <div class="main-distinct">
+                            <div class="main-col">
+                                <p class="col col-distinct"><span>各區資料</span></p>
+                            </div>
+                            <div class="main-content"></div>
+                        </div>
+                        <div class="main-forecast">
+                            <div class="main-col">
+                                <p class="col col-forecast"><span>預測資料</span></p>
+                            </div>
+                            <div class="main-content"></div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
+        <div class="sidebar-pane" id="wind">
+            <h1 class="sidebar-header tabs">Wind Direction<span class="sidebar-close"><i class="fa fa-caret-left"></i></span></h1>
+        </div>
+        <div class="sidebar-pane" id="chart">
+            <h1 class="sidebar-header tabs">Charts<span class="sidebar-close"><i class="fa fa-caret-left"></i></span></h1>
+        </div>
+        <div class="sidebar-pane" id="table">
+            <h1 class="sidebar-header tabs">Tables<span class="sidebar-close"><i class="fa fa-caret-left"></i></span></h1>
+        </div>
+        <div class="sidebar-pane" id="info">
+            <h1 class="sidebar-header tabs">Information<span class="sidebar-close"><i class="fa fa-caret-left"></i></span></h1>
+        </div>
+        <div class="sidebar-pane" id="option">
+            <h1 class="sidebar-header hint">Settings<span class="sidebar-close"><i class="fa fa-caret-left"></i></span></h1>
+        </div>
+    </div>
     </div>
     <!-- map -->
     <div class="container container-map" id="map"></div>
-    <!-- Custom JavaScript -->
-    <script src="js/index.js" type="text/javascript"></script>
 </body>
 
 </html>
