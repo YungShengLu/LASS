@@ -73,5 +73,8 @@ function renderAirData(data) {
         // callback renderAirData
         renderAirData(airData);
     });
+
+    // add sidebar
+    L.control.sidebar('sidebar').addTo(map);
 })();
 
