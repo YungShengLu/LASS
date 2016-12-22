@@ -51,6 +51,7 @@ function renderAirData(data) {
             radius: radiusCircleMarker
         });
 
+<<<<<<< HEAD
 /* Legend arguments */
 var legend,
     legendLabel = [],
@@ -78,7 +79,7 @@ function getLegendColor(d) {
         d < 64 ? legendColor[7] :
         d < 70 ? legendColor[8] :
         legendColor[9];
-
+=======
         strPopup = "SiteName: " + (i + 1).toString()
             + "<br /> Record timestamp : " + data[i].timestamp
             + "<br/> PM 2.5 : " + data[i].pollution
@@ -87,6 +88,7 @@ function getLegendColor(d) {
         circleMarker.bindPopup(strPopup);
         layerAirData.addLayer(circleMarker);
     }
+>>>>>>> 5efc2b4d7c2ce97726b9e0a3f829d54530f5d09f
 }
 
 function createLegend() {
@@ -122,6 +124,7 @@ function createLegend() {
     var airData = [],
         search;
 
+<<<<<<< HEAD
         if (0 <= data[i].pollution && data[i].pollution <= 11) {
             circle = L.circle([data[i].lat, data[i].lon], {
                 color: legendColor[0],
@@ -211,15 +214,17 @@ function createLegend() {
                 color: legendColor[7],
                 fillOpacity: dataAlpha,
                 radius: dataRadius
-
+=======
     map = L.map('map').setView(position, defaultZoom);
     L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
             minZoom: minZoom,
             maxZoom: maxZoom,
             continuousWorld: false,
             attribution: 'Map data &copy; OpenStreetMap contributors'
+>>>>>>> 5efc2b4d7c2ce97726b9e0a3f829d54530f5d09f
             }).addTo(map);
 
+<<<<<<< HEAD
         circle.bindPopup("SiteName: " + data[i].number + "<br /> Record timestamp : " + data[i].timestamp + "<br/> PM 2.5 : " + data[i].pollution + "<br /> ID: " + data[i].device_id);
         circleMaker.bindPopup("SiteName: " + data[i].number + "<br /> Record timestamp : " + data[i].timestamp + "<br/> PM 2.5 : " + data[i].pollution + "<br /> ID: " + data[i].device_id).openPopup();
         layer_airbox.addLayer(circleMaker);
@@ -237,7 +242,7 @@ function initMap() {
 
         // Initializa the map.
         map = L.map('map').setView(position, scale);
-
+=======
     layerAirData = new L.LayerGroup();
     map.addLayer(layerAirData);
 
@@ -256,6 +261,7 @@ function initMap() {
                 fillOpacity: 0.5,
                 radius: 500
             }).addTo(map);
+>>>>>>> 5efc2b4d7c2ce97726b9e0a3f829d54530f5d09f
 
             strPopup = "ID: " + data[i].id
                 + "<br/> FactoryName: " + data[i].name
