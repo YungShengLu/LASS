@@ -8,6 +8,7 @@ var position = [23.583, 120.583],
     '#FF9A00', '#FF6464', '#FF0000', '#990000', '#CE30FF'],
     factoryColor = '#888888';
 var map,
+    sidebar,
     layerAirData;
 
 function getLegendColor(aqi) {
@@ -143,7 +144,7 @@ function initMap() {
     });
 
     // add sidebar
-    L.control.sidebar('sidebar').addTo(map);
+    sidebar = L.control.sidebar('sidebar').addTo(map);
 
     // add legend
     createLegend().addTo(map);
