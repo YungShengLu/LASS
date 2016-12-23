@@ -44,7 +44,7 @@ function renderAirData(data) {
             fillColor: color,
             fillOpacity: opacity,
             radius: radiusCircle
-        }).addTo(map);
+        }).addTo(layerAirData);
         circleMarker = new L.CircleMarker([data[i].lat, data[i].lon], {
             title: data[i].device_id,
             color: color,
@@ -96,6 +96,7 @@ function initMap() {
         search;
 
     map = L.map('map').setView(position, defaultZoom);
+    var layerMap =
     L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
             minZoom: minZoom,
             maxZoom: maxZoom,
@@ -158,6 +159,17 @@ function initMap() {
         marker: false
     });
     map.addControl(search);
+    // fix search button floating problem after layers control is added
+    $('.leaflet-control-search').css('float', 'right');
+
+    // add layers control
+    var baseLayer = {
+        'Map': layerMap
+    };
+    var overlays = {
+        'AirData': layerAirData
+    };
+    L.control.layers(baseLayer, overlays).addTo(map);
 }
 
 window.onload = initMap;
