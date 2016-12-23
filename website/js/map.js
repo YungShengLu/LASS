@@ -45,8 +45,8 @@ function renderAirData(data) {
             radius: radiusCircle
         }).addTo(map);
         circleMarker = new L.CircleMarker([data[i].lat, data[i].lon], {
+            title: data[i].device_id,
             color: color,
-            fillColor: color,
             fillOpacity: opacity,
             radius: radiusCircleMarker
         });
