@@ -8,6 +8,7 @@ var position = [23.583, 120.583],
     '#FF9A00', '#FF6464', '#FF0000', '#990000', '#CE30FF'],
     factoryColor = '#888888';
 var map,
+    sidebar,
     layerAirData;
 
 function getLegendColor(aqi) {
@@ -90,7 +91,7 @@ function createLegend() {
 }
 
 // init map
-window.onload = function() {
+function initMap() {
     var airData = [],
         search;
 
@@ -143,7 +144,7 @@ window.onload = function() {
     });
 
     // add sidebar
-    L.control.sidebar('sidebar').addTo(map);
+    sidebar = L.control.sidebar('sidebar').addTo(map);
 
     // add legend
     createLegend().addTo(map);
@@ -157,5 +158,7 @@ window.onload = function() {
         marker: false
     });
     map.addControl(search);
-};
+}
+
+window.onload = initMap;
 
