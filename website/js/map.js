@@ -90,7 +90,7 @@ function createLegend() {
 }
 
 // init map
-(function() {
+window.onload = function() {
     var airData = [],
         search;
 
@@ -157,4 +157,5 @@ function createLegend() {
         marker: false
     });
     map.addControl(search);
-})();
+};
+
