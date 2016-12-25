@@ -9,7 +9,8 @@ var position = [23.583, 120.583],
     factoryColor = '#888888';
 var map,
     sidebar,
-    layerAirData;
+    layerAirData,
+    layerFactories;
 
 function getLegendColor(aqi) {
     return aqi < 11 ? legendColor[0] :
@@ -44,7 +45,7 @@ function renderAirData(data) {
             fillColor: color,
             fillOpacity: opacity,
             radius: radiusCircle
-        }).addTo(map);
+        }).addTo(layerAirData);
         circleMarker = new L.CircleMarker([data[i].lat, data[i].lon], {
             title: data[i].device_id,
             color: color,
@@ -96,6 +97,7 @@ function initMap() {
         search;
 
     map = L.map('map').setView(position, defaultZoom);
+    var layerMap =
     L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
             minZoom: minZoom,
             maxZoom: maxZoom,
@@ -104,7 +106,9 @@ function initMap() {
             }).addTo(map);
 
     layerAirData = new L.LayerGroup();
+    layerFactories = new L.LayerGroup();
     map.addLayer(layerAirData);
+    map.addLayer(layerFactories);
 
     // load factories
     d3.csv('data/csv/factories.csv', function(error, data) {
@@ -120,7 +124,7 @@ function initMap() {
                 fillColor: color,
                 fillOpacity: 0.5,
                 radius: 500
-            }).addTo(map);
+            }).addTo(layerFactories);
 
             strPopup = "ID: " + data[i].id
                 + "<br/> FactoryName: " + data[i].name
@@ -158,6 +162,18 @@ function initMap() {
         marker: false
     });
     map.addControl(search);
+    // fix search button floating problem after layers control is added
+    $('.leaflet-control-search').css('float', 'right');
+
+    // add layers control
+    var baseLayer = {
+        'Map': layerMap
+    };
+    var overlays = {
+        'AirData': layerAirData,
+        'Factories': layerFactories
+    };
+    L.control.layers(baseLayer, overlays).addTo(map);
 }
 
 window.onload = initMap;
