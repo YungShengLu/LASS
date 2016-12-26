@@ -161,6 +161,9 @@ function initMap() {
         zoom: 12,
         marker: false
     });
+    search.on('search:locationfound', function(e) {
+      e.layer.openPopup();
+    });
     map.addControl(search);
     // fix search button floating problem after layers control is added
     $('.leaflet-control-search').css('float', 'right');
