@@ -8,7 +8,9 @@ var position = [23.583, 120.583],
     '#FF9A00', '#FF6464', '#FF0000', '#990000', '#CE30FF'],
     factoryColor = '#888888';
 var map,
-    layerAirData;
+    sidebar,
+    layerAirData,
+    layerFactories;
 
 function getLegendColor(aqi) {
     return aqi < 11 ? legendColor[0] :
@@ -43,10 +45,10 @@ function renderAirData(data) {
             fillColor: color,
             fillOpacity: opacity,
             radius: radiusCircle
-        }).addTo(map);
+        }).addTo(layerAirData);
         circleMarker = new L.CircleMarker([data[i].lat, data[i].lon], {
+            title: data[i].device_id,
             color: color,
-            fillColor: color,
             fillOpacity: opacity,
             radius: radiusCircleMarker
         });
@@ -90,11 +92,12 @@ function createLegend() {
 }
 
 // init map
-(function() {
+function initMap() {
     var airData = [],
         search;
 
     map = L.map('map').setView(position, defaultZoom);
+    var layerMap =
     L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
             minZoom: minZoom,
             maxZoom: maxZoom,
@@ -103,7 +106,9 @@ function createLegend() {
             }).addTo(map);
 
     layerAirData = new L.LayerGroup();
+    layerFactories = new L.LayerGroup();
     map.addLayer(layerAirData);
+    map.addLayer(layerFactories);
 
     // load factories
     d3.csv('data/csv/factories.csv', function(error, data) {
@@ -119,7 +124,7 @@ function createLegend() {
                 fillColor: color,
                 fillOpacity: 0.5,
                 radius: 500
-            }).addTo(map);
+            }).addTo(layerFactories);
 
             strPopup = "ID: " + data[i].id
                 + "<br/> FactoryName: " + data[i].name
@@ -143,7 +148,7 @@ function createLegend() {
     });
 
     // add sidebar
-    L.control.sidebar('sidebar').addTo(map);
+    sidebar = L.control.sidebar('sidebar').addTo(map);
 
     // add legend
     createLegend().addTo(map);
@@ -156,5 +161,23 @@ function createLegend() {
         zoom: 12,
         marker: false
     });
+    search.on('search:locationfound', function(e) {
+      e.layer.openPopup();
+    });
     map.addControl(search);
-})();
+    // fix search button floating problem after layers control is added
+    $('.leaflet-control-search').css('float', 'right');
+
+    // add layers control
+    var baseLayer = {
+        'Map': layerMap
+    };
+    var overlays = {
+        'AirData': layerAirData,
+        'Factories': layerFactories
+    };
+    L.control.layers(baseLayer, overlays).addTo(map);
+}
+
+window.onload = initMap;
+
