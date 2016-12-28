@@ -1,14 +1,11 @@
-#LASS Demo website
-* Content: **website**
-* Version: **1.0**
-* Update: **Nov 19, 2016 17:02**
+# LASS/website
 
+## TODO
 
-##Notice
-* **History**
-	* **Nov 19, 2016 17:02** - Update the demo for the website.
+- [x] Layers control
+    - [x] layerMap
+    - [x] layerAirData
+    - [x] layerFactories
+- [ ] Show popup of result when searching device_id
+- [ ] Auto refresh air data on map
 
-* **Updates**
-	* Update a demo website.
-
-* **TODO**

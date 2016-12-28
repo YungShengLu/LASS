@@ -1,0 +1,974 @@
+{
+	"臺北市": [{
+		"name": "中正區",
+		"id": 100,
+		"properties": {}
+	},{
+		"name": "大同區",
+		"id": 103,
+		"properties": {}
+	},{
+		"name": "中山區",
+		"id": 104,
+		"properties": {}
+	},{
+		"name": "松山區",
+		"id": 105,
+		"properties": {}
+	},{
+		"name": "大安區",
+		"id": 106,
+		"properties": {}
+	},{
+		"name": "萬華區",
+		"id": 108,
+		"properties": {}
+	},{
+		"name": "信義區",
+		"id": 110,
+		"properties": {}
+	},{
+		"name": "士林區",
+		"id": 111,
+		"properties": {}
+	},{
+		"name": "北投區",
+		"id": 112,
+		"properties": {}
+	},{
+		"name": "內湖區",
+		"id": 114,
+		"properties": {}
+	},{
+		"name": "南港區",
+		"id": 115,
+		"properties": {}
+	},{
+		"name": "文山區",
+		"id": 116,
+		"properties": {}
+	},],
+	"新北市": [{
+		"name": "萬里區",
+		"id": 207,
+		"properties": {}
+	},{
+		"name": "金山區",
+		"id": 208,
+		"properties": {}
+	},{
+		"name": "板橋區",
+		"id": 220,
+		"properties": {}
+	},{
+		"name": "汐止區",
+		"id": 221,
+		"properties": {}
+	},{
+		"name": "深坑區",
+		"id": 222,
+		"properties": {}
+	},{
+		"name": "石碇區",
+		"id": 223,
+		"properties": {}
+	},{
+		"name": "瑞芳區",
+		"id": 224,
+		"properties": {}
+	},{
+		"name": "平溪區",
+		"id": 226,
+		"properties": {}
+	},{
+		"name": "雙溪區",
+		"id": 227,
+		"properties": {}
+	},{
+		"name": "貢寮區",
+		"id": 228,
+		"properties": {}
+	},{
+		"name": "新店區",
+		"id": 231,
+		"properties": {}
+	},{
+		"name": "坪林區",
+		"id": 232,
+		"properties": {}
+	},{
+		"name": "烏來區",
+		"id": 233,
+		"properties": {}
+	},{
+		"name": "永和區",
+		"id": 234,
+		"properties": {}
+	},{
+		"name": "中和區",
+		"id": 235,
+		"properties": {}
+	},{
+		"name": "土城區",
+		"id": 236,
+		"properties": {}
+	},{
+		"name": "三峽區",
+		"id": 237,
+		"properties": {}
+	},{
+		"name": "樹林區",
+		"id": 238,
+		"properties": {}
+	},{
+		"name": "鶯歌區",
+		"id": 239,
+		"properties": {}
+	},{
+		"name": "三重區",
+		"id": 241,
+		"properties": {}
+	},{
+		"name": "新莊區",
+		"id": 242,
+		"properties": {}
+	},{
+		"name": "泰山區",
+		"id": 243,
+		"properties": {}
+	},{
+		"name": "林口區",
+		"id": 244,
+		"properties": {}
+	},{
+		"name": "蘆洲區",
+		"id": 247,
+		"properties": {}
+	},{
+		"name": "五股區",
+		"id": 248,
+		"properties": {}
+	},{
+		"name": "八里區",
+		"id": 249,
+		"properties": {}
+	},{
+		"name": "淡水區",
+		"id": 251,
+		"properties": {}
+	},{
+		"name": "三芝區",
+		"id": 252,
+		"properties": {}
+	},{
+		"name": "石門區",
+		"id": 253,
+		"properties": {}
+	}],
+	"桃園市": [{
+		"name": "中壢區",
+		"id": 320,
+		"properties": {}
+	},{
+		"name": "平鎮區",
+		"id": 324,
+		"properties": {}
+	},{
+		"name": "龍潭區",
+		"id": 325,
+		"properties": {}
+	},{
+		"name": "楊梅區",
+		"id": 326,
+		"properties": {}
+	},{
+		"name": "新屋區",
+		"id": 327,
+		"properties": {}
+	},{
+		"name": "觀音區",
+		"id": 328,
+		"properties": {}
+	},{
+		"name": "桃園區",
+		"id": 330,
+		"properties": {}
+	},{
+		"name": "龜山區",
+		"id": 333,
+		"properties": {}
+	},{
+		"name": "八德區",
+		"id": 334,
+		"properties": {}
+	},{
+		"name": "大溪區",
+		"id": 335,
+		"properties": {}
+	},{
+		"name": "復興區",
+		"id": 336,
+		"properties": {}
+	},{
+		"name": "大園區",
+		"id": 337,
+		"properties": {}
+	},{
+		"name": "蘆竹區",
+		"id": 338,
+		"properties": {}
+	}],
+	"新竹縣": [{
+		"name": "竹北市",
+		"id": 302,
+		"properties": {}
+	},{
+		"name": "湖口鄉",
+		"id": 303,
+		"properties": {}
+	},{
+		"name": "新豐鄉",
+		"id": 304,
+		"properties": {}
+	},{
+		"name": "新埔鎮",
+		"id": 305,
+		"properties": {}
+	},{
+		"name": "關西鎮",
+		"id": 306,
+		"properties": {}
+	},{
+		"name": "穹林鄉",
+		"id": 307,
+		"properties": {}
+	},{
+		"name": "寶山鄉",
+		"id": 308,
+		"properties": {}
+	},{
+		"name": "竹東鎮",
+		"id": 310,
+		"properties": {}
+	},{
+		"name": "五峯鄉",
+		"id": 311,
+		"properties": {}
+	},{
+		"name": "橫山鄉",
+		"id": 312,
+		"properties": {}
+	},{
+		"name": "尖石鄉",
+		"id": 313,
+		"properties": {}
+	},{
+		"name": "北埔鄉",
+		"id": 314,
+		"properties": {}
+	},{
+		"name": "峨嵋鄉",
+		"id": 315,
+		"properties": {}
+	}],
+	"新竹市": [{
+		"name": "東區",
+		"id": 3001,
+		"properties": {}
+	},{
+		"name": "北區",
+		"id": 3002,
+		"properties": {}
+	},{
+		"name": "香山區",
+		"id": 3003,
+		"properties": {}
+	}],	
+	"臺中市": [{
+		"name": "中區",
+		"id": 400,
+		"properties": {}
+	},{
+		"name": "東區",
+		"id": 401,
+		"properties": {}
+	},{
+		"name": "南區",
+		"id": 402,
+		"properties": {}
+	},{
+		"name": "西區",
+		"id": 403,
+		"properties": {}
+	},{
+		"name": "北區",
+		"id": 404,
+		"properties": {}
+	},{
+		"name": "北屯區",
+		"id": 406,
+		"properties": {}
+	},{
+		"name": "西屯區",
+		"id": 407,
+		"properties": {}
+	},{
+		"name": "南屯區",
+		"id": 408,
+		"properties": {}
+	},{
+		"name": "太平區",
+		"id": 411,
+		"properties": {}
+	},{
+		"name": "大里區",
+		"id": 412,
+		"properties": {}
+	},{
+		"name": "霧峯區",
+		"id": 413,
+		"properties": {}
+	},{
+		"name": "烏日區",
+		"id": 414,
+		"properties": {}
+	},{
+		"name": "豐原區",
+		"id": 420,
+		"properties": {}
+	},{
+		"name": "后里區",
+		"id": 421,
+		"properties": {}
+	},{
+		"name": "石岡區",
+		"id": 422,
+		"properties": {}
+	},{
+		"name": "東勢區",
+		"id": 423,
+		"properties": {}
+	},{
+		"name": "和平區",
+		"id": 424,
+		"properties": {}
+	},{
+		"name": "新社區",
+		"id": 426,
+		"properties": {}
+	},{
+		"name": "潭子區",
+		"id": 427,
+		"properties": {}
+	},{
+		"name": "大雅區",
+		"id": 428,
+		"properties": {}
+	},{
+		"name": "神岡區",
+		"id": 429,
+		"properties": {}
+	},{
+		"name": "大社區",
+		"id": 432,
+		"properties": {}
+	},{
+		"name": "沙鹿區",
+		"id": 433,
+		"properties": {}
+	},{
+		"name": "龍井區",
+		"id": 434,
+		"properties": {}
+	},{
+		"name": "梧棲區",
+		"id": 435,
+		"properties": {}
+	},{
+		"name": "清水區",
+		"id": 436,
+		"properties": {}
+	},{
+		"name": "大甲區",
+		"id": 437,
+		"properties": {}
+	},{
+		"name": "外埔區",
+		"id": 438,
+		"properties": {}
+	},{
+		"name": "大安區",
+		"id": 439,
+		"properties": {}
+	}],
+	"彰化縣": [{
+		"name": "彰化市",
+		"id": 500,
+		"properties": {}
+	},{
+		"name": "芬園鄉",
+		"id": 502,
+		"properties": {}
+	},{
+		"name": "花壇鄉",
+		"id": 503,
+		"properties": {}
+	},{
+		"name": "秀水鄉",
+		"id": 504,
+		"properties": {}
+	},{
+		"name": "鹿港鎮",
+		"id": 505,
+		"properties": {}
+	},{
+		"name": "福興鄉",
+		"id": 506,
+		"properties": {}
+	},{
+		"name": "線西鄉",
+		"id": 507,
+		"properties": {}
+	},{
+		"name": "和美鎮",
+		"id": 508,
+		"properties": {}
+	},{
+		"name": "伸港鄉",
+		"id": 509,
+		"properties": {}
+	},{
+		"name": "員林鎮",
+		"id": 510,
+		"properties": {}
+	},{
+		"name": "社頭鄉",
+		"id": 511,
+		"properties": {}
+	},{
+		"name": "永靖鄉",
+		"id": 512,
+		"properties": {}
+	},{
+		"name": "埔心鄉",
+		"id": 513,
+		"properties": {}
+	},{
+		"name": "溪湖鎮",
+		"id": 514,
+		"properties": {}
+	},{
+		"name": "大村鄉",
+		"id": 515,
+		"properties": {}
+	},{
+		"name": "埔鹽鄉",
+		"id": 516,
+		"properties": {}
+	},{
+		"name": "田中鎮",
+		"id": 520,
+		"properties": {}
+	},{
+		"name": "北斗鎮",
+		"id": 521,
+		"properties": {}
+	},{
+		"name": "田尾鄉",
+		"id": 522,
+		"properties": {}
+	},{
+		"name": "埤頭鄉",
+		"id": 523,
+		"properties": {}
+	},{
+		"name": "溪州鄉",
+		"id": 524,
+		"properties": {}
+	},{
+		"name": "竹塘鄉",
+		"id": 525,
+		"properties": {}
+	},{
+		"name": "二林鎮",
+		"id": 526,
+		"properties": {}
+	},{
+		"name": "大城鄉",
+		"id": 527,
+		"properties": {}
+	},{
+		"name": "芳苑鄉",
+		"id": 528,
+		"properties": {}
+	},{
+		"name": "二水鄉",
+		"id": 530,
+		"properties": {}
+	}],
+	"雲林縣": [{
+		"name": "斗南鎮",
+		"id": 630,
+		"properties": {}
+	},{
+		"name": "大碑鄉",
+		"id": 631,
+		"properties": {}
+	},{
+		"name": "虎尾鎮",
+		"id": 632,
+		"properties": {}
+	},{
+		"name": "土庫鎮",
+		"id": 633,
+		"properties": {}
+	},{
+		"name": "褒忠鄉",
+		"id": 634,
+		"properties": {}
+	},{
+		"name": "東勢鄉",
+		"id": 635,
+		"properties": {}
+	},{
+		"name": "臺西鄉",
+		"id": 636,
+		"properties": {}
+	},{
+		"name": "崙背鄉",
+		"id": 637,
+		"properties": {}
+	},{
+		"name": "麥寮鄉",
+		"id": 638,
+		"properties": {}
+	},{
+		"name": "斗六市",
+		"id": 640,
+		"properties": {}
+	},{
+		"name": "林內鄉",
+		"id": 643,
+		"properties": {}
+	},{
+		"name": "古坑鄉",
+		"id": 646,
+		"properties": {}
+	},{
+		"name": "莿桐鄉",
+		"id": 647,
+		"properties": {}
+	},{
+		"name": "西螺鎮",
+		"id": 648,
+		"properties": {}
+	},{
+		"name": "二崙鄉",
+		"id": 649,
+		"properties": {}
+	},{
+		"name": "北港鎮",
+		"id": 651,
+		"properties": {}
+	},{
+		"name": "水林鄉",
+		"id": 652,
+		"properties": {}
+	},{
+		"name": "口湖鄉",
+		"id": 653,
+		"properties": {}
+	},{
+		"name": "四湖鄉",
+		"id": 654,
+		"properties": {}
+	},{
+		"name": "元長鄉",
+		"id": 655,
+		"properties": {}
+	}],
+	"嘉義縣": [{
+		"name": "番路鄉",
+		"id": 602,
+		"properties": {}
+	},{
+		"name": "梅山鄉",
+		"id": 603,
+		"properties": {}
+	},{
+		"name": "竹崎鄉",
+		"id": 604,
+		"properties": {}
+	},{
+		"name": "阿里山鄉",
+		"id": 605,
+		"properties": {}
+	},{
+		"name": "中埔鄉",
+		"id": 606,
+		"properties": {}
+	},{
+		"name": "大埔鄉",
+		"id": 607,
+		"properties": {}
+	},{
+		"name": "水上鄉",
+		"id": 608,
+		"properties": {}
+	},{
+		"name": "鹿草鄉",
+		"id": 611,
+		"properties": {}
+	},{
+		"name": "太保市",
+		"id": 612,
+		"properties": {}
+	},{
+		"name": "朴子市",
+		"id": 613,
+		"properties": {}
+	},{
+		"name": "東石鄉",
+		"id": 614,
+		"properties": {}
+	},{
+		"name": "六腳鄉",
+		"id": 615,
+		"properties": {}
+	},{
+		"name": "新港鄉",
+		"id": 616,
+		"properties": {}
+	},{
+		"name": "民雄鄉",
+		"id": 621,
+		"properties": {}
+	},{
+		"name": "大林鎮",
+		"id": 622,
+		"properties": {}
+	},{
+		"name": "溪口鄉",
+		"id": 623,
+		"properties": {}
+	},{
+		"name": "義竹鄉",
+		"id": 624,
+		"properties": {}
+	},{
+		"name": "布袋鎮",
+		"id": 625,
+		"properties": {}
+	}],
+	"嘉義市": [{
+		"name": "東區",
+		"id": 6001,
+		"properties": {}
+	},{
+		"name": "西區",
+		"id": 6002,
+		"properties": {}
+	}],	
+	"臺南市": [{
+		"name": "中西區",
+		"id": 700,
+		"properties": {}
+	},{
+		"name": "東區",
+		"id": 701,
+		"properties": {}
+	},{
+		"name": "南區",
+		"id": 702,
+		"properties": {}
+	},{
+		"name": "北區",
+		"id": 704,
+		"properties": {}
+	},{
+		"name": "安平區",
+		"id": 708,
+		"properties": {}
+	},{
+		"name": "安南區",
+		"id": 709,
+		"properties": {}
+	},{
+		"name": "永康區",
+		"id": 710,
+		"properties": {}
+	},{
+		"name": "歸仁區",
+		"id": 711,
+		"properties": {}
+	},{
+		"name": "新化區",
+		"id": 712,
+		"properties": {}
+	},{
+		"name": "左鎮區",
+		"id": 713,
+		"properties": {}
+	},{
+		"name": "玉井區",
+		"id": 714,
+		"properties": {}
+	},{
+		"name": "楠西區",
+		"id": 715,
+		"properties": {}
+	},{
+		"name": "南化區",
+		"id": 716,
+		"properties": {}
+	},{
+		"name": "仁德區",
+		"id": 717,
+		"properties": {}
+	},{
+		"name": "關廟區",
+		"id": 718,
+		"properties": {}
+	},{
+		"name": "龍崎區",
+		"id": 719,
+		"properties": {}
+	},{
+		"name": "官田區",
+		"id": 720,
+		"properties": {}
+	},{
+		"name": "麻豆區",
+		"id": 721,
+		"properties": {}
+	},{
+		"name": "佳里區",
+		"id": 722,
+		"properties": {}
+	},{
+		"name": "西港區",
+		"id": 723,
+		"properties": {}
+	},{
+		"name": "七股區",
+		"id": 724,
+		"properties": {}
+	},{
+		"name": "將軍區",
+		"id": 725,
+		"properties": {}
+	},{
+		"name": "學甲區",
+		"id": 726,
+		"properties": {}
+	},{
+		"name": "北門區",
+		"id": 727,
+		"properties": {}
+	},{
+		"name": "新營區",
+		"id": 730,
+		"properties": {}
+	},{
+		"name": "後壁區",
+		"id": 731,
+		"properties": {}
+	},{
+		"name": "白河區",
+		"id": 732,
+		"properties": {}
+	},{
+		"name": "東山區",
+		"id": 733,
+		"properties": {}
+	},{
+		"name": "六甲區",
+		"id": 734,
+		"properties": {}
+	},{
+		"name": "下營區",
+		"id": 735,
+		"properties": {}
+	},{
+		"name": "柳營區",
+		"id": 736,
+		"properties": {}
+	},{
+		"name": "鹽水區",
+		"id": 737,
+		"properties": {}
+	},{
+		"name": "善化區",
+		"id": 741,
+		"properties": {}
+	},{
+		"name": "大內區",
+		"id": 742,
+		"properties": {}
+	},{
+		"name": "山上區",
+		"id": 743,
+		"properties": {}
+	},{
+		"name": "新市區",
+		"id": 744,
+		"properties": {}
+	},{
+		"name": "安定區",
+		"id": 745,
+		"properties": {}
+	}],
+	"高雄市": [{
+		"name": "新興區",
+		"id": 800,
+		"properties": {}
+	},{
+		"name": "前金區",
+		"id": 801,
+		"properties": {}
+	},{
+		"name": "苓雅區",
+		"id": 802,
+		"properties": {}
+	},{
+		"name": "鹽埕區",
+		"id": 803,
+		"properties": {}
+	},{
+		"name": "鼓山區",
+		"id": 804,
+		"properties": {}
+	},{
+		"name": "旗津區",
+		"id": 805,
+		"properties": {}
+	},{
+		"name": "前鎮區",
+		"id": 806,
+		"properties": {}
+	},{
+		"name": "三民區",
+		"id": 807,
+		"properties": {}
+	},{
+		"name": "楠梓區",
+		"id": 811,
+		"properties": {}
+	},{
+		"name": "小港區",
+		"id": 812,
+		"properties": {}
+	},{
+		"name": "左營區",
+		"id": 813,
+		"properties": {}
+	},{
+		"name": "仁武區",
+		"id": 814,
+		"properties": {}
+	},{
+		"name": "大社區",
+		"id": 815,
+		"properties": {}
+	},{
+		"name": "岡山區",
+		"id": 820,
+		"properties": {}
+	},{
+		"name": "路竹區",
+		"id": 821,
+		"properties": {}
+	},{
+		"name": "阿蓮區",
+		"id": 822,
+		"properties": {}
+	},{
+		"name": "田寮區",
+		"id": 823,
+		"properties": {}
+	},{
+		"name": "燕巢區",
+		"id": 824,
+		"properties": {}
+	},{
+		"name": "橋頭區",
+		"id": 825,
+		"properties": {}
+	},{
+		"name": "梓官區",
+		"id": 826,
+		"properties": {}
+	},{
+		"name": "彌陀區",
+		"id": 827,
+		"properties": {}
+	},{
+		"name": "永安區",
+		"id": 828,
+		"properties": {}
+	},{
+		"name": "湖內區",
+		"id": 829,
+		"properties": {}
+	},{
+		"name": "鳳山區",
+		"id": 830,
+		"properties": {}
+	},{
+		"name": "大寮區",
+		"id": 831,
+		"properties": {}
+	},{
+		"name": "林園區",
+		"id": 832,
+		"properties": {}
+	},{
+		"name": "烏松區",
+		"id": 833,
+		"properties": {}
+	},{
+		"name": "大樹區",
+		"id": 840,
+		"properties": {}
+	},{
+		"name": "旗山區",
+		"id": 842,
+		"properties": {}
+	},{
+		"name": "美濃區",
+		"id": 843,
+		"properties": {}
+	},{
+		"name": "六龜區",
+		"id": 844,
+		"properties": {}
+	},{
+		"name": "內門區",
+		"id": 845,
+		"properties": {}
+	},{
+		"name": "杉林區",
+		"id": 846,
+		"properties": {}
+	},{
+		"name": "甲仙區",
+		"id": 847,
+		"properties": {}
+	},{
+		"name": "桃源區",
+		"id": 848,
+		"properties": {}
+	},{
+		"name": "那瑪夏區",
+		"id": 849,
+		"properties": {}
+	},{
+		"name": "茂林區",
+		"id": 852,
+		"properties": {}
+	},{
+		"name": "茄萣區",
+		"id": 852,
+		"properties": {}
+	}]
+}
