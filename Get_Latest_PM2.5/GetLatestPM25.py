@@ -10,9 +10,6 @@ client = InfluxDBClient('localhost', 8086, 'root', 'root', connectDB)
 client.create_database(connectDB) 
 
 
-
-
-
 #open a file for each airbox and write each data of the airbox to that file
 storeLoc='/var/www/html/LASS/data/csv'
 if not os.path.exists(storeLoc):
@@ -27,7 +24,6 @@ def getTimeList(PM25Query,timeList):
 
     for j in range(len(timetemp)):
         timeList.append(timetemp[j])
-
 
 
 #get a list of PM2.5 if PM2.5 
@@ -45,21 +41,13 @@ def getIDList(arg_measurement,IDList):
         for i in range(len(temp)):
             IDList.append(temp[i])
 
-
         return PM25Query
-
-
-
-
 
     else:
         print('Invalid Measurement.')
         return 1
 
 #to count how many airbox device don't have the requested data
-
-
-
 
 
 #get PM2.5 latest data
@@ -75,11 +63,7 @@ def getPM25List(PM25Query,PM25List):
     for n in range(len(PM25temp)):
         PM25List.append(PM25temp[n])
 
-
-
-
-
-#write the latest PM2.5 ,ID and time to csv file
+# write the latest PM2.5 ,ID and time to csv file
 def write2file(arg_measurement,IDList,PM25List,timeList):
     
     with open('gpsfile.json') as data_file:    
@@ -109,12 +93,6 @@ def write2file(arg_measurement,IDList,PM25List,timeList):
 
         fp.close()
 
-
-
-
-
-
-
 def main():
 
         #read in target measurement
@@ -127,10 +105,13 @@ def main():
         #get latest PM2.5 data and store it in CSV files from DB every 5 mins
         while(True):
             
-            # re generate all position for lass, airbox
+            # re generate all position for lass, airbox, factory, windsite
             os.system('python region_graph.py')
             
-            
+            # re classify to city/county
+            os.system('python classify/classify.py')
+
+
             for mIndex in range(len(arg_measurementList)):
                 #get all IDs in this measurement
                 PM25Query=getIDList(arg_measurementList[mIndex],IDList)
@@ -142,9 +123,7 @@ def main():
                 #write latest PM2.5 data to csv file
                 write2file(arg_measurementList[mIndex],IDList,PM25List,timeList)
 
-                
-
-
+            
                 print('Measurement: ',arg_measurementList[mIndex])
                 print('Total responsive AirBox num(which has data in the past one hour): ',len(IDList))
 
@@ -153,11 +132,10 @@ def main():
                 del timeList[:]
                 del PM25List[:]
             #get latest PM2.5 data from DB every 5 mins
+            print("sleeping")
             time.sleep(300)
+            print("wake up")
                 
-        
-        
-        
 if __name__ == '__main__':
             main()
 
