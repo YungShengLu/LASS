@@ -24,9 +24,9 @@ def collectAllGps(Gpslist, kind, IDList):
     #client.create_database('AirBox_test')
     # query
     GPSQuery = client.query('select "Gps_lon" ,"Gps_lat" from ' + kind + ' WHERE time > now() - 1h group by "Device_id" limit 1;')
-   # print(GPSQuery)
+    # print(GPSQuery)
     GPSQuery = str(GPSQuery)
-   # print(type(GPSQuery))
+    # print(type(GPSQuery))
 
     
     IDs = list(re.findall("Device_id': u'(.*?)'", GPSQuery))
@@ -59,11 +59,6 @@ def main():
         node = Node(id, type, lat, lon)
         #node.hello()
         Allnodes.append(node)
-        # testing
-        #p1 = (120.734, 24.12)
-        #p2 = (121.535, 25.023)
-        #print(compute_dis(p1[0],p1[1],p2[0],p2[1]))
-    
 
     # 2. query to get gps, id list(lass)
     type = "lass"
@@ -86,14 +81,33 @@ def main():
     for i in range(len(AirboxIDList)):
         node = Node(AirboxIDList[i], type, AirboxGpsList[i][1], AirboxGpsList[i][0])
         Allnodes.append(node)
-    
-    #for n in Allnodes:
-    #    n.hello()
     print(len(Allnodes))
 
+    # 4. read windsite
+    type = "wind"
+    f = open("wind_location.csv", 'r')
+    lines = f.readlines()
+    print(len(lines))
+
+    for i in range(1, len(lines)):
+        segment = lines[i].rstrip().split(",")
+        id = str(segment[1])
+        lat = float(segment[4])
+        lon = float(segment[5])
+        #print([id, type, lat, lon])
+        
+        node = Node(id, type, lat, lon)
+
+        Allnodes.append(node)
+
+    
     # write Allnodes data to json file- id:{type:xxx, lon:xx, lat:xx}
     fn = "gpsfile.json"
     node2file(fn, Allnodes)
+
+    with open('gpsfile.json', 'r') as readfile:
+        print("open succeed")
+
 
 
 # fuction: compute distance given lon, lat
@@ -123,9 +137,9 @@ def node2file(fn, Allnodes):
     dict["sites"] = sites
 
 
-    
     print(len(dict))
     with open(fn, 'w') as fp:
-        json.dump(dict, fp)
+        json.dump(dict, fp, indent=4)
+    print("dump finish")
 if __name__ == '__main__':
     main()

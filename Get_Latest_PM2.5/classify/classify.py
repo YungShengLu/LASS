@@ -7,14 +7,16 @@ import json
 from shapely.geometry import shape, Point
 import urllib
 
+## Note: the path is from the caller, that is, the outer layer(classify outside)
+
 # record all gps location
-with open('../gpsfile.json', 'r') as readfile:
+with open('gpsfile.json', 'r') as readfile:
 	gps = json.load(readfile)
 print(len(gps["sites"]))
 
 # record Taiwan county polygon
 taiwan = []
-with open('output.json', 'r') as readfile:
+with open('classify/output.json', 'r') as readfile:
 	county = json.load(readfile)
 print(len(county["features"]))
 
@@ -70,7 +72,7 @@ def main():
 
 	# write to json format
 	with open('county.json', 'w') as writefile:
-		json.dump(county2id, writefile)
+		json.dump(county2id, writefile, indent=4)
 	print(UsePolygonList)
 
 	# # Using county.json
@@ -80,8 +82,10 @@ def main():
 	# 	print(k)
 
 def UseGoogleApiAll(county2id, exceptList):
-	county2id["Foreign"] = {"factory":[],"lass":[],"airbox":[]}
+	county2id["Foreign"] = {"factory":[],"lass":[],"airbox":[], "wind":[]}
 
+	for t in taiwan:
+		county2id[t] = {"factory":[],"lass":[],"airbox":[], "wind":[]}
 	# Use GoogleApi as main tool, and if can,t handle, append to exceptList then handle later
 	failcount = {}		# id: failcount
 
@@ -113,12 +117,7 @@ def UseGoogleApiAll(county2id, exceptList):
 		# print(data["results"][0]["address_components"][3]["long_name"])
 		try:
 			succeed = 0
-			# # google api can't get data
-			# if data["results"] == []:
-			# 	county2id["Foreign"][type].append(id)
-			# 	i += 1
-			# 	continue
-			# print(data)
+
 			for j in reversed(data["results"][0]["address_components"]):
 				# print(j["types"])
 
@@ -127,7 +126,7 @@ def UseGoogleApiAll(county2id, exceptList):
 					print(i+1, id, result)
 					if result in taiwan:
 						if result not in county2id:
-							county2id[result] = {"factory":[],"lass":[],"airbox":[]}
+							county2id[result] = {"factory":[],"lass":[],"airbox":[],"wind":[]}
 						county2id[result][type].append(id)
 					else:
 						county2id["Foreign"][type].append(id)
@@ -140,29 +139,12 @@ def UseGoogleApiAll(county2id, exceptList):
 				i += 1
 				print(i+1, "no administrative_area_level_")
 				county2id["Foreign"][type].append(id)
-			# # origin
-			# address = data["results"][0]["formatted_address"]
-			# segment = address.split(",")
-			# # print(i+1, address,)
-			# for s in reversed(segment):
-			# 	if "City" in s or "County" in s:
-			# 		# get county or city
-			# 		result = s[1:]
-			# 		print(i+1, result)
-			# 		if result not in county2id:
-			# 			county2id[result] = {"factory":[],"lass":[],"airbox":[]}
-			# 		county2id[result][type].append(id)
-			# 		break
-			# # print(i+1, segment)
-			# # print(i+1, address)
+
 		except IndexError as e:
 			print (e)
 			print(i+1, "can't find")
 			failcount[id] += 1
-			# exceptList.append(i+1)
-		# except UnicodeEncodeError:
-		# 	print(i+1, address)
-		# 	print(i+1,"can't decode")
+
 
 def UseGoogleApiRest(addingId, county2id):
 	
@@ -261,7 +243,7 @@ def UsePolygon(county2id, UsePolygonList):
 		if canfind:
 			print(id, whichcounty, i+1)
 			if whichcounty not in county2id:
-				county2id[whichcounty] = {"factory":[],"lass":[],"airbox":[]}
+				county2id[whichcounty] = {"factory":[],"lass":[],"airbox":[],"wind":[]}
 			county2id[whichcounty][type].append(id)
 			UsePolygonList.remove(id)
 		else:
@@ -270,78 +252,6 @@ def UsePolygon(county2id, UsePolygonList):
 
 	# print(lat, lon, type, id)
 
-
-
-
-
-
 if __name__ == '__main__':
 	main()
 
-"""
-CODE TESTING
-
-# import urllib.request
-# import json
-
-# with urllib.request.urlopen("http://maps.googleapis.com/maps/api/geocode/json?latlng=22.9996873%2C120.2180947&sensor=true") as url:
-#     s = json.loads(url.read())
-# #I'm guessing this would output the html source code?
-# print(s)
-
-
-
-# depending on your version, use: from shapely.geometry import shape, Point
-
-# load GeoJSON file containing sectors
-# with open('sectors.json') as f:
-#     js = json.load(f)
-
-# construct point based on lon/lat returned by geocoder
-# point = Point(-122.7924463, 45.4519896)
-
-# # check each polygon to see if it contains the point
-# for feature in js['features']:
-#     polygon = shape(feature['geometry'])
-#     if polygon.contains(point):
-#         print 'Found containing polygon:', feature
-
-
-
-
-# url = "http://maps.googleapis.com/maps/api/geocode/json?latlng=22.9996873%2C120.2180947&sensor=true"
-# response = urllib.urlopen(url)
-# data = json.loads(response.read())
-# print data
-
-# print json.dumps(data, sort_keys=True,
-# 	indent=2, separators=(',', ': '))
-
-# # specify data
-# print len(data["results"][0])
-# print data["results"][0]["address_components"][3]["long_name"]
-# print data["results"][1]["address_components"][4]["long_name"]
-
-# jsonStr = json.dumps(data, ensure_ascii=False)
-# print len(jsonStr)
-
-# with open('data.json', 'w') as outfile:
-#     json.dump(data, outfile)
-
-
-# point = Point(120.644444, 24.108612)
-# for area in county["features"]:
-# 	print(area["properties"]["COUNTYENG"])
-
-# 	if area["properties"]["COUNTYENG"] == "Changhua County":
-
-# 		print(area["geometry"]["coordinates"])
-
-# 		polygon = shape(area["geometry"])
-# 		# print(polygon)
-# 		if polygon.contains(point):
-# 			print("contain")
-# 		else:
-# 			print("not contains")
-# 		break
-"""
