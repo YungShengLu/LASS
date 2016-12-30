@@ -114,22 +114,22 @@ function initMap() {
     d3.csv('data/csv/factories.csv', function(error, data) {
         if(error) throw error;
         var color = factoryColor;
-        var circle,
+        var polygon,
             strPopup;
 
         var I = data.length;
         for(var i = 0; i < I; i++) {
-            circle = L.circle([data[i].latitude, data[i].longitude], {
+            var latLngAry = point2PentagonArray(factory2latLng(data[i]), 0.005);
+            polygon = L.polygon(latLngAry, {
                 color: color,
                 fillColor: color,
                 fillOpacity: 0.5,
-                radius: 500
             }).addTo(layerFactories);
 
             strPopup = "ID: " + data[i].id
                 + "<br/> FactoryName: " + data[i].name
                 + "<br/> Type: " + data[i].type;
-            circle.bindPopup(strPopup);
+            polygon.bindPopup(strPopup);
         }
     });
 
