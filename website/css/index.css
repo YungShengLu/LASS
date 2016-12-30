@@ -443,3 +443,9 @@ body,
     text-transform: uppercase;
     line-height: 20px;
 }
+
+// memory consumption bug
+.leaflet-zoom-animated {
+    will-change: auto !important;
+    -webkit-backface-visibility: visible !important;
+}
