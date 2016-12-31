@@ -3,11 +3,18 @@ import re
 import os
 import json
 import time
+import csv
+
 
 from influxdb import InfluxDBClient
 connectDB='PM25'
 client = InfluxDBClient('localhost', 8086, 'root', 'root', connectDB) 
 client.create_database(connectDB) 
+
+
+from datetime import datetime
+from pytz import timezone
+
 
 
 #open a file for each airbox and write each data of the airbox to that file
@@ -29,7 +36,7 @@ def getTimeList(PM25Query,timeList):
 #get a list of PM2.5 if PM2.5 
 def getIDList(arg_measurement,IDList):
     if arg_measurement=='airbox' or arg_measurement=='lass':
-        PM25Query = client.query(' select "PM2.5" from ' + arg_measurement + ' where time > now() - 1h  group by "Device_id" order by time DESC limit 1;')    
+        PM25Query = client.query(' select "PM2.5" from ' + arg_measurement + ' where time > now() - 1h group by "Device_id" order by time DESC limit 1;')    
 
         #extract ID from query replies
         IDSet = " "
@@ -66,19 +73,33 @@ def getPM25List(PM25Query,PM25List):
 # write the latest PM2.5 ,ID and time to csv file
 def write2file(arg_measurement,IDList,PM25List,timeList):
     
+    # read all posision in json
     with open('gpsfile.json') as data_file:    
         data = json.load(data_file)   
     allposition = data["sites"]
 
-    # print(allposition)
+    # read all county/city in json
+    with open('county.json', 'r') as readfile:
+        countyTable = json.load(readfile)
+    print(len(countyTable))
+
+    # convert time zone to UTC+8
+    for i in range(len(timeList)):
+        datetime_object = datetime.strptime(timeList[i], '%Y-%m-%dT%H:%M:%SZ')
+    
+        datetime_object = datetime_object.replace(tzinfo=timezone('UTC'))
+        now_zone = datetime_object.astimezone(timezone('Asia/Taipei'))
+        timeList[i] =  now_zone.strftime('%Y-%m-%d (%H:%M:%S)')
+
 
     if(len(IDList)!=0):
 
         fp = open(storeLoc+"/"+arg_measurement+".csv", "w+")
 
-        fp.write("device_id,pollution,timestamp,lat,lon\n")
+        fp.write("device_id,pollution,timestamp,lat,lon,county/city\n")
         for IDindex in range(len(IDList)):
 
+            # search position
             pos = ("","")
             for element in allposition:
                 if element['id'] == str(IDList[IDindex]):
@@ -86,10 +107,12 @@ def write2file(arg_measurement,IDList,PM25List,timeList):
     
                     break
 
-            # fp.write( str(IDList[IDindex])+","+str(PM25List[IDindex])+","+timeList[IDindex]+"\n");
-  
+            # search county/city
+            for k in countyTable:
+                if IDList[IDindex] in countyTable[k][arg_measurement]:
+                    belongArea = k
 
-            fp.write( str(IDList[IDindex])+","+str(PM25List[IDindex])+","+timeList[IDindex]+","+str(pos[0])+","+str(pos[1])+"\n");
+            fp.write( str(IDList[IDindex])+","+str(PM25List[IDindex])+","+timeList[IDindex]+","+str(pos[0])+","+str(pos[1])+","+str(belongArea)+"\n");
 
         fp.close()
 
