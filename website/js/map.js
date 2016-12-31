@@ -178,51 +178,22 @@ function initMap() {
     };
     L.control.layers(baseLayer, overlays).addTo(map);
 
-    // Feature from Leaflet example: Interactive Choropleth Map
+    // Click then show what the county is
     (function() {
         var geojson;
-
-        function style(feature) {
-            return {
-                opacity: 0.0,
-                fillOpacity: 0.0
-            };
-        }
-
-        function highlightFeature(e) {
-            var t = e.target;
-            t.setStyle({
-                weight: 5,
-                dashArray: '',
-                color: '#666',
-                opacity: 1.0,
-                fillOpacity: 0.7
-            });
-        }
-
-        function resetFeature(e) {
-            geojson.resetStyle(e.target);
-        }
-
-        function zoomToFeature(e) {
-            map.fitBounds(e.target.getBounds());
-        }
-
-        function onEachFeature(feature, layer) {
-            layer.on({
-                mouseover: highlightFeature,
-                mouseout:  resetFeature,
-                click: zoomToFeature
-            });
-        }
-
         d3.json('data/json/county.topo.json', function(error, data) {
             if(error) return console.error(error);
             var topo = topojson.feature(data, data.objects.layer1).features;
             geojson = L.geoJson(topo, {
-                style: style,
-                onEachFeature: onEachFeature
+                style: {
+                    opacity: 0.0,
+                    fillOpacity: 0.0
+                }
             }).addTo(map);
+            geojson.eachLayer(function(layer) {
+                layer.bindPopup(layer.feature.properties.COUNTYNAME);
+            });
+            geojson.bringToBack();
         });
     }) ();
 }
