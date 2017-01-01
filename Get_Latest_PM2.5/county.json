@@ -405,7 +405,8 @@
             "FT1_001", 
             "FT1_031", 
             "FT1_037", 
-            "LASS-PI_014"
+            "LASS-PI_014", 
+            "FT1_034"
         ], 
         "factory": [
             "factory63", 
@@ -432,7 +433,8 @@
             "28C2DDDD41C7", 
             "74DA388FF65C", 
             "74DA3895DFCA", 
-            "74DA3895DFCE"
+            "74DA3895DFCE", 
+            "74DA38AF489A"
         ], 
         "lass": [
             "FT1_CCUME_Factory101", 
@@ -670,7 +672,8 @@
             "74DA3895C332", 
             "74DA3895C406", 
             "74DA38A77948", 
-            "28C2DDDD4423"
+            "28C2DDDD4423", 
+            "74DA38AF488C"
         ], 
         "lass": [
             "FT1_028", 
@@ -781,7 +784,8 @@
             "74DA3895E078", 
             "74DA3895E0AE", 
             "74DA38AF4884", 
-            "74DA38AF4886"
+            "74DA38AF4886", 
+            "74DA38AF48C2"
         ], 
         "lass": [
             "FT1_005", 
@@ -993,7 +997,8 @@
             "74DA38AF4810", 
             "74DA38AF481E", 
             "74DA38AF486C", 
-            "74DA38AF488A"
+            "74DA38AF488A", 
+            "74DA3895C3E2"
         ], 
         "lass": [
             "FT1_0442D", 
@@ -1095,7 +1100,8 @@
         "lass": [
             "NUK_518-1_inside", 
             "NUK_H1-207_inside", 
-            "NUK_RD5F_inside"
+            "NUK_RD5F_inside", 
+            "WF_14011027"
         ], 
         "factory": [
             "factory41", 
