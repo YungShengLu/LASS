@@ -105,49 +105,51 @@
             "C0D57"
         ]
     }, 
-    "Chiayi County": {
+    "Yunlin County": {
         "airbox": [
-            "28C2DDDD41C7", 
-            "74DA388FF65C", 
-            "74DA3895DFCA", 
-            "74DA3895DFCE"
+            "74DA3895C2D4", 
+            "74DA38AF48A4"
         ], 
         "lass": [
-            "FT1_CCUME_Factory101", 
-            "FT1_CCUME_Factory202", 
-            "LASD_62145"
+            "FT1_092", 
+            "FT1_Dounan_Indoor", 
+            "FT1_Dounan_Outdoor", 
+            "EXFO-999991"
         ], 
         "factory": [
-            "factory46", 
-            "factory119", 
-            "factory120", 
-            "factory121", 
-            "factory122"
+            "factory38", 
+            "factory113", 
+            "factory114", 
+            "factory115", 
+            "factory116", 
+            "factory117", 
+            "factory118", 
+            "factory151"
         ], 
         "wind": [
-            "C0M66", 
-            "C0M67", 
-            "C0M77", 
-            "C0M79", 
-            "C0M76", 
-            "C0M70", 
-            "46753", 
-            "C0M53", 
-            "C0M74", 
-            "C0M72", 
-            "C0M71", 
-            "C0M68", 
-            "C0M82", 
-            "C0M65", 
-            "C0M64", 
-            "C0M69", 
-            "C0M78", 
-            "C0M81", 
-            "C0M83", 
-            "C0M75", 
-            "C0M52", 
-            "C0M41", 
-            "C0M80"
+            "C0K42", 
+            "C0K44", 
+            "C0K48", 
+            "C0K25", 
+            "C0K47", 
+            "C0K40", 
+            "C0K33", 
+            "C0K53", 
+            "C0K43", 
+            "C0K56", 
+            "C0K39", 
+            "C0K46", 
+            "C0K52", 
+            "C0K49", 
+            "C0K50", 
+            "C0K45", 
+            "A2K57", 
+            "C0K28", 
+            "C0K24", 
+            "C0K41", 
+            "C0K51", 
+            "C0K29", 
+            "C0K55"
         ]
     }, 
     "Miaoli County": {
@@ -195,7 +197,10 @@
             "74DA3895C39E", 
             "74DA3895DFF6", 
             "74DA3895E04C", 
-            "74DA3895E068"
+            "74DA3895E068", 
+            "74DA388FF4F8", 
+            "74DA3895C2B0", 
+            "74DA38AF4812"
         ], 
         "lass": [
             "YK_160"
@@ -382,13 +387,29 @@
             "74DA3895C2F4", 
             "74DA3895C416", 
             "74DA389B9A74", 
-            "801F02000010"
+            "801F02000010", 
+            "28C2DDDD4149", 
+            "28C2DDDD4244", 
+            "28C2DDDD4377", 
+            "28C2DDDD4413", 
+            "28C2DDDD4418", 
+            "28C2DDDD4559", 
+            "28C2DDDD456C", 
+            "28C2DDDD458A", 
+            "28C2DDDD4598", 
+            "74DA388FF424", 
+            "74DA3895C214", 
+            "74DA38AF4896", 
+            "28C2DDDD43FD", 
+            "28C2DDDD41ED", 
+            "28C2DDDD4408"
         ], 
         "lass": [
             "FT1_001", 
             "FT1_031", 
             "FT1_037", 
-            "LASS-PI_014"
+            "LASS-PI_014", 
+            "FT1_034"
         ], 
         "factory": [
             "factory63", 
@@ -410,57 +431,61 @@
             "C0AC8"
         ]
     }, 
-    "Yunlin County": {
+    "Chiayi County": {
         "airbox": [
-            "74DA3895C2D4"
+            "28C2DDDD41C7", 
+            "74DA388FF65C", 
+            "74DA3895DFCA", 
+            "74DA3895DFCE", 
+            "74DA38AF489A"
         ], 
         "lass": [
-            "FT1_092", 
-            "FT1_Dounan_Indoor", 
-            "FT1_Dounan_Outdoor"
+            "FT1_CCUME_Factory101", 
+            "FT1_CCUME_Factory202", 
+            "LASD_62145"
         ], 
         "factory": [
-            "factory38", 
-            "factory113", 
-            "factory114", 
-            "factory115", 
-            "factory116", 
-            "factory117", 
-            "factory118", 
-            "factory151"
+            "factory46", 
+            "factory119", 
+            "factory120", 
+            "factory121", 
+            "factory122"
         ], 
         "wind": [
-            "C0K42", 
-            "C0K44", 
-            "C0K48", 
-            "C0K25", 
-            "C0K47", 
-            "C0K40", 
-            "C0K33", 
-            "C0K53", 
-            "C0K43", 
-            "C0K56", 
-            "C0K39", 
-            "C0K46", 
-            "C0K52", 
-            "C0K49", 
-            "C0K50", 
-            "C0K45", 
-            "A2K57", 
-            "C0K28", 
-            "C0K24", 
-            "C0K41", 
-            "C0K51", 
-            "C0K29", 
-            "C0K55"
+            "C0M66", 
+            "C0M67", 
+            "C0M77", 
+            "C0M79", 
+            "C0M76", 
+            "C0M70", 
+            "46753", 
+            "C0M53", 
+            "C0M74", 
+            "C0M72", 
+            "C0M71", 
+            "C0M68", 
+            "C0M82", 
+            "C0M65", 
+            "C0M64", 
+            "C0M69", 
+            "C0M78", 
+            "C0M81", 
+            "C0M83", 
+            "C0M75", 
+            "C0M52", 
+            "C0M41", 
+            "C0M80"
         ]
     }, 
     "Taoyuan City": {
         "airbox": [
-            "28C2DDDD47D7"
+            "28C2DDDD47D7", 
+            "74DA38AF4876", 
+            "74DA38AF488E"
         ], 
         "lass": [
-            "WF_1664490"
+            "WF_1664490", 
+            "PERCY_603"
         ], 
         "factory": [
             "factory30", 
@@ -576,11 +601,20 @@
             "74DA38A8695A", 
             "74DA38A8695C", 
             "74DA38A8695E", 
-            "74DA38A86960"
+            "74DA38A86960", 
+            "28C2DDDD47CF", 
+            "74DA3895C346", 
+            "74DA3895E14C", 
+            "74DA38A8690A", 
+            "74DA38A8694A", 
+            "74DA38A8694C"
         ], 
         "lass": [
             "LASD_CMC_002", 
-            "LASS-SPS_017"
+            "LASS-SPS_017", 
+            "WF_15847056", 
+            "LASS-SPS_025", 
+            "FT1_024"
         ], 
         "factory": [], 
         "wind": [
@@ -642,13 +676,16 @@
             "74DA3895C32A", 
             "74DA3895C332", 
             "74DA3895C406", 
-            "74DA38A77948"
+            "74DA38A77948", 
+            "28C2DDDD4423", 
+            "74DA38AF488C"
         ], 
         "lass": [
             "FT1_028", 
             "FT1_041", 
             "FT1_063", 
-            "Howard222"
+            "Howard222", 
+            "WF_14087368"
         ], 
         "factory": [
             "factory29", 
@@ -722,7 +759,8 @@
             "28C2DDDD45E2", 
             "28C2DDDD47AD", 
             "28C2DDDD47CB", 
-            "74DA388FF65A"
+            "74DA388FF65A", 
+            "28C2DDDD4781"
         ], 
         "lass": [
             "FT1_115", 
@@ -751,7 +789,10 @@
             "74DA3895DFAA", 
             "74DA3895E074", 
             "74DA3895E078", 
-            "74DA3895E0AE"
+            "74DA3895E0AE", 
+            "74DA38AF4884", 
+            "74DA38AF4886", 
+            "74DA38AF48C2"
         ], 
         "lass": [
             "FT1_005", 
@@ -957,7 +998,14 @@
             "74DA3895E0BE", 
             "74DA3895E0DE", 
             "74DA3895E0E0", 
-            "74DA3895E0E2"
+            "74DA3895E0E2", 
+            "74DA3895C3FE", 
+            "74DA38AF4808", 
+            "74DA38AF4810", 
+            "74DA38AF481E", 
+            "74DA38AF486C", 
+            "74DA38AF488A", 
+            "74DA3895C3E2"
         ], 
         "lass": [
             "FT1_0442D", 
@@ -974,7 +1022,11 @@
             "WF_12781724", 
             "WF_12975751", 
             "WF_198166", 
-            "HRY_7688"
+            "HRY_7688", 
+            "FT1_0446D", 
+            "FT1_391", 
+            "FT1_394", 
+            "FT1_396"
         ], 
         "factory": [
             "factory3", 
@@ -1050,12 +1102,14 @@
         "airbox": [
             "28C2DDDD47C0", 
             "28C2DDDD47C7", 
-            "74DA3895DFB2"
+            "74DA3895DFB2", 
+            "74DA38AF4880"
         ], 
         "lass": [
             "NUK_518-1_inside", 
             "NUK_H1-207_inside", 
-            "NUK_RD5F_inside"
+            "NUK_RD5F_inside", 
+            "WF_14011027"
         ], 
         "factory": [
             "factory41", 
@@ -1118,7 +1172,9 @@
     }, 
     "Hsinchu County": {
         "airbox": [
-            "74DA3895C330"
+            "74DA3895C330", 
+            "74DA38AF48B4", 
+            "28C2DDDD4532"
         ], 
         "lass": [
             "FT1_123", 
