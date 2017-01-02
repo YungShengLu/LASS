@@ -96,7 +96,7 @@ def write2file(arg_measurement,IDList,PM25List,timeList):
 
         fp = open(storeLoc+"/"+arg_measurement+".csv", "w+")
 
-        fp.write("device_id,pollution,timestamp,lat,lon,county/city\n")
+        fp.write("device_id,pollution,timestamp,lat,lon,county/city,humidity,temperature\n")
         for IDindex in range(len(IDList)):
 
             # search position
@@ -112,7 +112,14 @@ def write2file(arg_measurement,IDList,PM25List,timeList):
                 if IDList[IDindex] in countyTable[k][arg_measurement]:
                     belongArea = k
 
-            fp.write( str(IDList[IDindex])+","+str(PM25List[IDindex])+","+timeList[IDindex]+","+str(pos[0])+","+str(pos[1])+","+str(belongArea)+"\n");
+            # query again, get temperature(s_t0) humidity(s_h0)
+
+            # select "Humidity,Temperature" from airbox where Device_id='801F02000010' order by time DESC limit 1
+            H_T_Query = str(client.query('select "Humidity","Temperature" from ' + arg_measurement + ' where Device_id='+'\''+IDList[IDindex]+'\''+'order by time DESC limit 1;'))
+            humidity = re.findall("Humidity': (.*?),", H_T_Query)[0]
+            temperature = re.findall("Temperature': (.*?),", H_T_Query)[0]
+            
+            fp.write( str(IDList[IDindex])+","+str(PM25List[IDindex])+","+timeList[IDindex]+","+str(pos[0])+","+str(pos[1])+","+str(belongArea)+","+(humidity)+","+(temperature)+"\n");
 
         fp.close()
 

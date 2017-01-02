@@ -399,7 +399,10 @@
             "28C2DDDD4598", 
             "74DA388FF424", 
             "74DA3895C214", 
-            "74DA38AF4896"
+            "74DA38AF4896", 
+            "28C2DDDD43FD", 
+            "28C2DDDD41ED", 
+            "28C2DDDD4408"
         ], 
         "lass": [
             "FT1_001", 
@@ -481,7 +484,8 @@
             "74DA38AF488E"
         ], 
         "lass": [
-            "WF_1664490"
+            "WF_1664490", 
+            "PERCY_603"
         ], 
         "factory": [
             "factory30", 
@@ -609,7 +613,8 @@
             "LASD_CMC_002", 
             "LASS-SPS_017", 
             "WF_15847056", 
-            "LASS-SPS_025"
+            "LASS-SPS_025", 
+            "FT1_024"
         ], 
         "factory": [], 
         "wind": [
@@ -679,7 +684,8 @@
             "FT1_028", 
             "FT1_041", 
             "FT1_063", 
-            "Howard222"
+            "Howard222", 
+            "WF_14087368"
         ], 
         "factory": [
             "factory29", 
@@ -753,7 +759,8 @@
             "28C2DDDD45E2", 
             "28C2DDDD47AD", 
             "28C2DDDD47CB", 
-            "74DA388FF65A"
+            "74DA388FF65A", 
+            "28C2DDDD4781"
         ], 
         "lass": [
             "FT1_115", 
@@ -1018,7 +1025,8 @@
             "HRY_7688", 
             "FT1_0446D", 
             "FT1_391", 
-            "FT1_394"
+            "FT1_394", 
+            "FT1_396"
         ], 
         "factory": [
             "factory3", 
@@ -1165,7 +1173,8 @@
     "Hsinchu County": {
         "airbox": [
             "74DA3895C330", 
-            "74DA38AF48B4"
+            "74DA38AF48B4", 
+            "28C2DDDD4532"
         ], 
         "lass": [
             "FT1_123", 
