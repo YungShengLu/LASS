@@ -117,8 +117,12 @@ def getPM25List(arg_measurement,IDList,PM25List):
        	 if PM25temp[k] != 'None':
        	 	numOfNonNone+=1
        	 	PM25MeanSum+=float(PM25temp[k])
-       MeanDict['total_mean']=round(PM25MeanSum/numOfNonNone)
+       
 
+       try:
+         MeanDict['total_mean']=round(PM25MeanSum/numOfNonNone)
+       except ZeroDivisionError:
+         MeanDict['total_mean']="this week no data"
       
        #append dict to an accumulation list
        PM25List.append(dict(MeanDict))
@@ -144,7 +148,13 @@ def getPM25List(arg_measurement,IDList,PM25List):
 def write2file(arg_measurement,IDList,PM25List):
     
     
-    # print(allposition)
+    # Get_Latest_PM2.5
+    with open('../Get_Latest_PM2.5/county.json') as data_file:    
+      counties = json.load(data_file)
+
+
+    
+
 
     if(len(IDList)!=0):
 
@@ -152,6 +162,7 @@ def write2file(arg_measurement,IDList,PM25List):
         fp = open(storeLoc+"/"+arg_measurement+"History.csv", "w+")
 
         fp.write( 'ID,'\
+          'county/city,'\
           'day1,day1(mean),'\
           'day2,day2(mean),'\
           'day3,day3(mean),'\
@@ -163,13 +174,21 @@ def write2file(arg_measurement,IDList,PM25List):
           'Total mean\n')
   
         for IDindex in range(len(IDList)):
+            # Use id and find which county:
+            find = 0
+            for c in counties.keys():
+              for element in counties[c][arg_measurement]:
+                if element == IDList[IDindex] :
+                  mitsuketa = c
+                  find = 1
+                  break
+              if find == 1:
+                break
+            if find == 0:
+              mitsuketa = "unknown"
 
             
-
-            # fp.write( str(IDList[IDindex])+","+str(PM25List[IDindex])+","+timeList[IDindex]+"\n");
-  
-
-            fp.write( str(IDList[IDindex])+","+str(PM25List[IDindex]['day1'])+","+str(PM25List[IDindex]['day1_mean'])+","+str(PM25List[IDindex]['day2'])+","+str(PM25List[IDindex]['day2_mean'])+","+str(PM25List[IDindex]['day3'])+","+str(PM25List[IDindex]['day3_mean'])+","+str(PM25List[IDindex]['day4'])+","+str(PM25List[IDindex]['day4_mean'])+","+str(PM25List[IDindex]['day5'])+","+str(PM25List[IDindex]['day5_mean'])+","+str(PM25List[IDindex]['day6'])+","+str(PM25List[IDindex]['day6_mean'])+","+str(PM25List[IDindex]['day7'])+","+str(PM25List[IDindex]['day7_mean'])+","+str(PM25List[IDindex]['today'])+","+str(PM25List[IDindex]['today_mean'])+","+str(PM25List[IDindex]['total_mean'])+"\n");
+            fp.write( str(IDList[IDindex])+","+mitsuketa+","+str(PM25List[IDindex]['day1'])+","+str(PM25List[IDindex]['day1_mean'])+","+str(PM25List[IDindex]['day2'])+","+str(PM25List[IDindex]['day2_mean'])+","+str(PM25List[IDindex]['day3'])+","+str(PM25List[IDindex]['day3_mean'])+","+str(PM25List[IDindex]['day4'])+","+str(PM25List[IDindex]['day4_mean'])+","+str(PM25List[IDindex]['day5'])+","+str(PM25List[IDindex]['day5_mean'])+","+str(PM25List[IDindex]['day6'])+","+str(PM25List[IDindex]['day6_mean'])+","+str(PM25List[IDindex]['day7'])+","+str(PM25List[IDindex]['day7_mean'])+","+str(PM25List[IDindex]['today'])+","+str(PM25List[IDindex]['today_mean'])+","+str(PM25List[IDindex]['total_mean'])+"\n");
 
         fp.close()
 

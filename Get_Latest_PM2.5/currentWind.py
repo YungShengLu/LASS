@@ -72,20 +72,28 @@ def queryNowWind(windIDs):
         want ='select Direction,Speed from wind where Station='+'\''+name+'\''+' and time > now() - 1h order by time DESC limit 1;'
 
         result = str(client.query(want))
+        print(result, name)
+        
+        # query no data 
+        if result == 'ResultSet({})':
+            direction = "no data"
+            speed = "no data"
+            timestamp = "no data"
 
 
-        # re matching
-        direction = re.findall( "Direction': u'(.*?)',", result)[0].decode('unicode-escape')
-        speed = re.findall( "Speed': u'(.*?)',", result)[0]
-        timestamp = re.findall( "time': u'(.*?)\.", result)[0]
+        else:
+            # re matching
+            direction = re.findall( "Direction': u'(.*?)',", result)[0].decode('unicode-escape')
+            speed = re.findall( "Speed': u'(.*?)',", result)[0]
+            timestamp = re.findall( "time': u'(.*?)\.", result)[0]
 
-        # process time to taiwan zone
-        # print(timestamp)
-        datetime_object = datetime.strptime(timestamp, '%Y-%m-%dT%H:%M:%S')
-    
-        datetime_object = datetime_object.replace(tzinfo=timezone('UTC'))
-        now_zone = datetime_object.astimezone(timezone('Asia/Taipei'))
-        timestamp =  now_zone.strftime('%Y-%m-%d (%H:%M:%S)')
+            # process time to taiwan zone
+            # print(timestamp)
+            datetime_object = datetime.strptime(timestamp, '%Y-%m-%dT%H:%M:%S')
+        
+            datetime_object = datetime_object.replace(tzinfo=timezone('UTC'))
+            now_zone = datetime_object.astimezone(timezone('Asia/Taipei'))
+            timestamp =  now_zone.strftime('%Y-%m-%d (%H:%M:%S)')
 
 
         
