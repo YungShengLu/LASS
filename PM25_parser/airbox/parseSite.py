@@ -9,7 +9,7 @@ from datetime import datetime
 class parseSite:
     def __init__(self, src, database):
         self.src = src
-        self.url = 'http://nrl.iis.sinica.edu.tw/LASS/last-all-' + self.src + '.json'
+        self.url = 'https://data.lass-net.org/data/last-all-' + self.src + '.json'
         self.jsonData = {}
         #connect with DB (PM25)
         self.database = database
@@ -24,6 +24,8 @@ class parseSite:
             req = get(self.url, timeout = 25)
         except exceptions.Timeout as e:
             print('Website cannot connect: ' + self.url)
+            raise
+            return
 
         #parse data
         self.jsonData = req.json()
@@ -35,13 +37,13 @@ class parseSite:
             
             # fill -1 to attrubute if no values
             pm25 = self.jsonData.get('feeds')[i].get('s_d0')
-            print(pm25, type(pm25))
+            #print(pm25, type(pm25))
             if pm25 == 'NaN' or pm25 == None:
                 continue
 
 
             temperature = self.jsonData.get('feeds')[i].get('s_t0')  
-            print(temperature)
+            #print(temperature)
             if temperature is None:
                 temperature = -1
 
@@ -71,6 +73,8 @@ class parseSite:
                 self.client.write_points(json_body)
             except:
                 print(self.jsonData.get('feeds')[i].get('device_id')+"Write to DB failed")
+                raise
+                return
 
         #parse record
         self.record()

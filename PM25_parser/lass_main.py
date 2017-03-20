@@ -1,5 +1,6 @@
 from time import time, sleep
 import sys
+import traceback
 import json
 
 #custom class
@@ -14,8 +15,11 @@ def main():
 	parse = parseSite(arg_src, database)
 	while True:
 		start = time()	#debug
-		parse.parseData()
-		print('Execution: ' + str(time() - start) + ' sec')	#debug
+		try:
+			parse.parseData()
+		except:
+			traceback.print_exc()
+		#print('Execution: ' + str(time() - start) + ' sec')	#debug
 		sleep(300)	#debug
 
 
