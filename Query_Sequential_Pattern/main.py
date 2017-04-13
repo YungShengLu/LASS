@@ -54,20 +54,12 @@ def pm25s_to_patterns(pm25s=[]):
 
 def main():
     client = InfluxDBClient(host='127.0.0.1', port=8086, database='PM25')
-    #result = client.query('select * from lass order by time desc limit 10;', epoch='RFC3339')
-    #result = client.query('select "" from lass where id=74DA3895DFF6 and time >= now() - 7d order by time;', epoch='RFC3339')
-    #print("Result: {0}".format(result))
-    #print(query_interval_by_device_id(client, 'lass', 'FT1_CCH01'))
-    #result = query_interval_by_device_id(client, 'lass', 'FT1_CCH01')
-    #print(result['series'][0]['name'])
-    #get_pm25s_from_query(result)
     print(_msg_monitors)
     measurement, device_id = input('Input measurement and id: (seperated by space) ').split()
     print('measurement = {0}, device_id = {1}'.format(measurement, device_id))
     print('') # new line
     for d in range(0,7):
         result = query_interval_by_device_id(client, measurement, device_id, 'now() - ' + str(d) + 'd', '1d')
-        #print(get_pm25s_from_query(result))
         print(''.join(pm25s_to_patterns(get_pm25s_from_query(result))))
 
 if __name__=='__main__':
