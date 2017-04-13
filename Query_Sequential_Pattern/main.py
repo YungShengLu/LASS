@@ -59,8 +59,12 @@ def main():
     print('measurement = {0}, device_id = {1}'.format(measurement, device_id))
     print('') # new line
     for d in range(0,7):
-        result = query_interval_by_device_id(client, measurement, device_id, 'now() - ' + str(d) + 'd', '1d')
-        print(''.join(pm25s_to_patterns(get_pm25s_from_query(result))))
+        try:
+            result = query_interval_by_device_id(client, measurement, device_id, 'now() - ' + str(d) + 'd', '1d')
+            print(''.join(pm25s_to_patterns(get_pm25s_from_query(result))))
+        except:
+            print('[debug] There may be no result in this query.')
+            print('[debug]   measurement = {0}, device_id = {1}, d = {2}'.format(measurement, device_id, d))
 
 if __name__=='__main__':
     main()
