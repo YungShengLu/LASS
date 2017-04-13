@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""
+_msg_monitors = """
 air monitors in Tainan City: (id)
     airbox
         74DA38AF489E
@@ -22,9 +22,11 @@ air monitors in Tainan City: (id)
 """
 from influxdb import InfluxDBClient
 
-def query_interval_by_device_id(client, measurement='', device_id='', start_time='now()', duration='7d'):
+def query_interval_by_device_id(client, measurement='', device_id='', late_time='now()', duration='7d'):
     # return type: Raw JSON from InfluxDB
-    return client.query('select "PM2.5" from ' + measurement + ' where "Device_id" = \'' + device_id + '\' and time >= ' + start_time + ' - ' + duration).raw
+    early_time = late_time + ' - '  + duration
+    str_query = 'select "PM2.5" from ' + measurement + ' where "Device_id" = \'' + device_id + '\' and time <= ' + late_time + ' and time > ' + early_time
+    return client.query(str_query).raw
 
 def get_pm25s_from_query(json={}):
     # return type: list
@@ -56,9 +58,17 @@ def main():
     #result = client.query('select "" from lass where id=74DA3895DFF6 and time >= now() - 7d order by time;', epoch='RFC3339')
     #print("Result: {0}".format(result))
     #print(query_interval_by_device_id(client, 'lass', 'FT1_CCH01'))
-    result = query_interval_by_device_id(client, 'lass', 'FT1_CCH01')
+    #result = query_interval_by_device_id(client, 'lass', 'FT1_CCH01')
     #print(result['series'][0]['name'])
-    get_pm25s_from_query(result)
+    #get_pm25s_from_query(result)
+    print(_msg_monitors)
+    measurement, device_id = input('Input measurement and id: (seperated by space) ').split()
+    print('measurement = {0}, device_id = {1}'.format(measurement, device_id))
+    print('') # new line
+    for d in range(0,7):
+        result = query_interval_by_device_id(client, measurement, device_id, 'now() - ' + str(d) + 'd', '1d')
+        #print(get_pm25s_from_query(result))
+        print(''.join(pm25s_to_patterns(get_pm25s_from_query(result))))
 
 if __name__=='__main__':
     main()
