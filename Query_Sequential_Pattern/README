@@ -12,5 +12,10 @@ Execution :
 
 '''
 Enter airbox / lass and device ID to use the PM2.5 data of that device for pattern mining.
-e.g. airbox 28C2DDDD479C
+e.g. airbox 74DA3895C39E
 
+Output:
+It will output the candidate pattern for prediction according to the Device ID you entered.
+e.g. if you enter "airbox 74DA3895C39E"
+The output will be something like:
+"candidatePredictionPatts of Device :74DA3895C39E  is  [('aa', 0.21951219512195122), ('ab', 0.03658536585365854)]"
