@@ -32,7 +32,7 @@ from influxdb import InfluxDBClient
 import sys
 from collections import defaultdict
 from heapq import heappop, heappush
-
+import operator
 #from consequentPattern import pattern_mining,genCandidate
 import consequentPattern
 import HillFunction
@@ -174,7 +174,7 @@ if __name__=='__main__':
 								formatDB.append(tempStr)
 								tempStr=""
 				
-				print(k)
+				
 
 				
 
@@ -197,9 +197,79 @@ if __name__=='__main__':
 				print(patternLenDict)
 				print (formatDB)
 				dataset_weight_applied=HillFunction.MultiplyHillFunWeight(patternLenDict)
-				print ("dataset with weight applied={0}".format(dataset_weight_applied))
-			
+				#print ("dataset with weight applied={0}".format(dataset_weight_applied))
 				
+				#sort the freq of each pattern after weight applied.
+				sorted_dataset={}
+				lenCount=2
+				for pattern_len, pattern_collectionDict in dataset_weight_applied.iteritems():	
+					for pattern, freq in pattern_collectionDict.iteritems():			
+						sorted_set = sorted(dataset_weight_applied[pattern_len].items(), key=operator.itemgetter(1))
+						sorted_set.reverse()
+					sorted_dataset[lenCount]=sorted_set
+					lenCount=lenCount+1
+
+				print ("After sorting= {0}".format(sorted_dataset))
+
+				print (" ")#/n
+
+
+				
+				#get referech string from the most recent 12 PM2.5 data of the device.
+				lenFormatDB=len(formatDB)
+				referenceString=formatDB[lenFormatDB-1]
+				i=2
+				while len(referenceString)<12:
+						referenceString=formatDB[lenFormatDB-i]+referenceString
+						
+						i=i+1
+				
+				print(referenceString)
+
+
+				#compare the most matched pattern of each length
+				candidatePredictionPattDict={}
+				cur_len=2
+				for pattern_len, pattern_collectionDict in sorted_dataset.iteritems():	
+					for i in range(0,len(sorted_dataset[pattern_len])):
+						#print(sorted_dataset[pattern_len][i])
+						print("foundPatt    ={0}".format(sorted_dataset[pattern_len][i][0]))
+
+						comparedString=""
+						for j in range(0,cur_len-1):
+							comparedString+=sorted_dataset[pattern_len][i][0][j]
+						print("comparedPatt ={0}".format(comparedString))
+						print("referencePatt={0}".format(referenceString[-len(comparedString):]))
+						
+						if(comparedString==referenceString[-len(comparedString):]):
+							print("~~~~Pattern matched!!~~~~~")
+							candidatePredictionPattDict[sorted_dataset[pattern_len][i][0]]=sorted_dataset[pattern_len][i][1]
+						print("")#\n
+					cur_len=cur_len+1
+				
+				#sort the candidatePredictionPatt
+				sorted_candidatePredictionPattDict = sorted(candidatePredictionPattDict.items(), key=operator.itemgetter(1))
+				sorted_candidatePredictionPattDict.reverse()
+				print("candidatePredictionPatts of Device :{0}  is  {1}".format(device_id,sorted_candidatePredictionPattDict))
+				#print ("The prediction PM2.5 level in the next 5 mins is : {}".format(predictLevel))
+
+				#check if the candidatePredictionPattDict is empty or not.
+				'''
+				if(bool(candidatePredictionPattDict) ):
+				'''
+
+
+
+
+
+
+
+
+
+
+
+
+
 				'''
 				#to keep prediction reference
 				predictionRef=[]
@@ -223,7 +293,6 @@ if __name__=='__main__':
 				predictLevel=predictPM25Level(predictionRef)
 				print ("The prediction PM2.5 level in the next 5 mins is : {}".format(predictLevel))
 				'''
-				
 
 
 

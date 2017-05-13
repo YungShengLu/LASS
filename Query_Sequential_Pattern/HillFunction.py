@@ -1,6 +1,6 @@
 def hillFunction(pattern_len):
 	n=4
-	Km=5
+	Km=6
 	weight = (pattern_len**n * 1.0 /( Km**n + pattern_len**n ))
 	
 	return weight
