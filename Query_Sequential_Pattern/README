@@ -19,3 +19,8 @@ It will output the candidate pattern for prediction according to the Device ID y
 e.g. if you enter "airbox 74DA3895C39E"
 The output will be something like:
 "candidatePredictionPatts of Device :74DA3895C39E  is  [('aa', 0.21951219512195122), ('ab', 0.03658536585365854)]"
+
+
+Algorithm:
+Please head to the following DropBox Paper link:
+https://paper.dropbox.com/doc/Algorithm-of-Consequent-pattern-mining-for-PM2.5-Prediction-upNriDYz1uBkGvFYRMA7O
