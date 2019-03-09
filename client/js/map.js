@@ -111,7 +111,7 @@ function initMap() {
     map.addLayer(layerFactories);
 
     // load factories
-    d3.csv('data/csv/factories.csv', function(error, data) {
+    d3.csv('./data/csv/factories.csv', function(error, data) {
         if(error) throw error;
         var color = factoryColor;
         var circle,
@@ -134,11 +134,11 @@ function initMap() {
     });
 
     // load csv
-    d3.csv('data/csv/lass.csv', function(error, data) {
+    d3.csv('./data/csv/lass.csv', function(error, data) {
         if(error) throw error;
         airData = airData.concat(data);
     });
-    d3.csv('data/csv/airbox.csv', function(error, data) {
+    d3.csv('./data/csv/airbox.csv', function(error, data) {
         if(error) throw error;
         airData = airData.concat(data);
 
