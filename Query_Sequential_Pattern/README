@@ -1,0 +1,36 @@
+Purpose:
+
+conseqPattMining_Day.py means get all the PM2.5 level data of the past 24 hours 
+and use these data for consequent pattern mining .
+We applied Hill Function to generate the corresponding weight for patterns of each length,
+then multiply the corresponding weight with the frequency of each pattern to rise the 
+influence of the patterns of longer length and reduce that of the patterns of shorter length.
+
+Execution :
+'''
+	python conseqPattMining_Day.py
+
+'''
+
+
+Input: 
+Type airbox / lass and device ID to retrieve the PM2.5 data of that device from influxDB for pattern mining.
+e.g. 
+```
+	airbox 74DA3895C39E
+```
+
+
+Output:
+It will output the candidate pattern for prediction according to the Device ID you entered.
+e.g. if you typed "airbox 74DA3895C39E"
+The output will be something like:
+```
+	candidatePredictionPatts of Device :74DA3895C39E  is  [('aa', 0.21951219512195122), ('ab', 0.03658536585365854)]
+```
+The output may change as time goes by,so it's normal to see different output if you type "airbox 74DA3895C39E" 5 minutes later.
+
+
+Algorithm:
+Please head to the following DropBox Paper link:
+https://paper.dropbox.com/doc/Algorithm-of-Consequent-pattern-mining-for-PM2.5-Prediction-upNriDYz1uBkGvFYRMA7O

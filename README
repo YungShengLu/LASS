@@ -1,0 +1,16 @@
+Purpose:
+
+conseqPattMining_Day.py means get all the PM2.5 level data of the past 24 hours 
+and use these data for consequent pattern mining .
+We applied Hill Function to generate the corresponding weight for patterns of each length,
+then multiply the corresponding weight with the frequency of each pattern to rise the 
+influence of the patterns of longer length and reduce that of the patterns of shorter length.
+
+Execution :
+'''
+	python conseqPattMining_Day.py
+
+'''
+Enter airbox / lass and device ID to use the PM2.5 data of that device for pattern mining.
+e.g. airbox 28C2DDDD479C
+
